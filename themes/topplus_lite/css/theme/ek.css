@@ -1,0 +1,357 @@
+/* Sistem Ayarlari */
+a.button, .button > a, input[type="submit"], input[type="reset"], input[type="button"] {
+  color: #fff !important;
+}
+.header__container .block{
+  padding:0 0 5px;
+}
+#block-topplus-lite-branding{
+  max-width:600px;
+  width:49%;
+  margin:0 1% 0 0;
+  float:left;
+}
+#block-uyeliklerblok{
+  width:49%;
+  display:flex;
+}
+.region-content h2.title, .region-content nav > h2, .region-content .block-search > h2{
+    margin: 0 0 10px;
+}
+.container-fluid{
+  max-width:1140px;
+  margin:0 auto;
+}
+.content-top__section {
+    padding: 0px 0 10px;
+}
+.region-content h2.title{
+  text-align:center;
+}
+.sidebar__section .block {
+    padding: 0 0 10px 0;
+}
+#footer.region--black-background{
+  background:rgba(40, 100, 255, 0.2) !important;
+}
+.footer__section {
+    padding: 30px 0 !important;
+}
+/* Menu Ayarlari */
+.header-container ul.menu li > span{
+    padding-right:20px;
+}
+.header-container ul.menu li > span:hover{
+    color:#000;
+}
+.header-container ul.sf-menu > li > span .sf-sub-indicator:after {
+    content: "\f078";
+    font-family: 'FontAwesome';
+    left: 50%;
+    margin-left: -3px;
+    font-size: 7px;
+}
+.header-container .sf-shadow.sf-menu.menu ul{
+    background: rgba(255,255,255,1);
+}
+.sf-depth-2 a{
+    color:#000 !important;
+}
+.sf-depth-2 a:hover{
+    color:#fff !important;
+}
+.menu-item a::before{
+    color:rgba(50,100,200,1) !important;
+}
+#block-topplus-lite-tools .menu-item a:hover, #block-topplus-lite-tools .menu-item:hover > a::before{
+    color:#fff !important;
+}
+.sidebar-second h2.title{
+  text-align:center;
+  background:rgba(90,150,200,1);
+  padding:2% 0;
+  color:#fff;
+}
+.footer__section ul.menu li a, .footer__section ul.menu li > span{
+  color:rgba(50,100,200,1) !important
+}
+.footer__section ul.menu li a:hover, .footer__section ul.menu li:hover > span, .footer__section ul.menu li:hover a:before{
+  color:#fff !important;
+}
+h1.page-title{
+  font-size:3vw
+}
+/**********************************************************/
+/* Manset Ayarlari */
+#block-views-block-manset-block-1{
+  margin: 2vw auto 1vw;
+  max-width: 1170px;
+}
+.slick-arrow{
+  height:4vw;
+  width:4vw;
+}
+.slick-prev:before, .slick-next:before{
+  opacity:1;
+  font-size:4vw;
+}
+.slick-arrow::before{
+  color:rgba(40, 100, 255, 1) !important;
+}
+#manset{
+  position:relative;
+  width:100%;
+}
+#manset-gorsel{
+    width:60%;
+}
+#manset-yazi{
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:40%;
+  background:rgba(40, 100, 255, 0.2);
+  padding:5% 4%;
+  height:100%;
+}
+#manset-baslik a{
+  font-weight:700;
+}
+#manset-terim{
+  max-width:100px;
+  text-align:center;
+  background:#fff;
+  color:rgba(40, 100, 255, 1)
+}
+/* Yazi Blok Ayarlari */
+#yazi-blok{
+    border-bottom:2px dotted #ddd;
+    margin:0 0 2%;
+    height: 140px;
+}
+#yazi-blok-gorsel{
+    width:30%;
+    float:left;
+    margin:0 2% 0 0;
+}
+#yazi-blok-baslik a{
+    text-transform:lowercase !important;
+    font-weight:700;
+}
+#yazi-blok-baslik::first-letter{
+    text-transform:capitalize !important;
+}
+#yazi-blok-tarih{
+    font-size:12px;
+}
+/**********************************************************/
+/* Yazi Sayfa Ayarlari */
+#yazi-sayfa{
+    border-bottom:2px dotted #ddd;
+    margin:0 0 2%;
+    min-height:120px;
+}
+#yazi-sayfa-gorsel{
+    width:30%;
+    float:left;
+    margin:0 2% 0 0;
+}
+#yazi-sayfa-baslik a{
+    font-weight:700;
+}
+#yazi-sayfa-tarih{
+    font-size:12px;
+}
+/* Ozet Gorunum Ayarlari */
+.field--entity-reference-target-type-taxonomy-term.field__item{
+    display:block;
+}
+/**********************************************************/
+#footer .block{
+  padding:0;
+}
+.footer-logo{
+  width: 10%;
+  margin: 5% 0% 0 2%;
+  float:right;
+}
+@media (max-width:400px){
+  #block-topplus-lite-branding {
+    max-width:100%;
+    width: 100%;
+    margin: 0 1% 0 0;
+    float: none;
+  }
+  #block-uyeliklerblok{
+    width:100%;
+  }
+  .footer-logo {
+    width: 9%;
+    margin: 3% 3.5% 0 3.5%;
+  }
+  .header-container .sf-menu.menu ul{
+    background-color:transparent;
+  }
+  .content-top__section{
+    padding:0 0;
+  }
+  h1.page-title{
+    font-size:5vw;
+  }
+  .slick-arrow{
+    height:6vw;
+    width:6vw;
+  }
+  .slick-prev:before, .slick-next:before{
+    font-size:6vw;
+  }
+  #manset-gorsel{
+    width:100%
+  }
+  #manset-gorsel img{
+    width:100%;
+  }
+  #manset-yazi{
+    position:relative;
+    bottom:initial;
+    right:initial;
+    width:100%;
+    height:auto;
+    padding:0 10%;
+  }
+  #manset-baslik{
+    font-size:4vw;
+  }
+  #manset-govde{
+    font-size:4vw;
+    display:none;
+  }
+  #yazi-blok-gorsel{
+    width:100%;
+    float:none;
+    margin:0 0 1% 0;
+  }
+}
+@media (min-width:401px) and (max-width:599px){
+  #block-topplus-lite-branding {
+    max-width:100%;
+    width: 100%;
+    margin: 0 1% 0 0;
+    float: none;
+  }
+  #block-uyeliklerblok{
+    width:100%;
+  }
+  .footer-logo {
+    width: 9%;
+    margin: 3% 3.5% 0 3.5%;
+  }
+  .sf-depth-2{
+    border-bottom:1px solid;
+  }
+  h1.page-title{
+    font-size:5vw;
+  }
+  .slick-prev:before, .slick-next:before{
+    font-size:7vw;
+  }
+  #manset-gorsel{
+    width:100%
+  }
+  #manset-gorsel img{
+    width:100%;
+  }
+  #manset-yazi{
+    position:relative;
+    bottom:initial;
+    right:initial;
+    width:100%;
+    height:auto;
+  }
+  #yazi-blok-gorsel{
+    width:100%;
+    float:initial;
+    margin:0 0 1% 0;
+  }
+  #yazi-sayfa-gorsel{
+    width:100%;
+    float:initial;
+    margin:0 0 1% 0;
+  }
+}
+@media (min-width:401px) and (max-width:599px){
+  .sf-depth-2{
+    border-bottom:1px solid;
+  }
+  .content-top__section{
+    padding:0 0;
+  }
+  h1.page-title{
+    font-size:5vw;
+  }
+  #manset-gorsel{
+    width:100%
+  }
+  #manset-gorsel img{
+    width:100%;
+  }
+  #manset-baslik{
+    font-size:4vw
+  }
+  #manset-govde{
+    display:none;
+  }
+  #manset-yazi{
+    position:relative;
+    bottom:initial;
+    right:initial;
+    width:100%;
+    height:auto;
+    padding:0 15%;
+  }
+  #yazi-blok-gorsel{
+    width:100%;
+    float:initial;
+    margin:0 0 1% 0;
+  }
+  #yazi-sayfa-gorsel{
+    width:100%;
+    float:initial;
+    margin:0 0 1% 0;
+  }
+}
+@media (min-width:600px) and (max-width:767px){
+  .sf-depth-2{
+    border-bottom:1px solid;
+  }
+  h1.page-title{
+    font-size:5vw;
+  }
+  #manset-gorsel{
+    width:100%
+  }
+  #manset-gorsel img{
+    width:100%;
+  }
+  #manset-yazi{
+    position:relative;
+    bottom:initial;
+    right:initial;
+    width:100%;
+    height:auto;
+  }
+  #yazi-blok-gorsel{
+    width:100%;
+    float:initial;
+    margin:0 0 1% 0;
+  }
+  #yazi-sayfa-gorsel{
+    width:100%;
+    float:initial;
+    margin:0 0 1% 0;
+  }
+}
+@media (max-width: 767px){
+.header__container {
+    padding: 5px 0;
+}

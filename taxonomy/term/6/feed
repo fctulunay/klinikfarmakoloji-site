@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:schema="http://schema.org/" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" version="2.0" xml:base="https://klinikfarmakoloji.com/sektoru-taniyalim-0">
+  <channel>
+    <title>Sektörü Tanıyalım</title>
+    <link>https://klinikfarmakoloji.com/sektoru-taniyalim-0</link>
+    <description/>
+    <language>tr</language>
+    
+    <item>
+  <title>GİZLİ İLAÇ SÖZLEŞMELERİ</title>
+  <link>https://klinikfarmakoloji.com/sektoru-taniyalim/gizli-ilac-sozlesmeleri</link>
+  <description>&lt;span property="schema:name" class="field field--name-title field--type-string field--label-hidden"&gt;GİZLİ İLAÇ SÖZLEŞMELERİ&lt;/span&gt;
+&lt;span rel="schema:author" class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span lang="" about="https://klinikfarmakoloji.com/index.php/user/9" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;klinikfarmakoloji&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2026-09-23T09:53:05+00:00" class="field field--name-created field--type-created field--label-hidden"&gt;Çar, 23/09/2026 - 12:53&lt;/span&gt;
+</description>
+  <pubDate>Wed, 23 Sep 2026 09:53:05 +0000</pubDate>
+    <dc:creator>klinikfarmakoloji</dc:creator>
+    <guid isPermaLink="false">835 at https://klinikfarmakoloji.com</guid>
+    </item>
+<item>
+  <title>İRANIN SMA İLACI</title>
+  <link>https://klinikfarmakoloji.com/sektoru-taniyalim/iranin-sma-ilaci</link>
+  <description>&lt;span property="schema:name" class="field field--name-title field--type-string field--label-hidden"&gt;İRANIN SMA İLACI&lt;/span&gt;
+&lt;span rel="schema:author" class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span lang="" about="https://klinikfarmakoloji.com/index.php/user/9" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;klinikfarmakoloji&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2026-01-08T16:49:45+00:00" class="field field--name-created field--type-created field--label-hidden"&gt;Per, 08/01/2026 - 19:49&lt;/span&gt;
+</description>
+  <pubDate>Thu, 08 Jan 2026 16:49:45 +0000</pubDate>
+    <dc:creator>klinikfarmakoloji</dc:creator>
+    <guid isPermaLink="false">716 at https://klinikfarmakoloji.com</guid>
+    </item>
+<item>
+  <title>20 SENEDE AKILCI İLAÇ KULLANIMINDA NE DEĞİŞTİ?</title>
+  <link>https://klinikfarmakoloji.com/sektoru-taniyalim/20-senede-akilci-ilac-kullaniminda-ne-degisti</link>
+  <description>&lt;span property="schema:name" class="field field--name-title field--type-string field--label-hidden"&gt;20 SENEDE AKILCI İLAÇ KULLANIMINDA NE DEĞİŞTİ?&lt;/span&gt;
+&lt;span rel="schema:author" class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span lang="" about="https://klinikfarmakoloji.com/index.php/user/9" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;klinikfarmakoloji&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2023-09-06T07:59:21+00:00" class="field field--name-created field--type-created field--label-hidden"&gt;Çar, 06/09/2023 - 10:59&lt;/span&gt;
+</description>
+  <pubDate>Wed, 06 Sep 2023 07:59:21 +0000</pubDate>
+    <dc:creator>klinikfarmakoloji</dc:creator>
+    <guid isPermaLink="false">577 at https://klinikfarmakoloji.com</guid>
+    </item>
+<item>
+  <title>DAR TEDAVİ ARALIĞI OLAN İLAÇLARDA BİYOEŞDEĞERLİK</title>
+  <link>https://klinikfarmakoloji.com/sektoru-taniyalim/dar-tedavi-araligi-olan-ilaclarda-biyoesdegerlik</link>
+  <description>&lt;span property="schema:name" class="field field--name-title field--type-string field--label-hidden"&gt;DAR TEDAVİ ARALIĞI OLAN İLAÇLARDA BİYOEŞDEĞERLİK&lt;/span&gt;
+&lt;span rel="schema:author" class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span lang="" about="https://klinikfarmakoloji.com/index.php/user/9" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;klinikfarmakoloji&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2023-09-05T09:48:45+00:00" class="field field--name-created field--type-created field--label-hidden"&gt;Sa, 05/09/2023 - 12:48&lt;/span&gt;
+</description>
+  <pubDate>Tue, 05 Sep 2023 09:48:45 +0000</pubDate>
+    <dc:creator>klinikfarmakoloji</dc:creator>
+    <guid isPermaLink="false">575 at https://klinikfarmakoloji.com</guid>
+    </item>
+<item>
+  <title>COVID-19 İLAÇLARI HAKKINDA BİLMEK İSTEDİKLERİNİZ.</title>
+  <link>https://klinikfarmakoloji.com/sektoru-taniyalim/covid-19-ilaclari-hakkinda-bilmek-istedikleriniz</link>
+  <description>&lt;span property="schema:name" class="field field--name-title field--type-string field--label-hidden"&gt;COVID-19 İLAÇLARI HAKKINDA BİLMEK İSTEDİKLERİNİZ.&lt;/span&gt;
+&lt;span rel="schema:author" class="field field--name-uid field--type-entity-reference field--label-hidden"&gt;&lt;span lang="" about="https://klinikfarmakoloji.com/index.php/user/9" typeof="schema:Person" property="schema:name" datatype="" xml:lang=""&gt;klinikfarmakoloji&lt;/span&gt;&lt;/span&gt;
+&lt;span property="schema:dateCreated" content="2020-06-09T18:01:12+00:00" class="field field--name-created field--type-created field--label-hidden"&gt;Sa, 09/06/2020 - 21:01&lt;/span&gt;
+</description>
+  <pubDate>Tue, 09 Jun 2020 18:01:12 +0000</pubDate>
+    <dc:creator>klinikfarmakoloji</dc:creator>
+    <guid isPermaLink="false">485 at https://klinikfarmakoloji.com</guid>
+    </item>
+
+  </channel>
+</rss>
