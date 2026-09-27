@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Add the GoatCounter visit counter (private statistics, no cookies) to every page. Safe to re-run.
-Dashboard: https://klinikfarmakoloji.goatcounter.com
+Dashboard: https://fctulunay.goatcounter.com
 Usage: python3 tools/analytics.py
 """
 import os, re, glob
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CODE = 'klinikfarmakoloji'
+CODE = 'fctulunay'
 TAG = f'<script data-goatcounter="https://{CODE}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
 OLD = re.compile(r'\n?<script data-goatcounter="[^"]*"[^>]*></script>')
 
