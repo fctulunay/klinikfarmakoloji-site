@@ -346,6 +346,7 @@ def main(cfg_path):
     import social_meta; social_meta.main()
     import like_button; like_button.main()
     import analytics; analytics.main()
+    import language_switch; language_switch.main()
     print('done')
 
 

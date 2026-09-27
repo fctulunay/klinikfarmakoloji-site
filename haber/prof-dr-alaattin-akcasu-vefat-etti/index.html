@@ -183,6 +183,26 @@ Değerli hocamıza Allah’tan rahmet; ailesine, sevenlerine ve bilim camiasına
                                                   <div class="col-md-3">
                                         <div class="clearfix header-top-highlighted__section header-top-highlighted-second">
                         <div class="region region-header-top-highlighted-second">
+<div class="kfd-lang notranslate" translate="no">
+<style>
+.kfd-lang{display:flex;justify-content:flex-end;gap:6px;padding:8px 4px 4px;font-family:Georgia,serif}
+.kfd-lang button{border:1px solid #651320;background:#fff;color:#651320;font:bold 13px/1 Georgia,serif;padding:6px 11px;border-radius:3px;cursor:pointer;letter-spacing:.5px}
+.kfd-lang button.on{background:#651320;color:#fff;cursor:default}
+@media (max-width:767px){.kfd-lang{justify-content:center;padding:6px 0 0}}
+</style>
+<button type="button" id="kfd-tr" class="on" title="Türkçe">TR</button><button type="button" id="kfd-en" title="English (automatic translation)">EN</button>
+<script>
+(function(){
+  var S='.translate.goog', h=location.hostname, inEN=h.slice(-S.length)===S;
+  var tr=document.getElementById('kfd-tr'), en=document.getElementById('kfd-en');
+  function origHost(){return h.slice(0,-S.length).replace(/--/g,'\u0000').replace(/-/g,'.').replace(/\u0000/g,'-');}
+  function encHost(x){return x.replace(/-/g,'--').replace(/\./g,'-');}
+  if(inEN){tr.className='';en.className='on';}
+  tr.onclick=function(){if(inEN){location.href='https://'+origHost()+location.pathname+location.hash;}};
+  en.onclick=function(){if(!inEN){location.href='https://'+encHost(h)+S+location.pathname+'?_x_tr_sl=tr&_x_tr_tl=en&_x_tr_hl=en'+location.hash;}};
+})();
+</script>
+</div>
     
 
   </div>
