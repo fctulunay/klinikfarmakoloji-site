@@ -70,7 +70,7 @@ def convert(docx):
                     bg = ' background:#efd9dc;' if k == 0 else (' background:#f5eee0;' if n % 2 else '')
                     txt = inner(td)
                     txt = f'<b><span style="color:#651320">{txt}</span></b>' if k == 0 else txt
-                    cells.append(f'\t\t\t<td style="border:solid #d0c5b3 1.0pt;{bg} padding:4px 7px" valign="top"><p style="margin:0">{wrap_text(txt, "11.0pt")}</p></td>')
+                    cells.append(f'\t\t\t<td style="border:solid #d0c5b3 1.0pt;{bg} padding:4px 7px" valign="top"><p style="margin:0; text-align:left">{wrap_text(txt, "11.0pt")}</p></td>')
                 rows.append('\t\t<tr>\n' + '\n'.join(cells) + '\n\t\t</tr>')
             out.append('<table class="Table" style="border-collapse:collapse; border:solid #d0c5b3 1.0pt; width:100%">\n\t<tbody>\n' + '\n'.join(rows) + '\n\t</tbody>\n</table>')
             continue
