@@ -6,5 +6,19 @@
   "image": "/sites/default/files/yazi-gorselleri/2026-09/biyobenzer-urunlerde-klinik-arastirmalar.png",
   "image_750x400": "/sites/default/files/styles/manset_resim_stili_750x400/public/yazi-gorselleri/2026-09/biyobenzer-urunlerde-klinik-arastirmalar.png",
   "body_file": "tools/articles/biyobenzer-urunlerde-klinik-arastirmalar.body.html",
-  "summary": "Biyobenzer ürünlerde klinik araştırmalar: yeni bir ilacın etkinliği baştan kanıtlanmaz; kalıntı belirsizlik azaltılır."
+  "summary": "Biyobenzer ürünlerde klinik araştırmalar: yeni bir ilacın etkinliği baştan kanıtlanmaz; kalıntı belirsizlik azaltılır.",
+  "edits_after_conversion": [
+    [
+      " (Bu tarihlerin ve ilk onaylanan ürünlerin, editoryal ilkemiz gereği TİTCK arşiv kılavuzları ve resmi duyurularla birincil kaynaktan doğrulanması gerekmektedir.)",
+      ""
+    ],
+    [
+      "sorgulanması gereken sorular olarak ele alınmalı ve yayın öncesi birincil kaynaklarla (TİTCK kılavuz metinleri, Sağlık Uygulama Tebliği hükümleri, TÜFAM raporları) doğrulanmalıdır:",
+      "sorgulanması gereken sorular olarak ele alınmalıdır:"
+    ],
+    [
+      "Bu taslağın hazırlanmasında",
+      "Bu yazının hazırlanmasında"
+    ]
+  ]
 }

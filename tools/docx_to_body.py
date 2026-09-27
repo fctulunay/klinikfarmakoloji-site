@@ -19,15 +19,16 @@ def wrap_text(inner, size='12.0pt', color='black'):
 
 def P_title(x): return f'<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="text-autospace:none"><span style="{F}"><b><span style="font-size:18.0pt"><span style="color:#651320">{x}</span></span></b></span></span></span></p>'
 def P_author(x): return f'<p style="margin-bottom:25px"><span style="font-size:11pt"><span style="text-autospace:none"><span style="{F}"><b><span style="font-size:16.0pt"><span style="color:black">{x}</span></span></b></span></span></span></p>'
-def P_head(x): return f'<p style="margin-top:21px; margin-bottom:14px"><span style="font-size:11pt"><span style="text-autospace:none"><span style="{F}"><b><span style="font-size:13.0pt"><span style="color:#651320">{x}</span></span></b></span></span></span></p>'
-def P_sub(x): return f'<p style="margin-top:14px; margin-bottom:10px"><span style="font-size:11pt"><span style="text-autospace:none"><span style="{F}"><b><span style="font-size:12.0pt"><span style="color:#651320">{x}</span></span></b></span></span></span></p>'
-def P_text(x): return f'<p style="margin-bottom:14px; text-align:justify"><span style="font-size:11pt"><span style="line-height:19.5pt"><span style="text-autospace:none"><span style="{F}"><span style="font-size:12.0pt"><span style="color:black">{x}</span></span></span></span></span></span></p>'
+def P_head(x): return f'<p style="margin:16px 0 6px; font-family:Georgia,serif; font-size:13pt; line-height:1.3; font-weight:bold; color:#651320">{x}</p>'
+def P_sub(x): return f'<p style="margin:12px 0 4px; font-family:Georgia,serif; font-size:12pt; line-height:1.3; font-weight:bold; color:#651320">{x}</p>'
+def P_text(x): return f'<p style="margin:0 0 7px; text-align:justify; font-family:Georgia,serif; font-size:12pt; line-height:1.5; color:black">{x}</p>'
 def P_formula(x): return f'<p style="margin:10px 0 16px; text-align:center">{wrap_text("<i>" + x + "</i>", "13.0pt")}</p>'
 def P_caption(x): return f'<p style="margin-top:6px; margin-bottom:18px">{wrap_text("<i>" + x + "</i>", "10.0pt", "#555555")}</p>'
-def P_bullet(x): return f'<p style="margin-bottom:7px; margin-left:50px; text-indent:-18.9pt"><span style="font-size:11pt"><span style="line-height:18.3pt"><span style="text-autospace:none"><span style="{F}"><span style="font-size:12.0pt"><span style="color:black">•</span></span>&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size:12.0pt"><span style="color:black">{x}</span></span></span></span></span></span></p>'
-def H_refs(x): return f'<h1 style="margin-top:21px; margin-bottom:11px"><span style="font-size:14pt"><span style="{F}"><span style="color:#7a1f2b"><span style="font-size:12.0pt">{x}</span></span></span></span></h1>'
-def LI_ref(x): return f'\t<li style="margin-bottom:4px"><span style="font-size:11pt"><span style="{F}"><i><span style="font-size:10.0pt">{x}</span></i></span></span></li>'
-def P_note(x): return f'<p style="margin-top:16px"><span style="font-size:11pt"><span style="{F}"><i><span style="font-size:10.0pt"><span style="color:#555555">{x}</span></span></i></span></span></p>'
+def P_bullet(x): return f'<p style="margin:0 0 3px 30px; text-indent:-14px; text-align:justify; font-family:Georgia,serif; font-size:12pt; line-height:1.45; color:black">•&nbsp;&nbsp;{x}</p>'
+def H_refs(x): return f'<p style="margin:18px 0 4px; font-family:Georgia,serif; font-size:12pt; line-height:1.3; font-weight:bold; color:#7a1f2b">{x}</p>'
+def LI_ref(x): return f'\t<li style="margin:0 0 1px; font-family:Georgia,serif; font-size:9.5pt; line-height:1.3; font-style:italic; color:#333; overflow-wrap:anywhere">{x}</li>'
+def OL(items): return '<ol style="margin:0 0 6px; padding-left:24px; font-size:9.5pt; line-height:1.3">\n' + '\n'.join(items) + '\n</ol>'
+def P_note(x): return f'<p style="margin:10px 0 0; font-family:Georgia,serif; font-size:9.5pt; line-height:1.3; font-style:italic; color:#555555">{x}</p>'
 
 SUBSCRIPTS = [(r'μtest', 'μ<sub>test</sub>'), (r'μreferans', 'μ<sub>referans</sub>'), (r'σWR', 'σ<sub>WR</sub>')]
 
@@ -90,7 +91,7 @@ def convert(docx):
             in_refs = True; out.append(H_refs(txt)); continue
         if in_refs:
             if 'AI desteği' in txt:
-                out.append('<ol>\n' + '\n'.join(refs) + '\n</ol>'); refs = []
+                out.append(OL(refs)); refs = []
                 out.append(P_note('Not: ' + re.sub(r'</?i>', '', x) if not txt.startswith('Not') else re.sub(r'</?i>', '', x))); in_refs = False
             else:
                 refs.append(LI_ref(re.sub(r'^\s*(<i>)?\s*\d+\.\s*', r'\1', x).replace('<i>', '').replace('</i>', '')))
@@ -101,7 +102,7 @@ def convert(docx):
             clean = re.sub(r'</?b>', '', x)
             out.append(P_sub(clean) if re.match(r'^\d+\.\d+\.', txt) else P_head(clean)); continue
         out.append(P_text(x))
-    if refs: out.append('<ol>\n' + '\n'.join(refs) + '\n</ol>')
+    if refs: out.append(OL(refs))
     return '\n'.join(out)
 
 if __name__ == '__main__':
