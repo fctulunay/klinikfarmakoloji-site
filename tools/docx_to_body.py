@@ -19,16 +19,16 @@ def wrap_text(inner, size='12.0pt', color='black'):
 
 def P_title(x): return f'<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="text-autospace:none"><span style="{F}"><b><span style="font-size:18.0pt"><span style="color:#651320">{x}</span></span></b></span></span></span></p>'
 def P_author(x): return f'<p style="margin-bottom:25px"><span style="font-size:11pt"><span style="text-autospace:none"><span style="{F}"><b><span style="font-size:16.0pt"><span style="color:black">{x}</span></span></b></span></span></span></p>'
-def P_head(x): return f'<p style="margin:16px 0 6px; font-family:Georgia,serif; font-size:13pt; line-height:1.3; font-weight:bold; color:#651320">{x}</p>'
-def P_sub(x): return f'<p style="margin:12px 0 4px; font-family:Georgia,serif; font-size:12pt; line-height:1.3; font-weight:bold; color:#651320">{x}</p>'
-def P_text(x): return f'<p style="margin:0 0 7px; text-align:justify; font-family:Georgia,serif; font-size:12pt; line-height:1.5; color:black">{x}</p>'
+def P_head(x): return f'<p style="margin:16px 0 6px; padding:0; font-family:Georgia,serif; font-size:13pt; line-height:1.3; font-weight:bold; color:#651320">{x}</p>'
+def P_sub(x): return f'<p style="margin:12px 0 4px; padding:0; font-family:Georgia,serif; font-size:12pt; line-height:1.3; font-weight:bold; color:#651320">{x}</p>'
+def P_text(x): return f'<p style="margin:0 0 7px; padding:0; text-align:justify; font-family:Georgia,serif; font-size:12pt; line-height:1.5; color:black">{x}</p>'
 def P_formula(x): return f'<p style="margin:10px 0 16px; text-align:center">{wrap_text("<i>" + x + "</i>", "13.0pt")}</p>'
 def P_caption(x): return f'<p style="margin-top:6px; margin-bottom:18px">{wrap_text("<i>" + x + "</i>", "10.0pt", "#555555")}</p>'
-def P_bullet(x): return f'<p style="margin:0 0 3px 30px; text-indent:-14px; text-align:justify; font-family:Georgia,serif; font-size:12pt; line-height:1.45; color:black">•&nbsp;&nbsp;{x}</p>'
-def H_refs(x): return f'<p style="margin:18px 0 4px; font-family:Georgia,serif; font-size:12pt; line-height:1.3; font-weight:bold; color:#7a1f2b">{x}</p>'
-def LI_ref(x): return f'\t<li style="margin:0 0 1px; font-family:Georgia,serif; font-size:9.5pt; line-height:1.3; font-style:italic; color:#333; overflow-wrap:anywhere">{x}</li>'
+def P_bullet(x): return f'<p style="margin:0 0 3px 30px; padding:0; text-indent:-14px; text-align:justify; font-family:Georgia,serif; font-size:12pt; line-height:1.45; color:black">•&nbsp;&nbsp;{x}</p>'
+def H_refs(x): return f'<p style="margin:18px 0 4px; padding:0; font-family:Georgia,serif; font-size:12pt; line-height:1.3; font-weight:bold; color:#7a1f2b">{x}</p>'
+def LI_ref(x): return f'\t<li style="margin:0 0 1px; padding:0; font-family:Georgia,serif; font-size:9.5pt; line-height:1.3; font-style:italic; color:#333; overflow-wrap:anywhere">{x}</li>'
 def OL(items): return '<ol style="margin:0 0 6px; padding-left:24px; font-size:9.5pt; line-height:1.3">\n' + '\n'.join(items) + '\n</ol>'
-def P_note(x): return f'<p style="margin:10px 0 0; font-family:Georgia,serif; font-size:9.5pt; line-height:1.3; font-style:italic; color:#555555">{x}</p>'
+def P_note(x): return f'<p style="margin:10px 0 0; padding:0; font-family:Georgia,serif; font-size:9.5pt; line-height:1.3; font-style:italic; color:#555555">{x}</p>'
 
 SUBSCRIPTS = [(r'μtest', 'μ<sub>test</sub>'), (r'μreferans', 'μ<sub>referans</sub>'), (r'σWR', 'σ<sub>WR</sub>')]
 
