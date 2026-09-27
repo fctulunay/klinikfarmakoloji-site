@@ -22,7 +22,7 @@ What it does
   3. adds it as the first slide of the homepage slider (keeps 5 slides)
   4. puts it first in the section's sidebar box on every page (keeps 5)
   5. adds /index.php/… and /node/N redirects and a sitemap entry
-  6. refreshes the social-media preview tags (tools/social_meta.py)
+  6. refreshes the social-media preview tags (tools/social_meta.py) and the like buttons (tools/like_button.py)
 """
 import os, re, sys, json, html, glob, math, datetime, urllib.parse
 
@@ -344,6 +344,7 @@ def main(cfg_path):
     # 6. link-preview tags (Facebook / X / LinkedIn / WhatsApp) for the new and updated pages
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import social_meta; social_meta.main()
+    import like_button; like_button.main()
     print('done')
 
 
