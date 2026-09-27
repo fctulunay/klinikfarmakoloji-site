@@ -22,6 +22,7 @@ What it does
   3. adds it as the first slide of the homepage slider (keeps 5 slides)
   4. puts it first in the section's sidebar box on every page (keeps 5)
   5. adds /index.php/… and /node/N redirects and a sitemap entry
+  6. refreshes the social-media preview tags (tools/social_meta.py)
 """
 import os, re, sys, json, html, glob, math, datetime, urllib.parse
 
@@ -340,6 +341,9 @@ def main(cfg_path):
     write(f'/node/{nid}/index.html', redirect(url + '/'))
     sm = read('sitemap.xml'); loc = f'<url><loc>https://klinikfarmakoloji.com{urllib.parse.quote(url + "/")}</loc></url>'
     if loc not in sm: write('sitemap.xml', sm.replace('</urlset>', loc + '\n</urlset>'))
+    # 6. link-preview tags (Facebook / X / LinkedIn / WhatsApp) for the new and updated pages
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import social_meta; social_meta.main()
     print('done')
 
 
