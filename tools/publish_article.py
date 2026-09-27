@@ -345,6 +345,7 @@ def main(cfg_path):
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import social_meta; social_meta.main()
     import like_button; like_button.main()
+    import analytics; analytics.main()
     print('done')
 
 
