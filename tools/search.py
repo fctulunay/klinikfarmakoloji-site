@@ -143,7 +143,8 @@ RESULTS = r'''<div id="kfd-arama" data-pagefind-ignore>
         filters(); render();
         if(UI!=='tr') ds.forEach(function(d){
           var ex=d.excerpt.replace(/<[^>]+>/g,'');
-          gt((d.meta&&d.meta.title||'')+'\n'+ex, LANG).then(function(x){ var i=x.indexOf('\n'); d.tTitle=i<0?x:x.slice(0,i); d.tExcerpt=i<0?'':x.slice(i+1); render(); });
+          gt(d.meta&&d.meta.title||'', LANG).then(function(x){ d.tTitle=x; render(); });
+          gt(ex, LANG).then(function(x){ d.tExcerpt=x; render(); });
         });
       });
     }
