@@ -200,8 +200,8 @@ FDAnews:  Novartis Close to Settlement in Fraud Litigation June 20, 2019" />
   var cur=inTr?(new URLSearchParams(location.search).get('_x_tr_tl')||'en'):'tr';
   function origHost(){return h.slice(0,-S.length).replace(/--/g,'\u0000').replace(/-/g,'.').replace(/\u0000/g,'-');}
   function encHost(x){return x.replace(/-/g,'--').replace(/\./g,'-');}
-  function save(l){try{localStorage.setItem('kfd-lang',l);}catch(e){}}
-  function saved(){try{return localStorage.getItem('kfd-lang');}catch(e){return null;}}
+  function save(l){try{localStorage.setItem('kfd-lang2',l);}catch(e){}}
+  function saved(){try{return localStorage.getItem('kfd-lang2');}catch(e){return null;}}
   function toLang(l){
     if(l==='tr'){location.href='https://'+(inTr?origHost():h)+location.pathname+'?kfd_lang=tr'+location.hash;return;}
     var host=inTr?h:encHost(h)+S;
@@ -221,6 +221,17 @@ FDAnews:  Novartis Close to Settlement in Fraud Litigation June 20, 2019" />
   /* automatic language: the visitor's saved choice, otherwise their browser language */
   if(/bot|crawl|spider|slurp|preview|facebookexternalhit|embedly|lighthouse|headless|pagespeed/i.test(navigator.userAgent)) return;
   var want=saved();
+  /* the visitor's country, read from the computer's time zone (no lookup needed) */
+  if(!want){ try{ var z=Intl.DateTimeFormat().resolvedOptions().timeZone||'';
+    if(/^(Europe|Asia)\/Istanbul$/.test(z)) want='tr';
+    else if(/^(Europe\/(Berlin|Vienna|Zurich|Busingen|Vaduz))$/.test(z)) want='de';
+    else if(/^(Europe\/Madrid|Atlantic\/Canary|Africa\/Ceuta|America\/(Mexico_City|Cancun|Merida|Monterrey|Matamoros|Chihuahua|Ciudad_Juarez|Ojinaga|Hermosillo|Mazatlan|Bahia_Banderas|Tijuana|Bogota|Lima|Santiago|Punta_Arenas|Argentina\/.*|Buenos_Aires|Caracas|Montevideo|Asuncion|La_Paz|Guayaquil|Havana|Santo_Domingo|Guatemala|El_Salvador|Tegucigalpa|Managua|Costa_Rica|Panama|Puerto_Rico))$/.test(z)) want='es';
+    else if(/^(Europe\/(Moscow|Kaliningrad|Samara|Volgograd|Saratov|Ulyanovsk|Astrakhan|Kirov|Minsk)|Asia\/(Yekaterinburg|Omsk|Novosibirsk|Barnaul|Tomsk|Novokuznetsk|Krasnoyarsk|Irkutsk|Chita|Yakutsk|Khandyga|Vladivostok|Ust-Nera|Magadan|Sakhalin|Srednekolymsk|Kamchatka|Anadyr))$/.test(z)) want='ru';
+    else if(/^Asia\/(Shanghai|Urumqi|Chongqing|Harbin|Hong_Kong|Macau)$/.test(z)) want='zh-CN';
+    else if(/^Asia\/(Kolkata|Calcutta)$/.test(z)) want='hi';
+    else if(/^(America\/(?!Sao_Paulo|Fortaleza|Recife|Bahia|Belem|Manaus|Cuiaba|Campo_Grande|Porto_Velho|Boa_Vista|Rio_Branco|Araguaina|Maceio|Santarem|Eirunepe|Noronha)|US\/|Canada\/|Pacific\/Honolulu|Europe\/(London|Dublin)|Australia\/|Pacific\/Auckland)/.test(z)) want='en';
+  }catch(e){} }
+  /* otherwise the browser language */
   if(!want){
     var list=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'tr'];
     for(var k=0;k<list.length;k++){ var code=String(list[k]).toLowerCase().split('-')[0]; if(LANGS[code]){ want=LANGS[code]; break; } }
