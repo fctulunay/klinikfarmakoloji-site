@@ -348,6 +348,7 @@ def main(cfg_path):
     import like_button; like_button.main()
     import analytics; analytics.main()
     import language_switch; language_switch.main()
+    import search; search.main()
     print('done')
 
 
