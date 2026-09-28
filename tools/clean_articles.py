@@ -172,6 +172,8 @@ def clean_body(inner, title):
             if b.name in ('ol', 'ul'): b['class'] = ['kfd-refs']
             elif b.name == 'p': b['class'] = (b.get('class') or []) + ['kfd-ref']
             continue
+        if b.name == 'p' and not b.get('class') and re.match(r'^[•·▪●◦■□►▸\-–]\s', txt):
+            b['class'] = ['kfd-bullet']; continue
         if b.name == 'p' and not b.get('class'):
             kids = [c for c in b.contents if not (isinstance(c, NavigableString) and not c.strip())]
             if (len(kids) == 1 and getattr(kids[0], 'name', None) in ('b', 'strong') and 3 <= len(txt) <= 120
