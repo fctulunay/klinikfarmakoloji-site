@@ -254,6 +254,18 @@ Gün geçmiyor ki halk arasında kolesterol hapları adıyla bilinen statinlerin
 </style>
 <label for="kfd-q" class="visually-hidden">Sitede ara</label>
 <input id="kfd-q" type="search" name="q" placeholder="Sitede ara…" autocomplete="off"><button type="submit">Ara</button>
+<script>
+(function(){
+  var S='.translate.goog', inTr=location.hostname.slice(-S.length)===S, P=new URLSearchParams(location.search);
+  var f=document.currentScript.parentNode, ui=(inTr?(P.get('_x_tr_tl')||'en'):(document.documentElement.getAttribute('data-kfd-src')||'tr')).split('-')[0];
+  var L={tr:['Sitede ara…','Ara'],en:['Search the site…','Search'],de:['Website durchsuchen…','Suchen'],es:['Buscar en el sitio…','Buscar'],ru:['Поиск по сайту…','Найти'],zh:['站内搜索…','搜索'],hi:['साइट में खोजें…','खोजें']}[ui];
+  if(L){ f.querySelector('input').placeholder=L[0]; f.querySelector('button').textContent=L[1]; }
+  f.onsubmit=function(ev){ ev.preventDefault(); var v=f.querySelector('input').value.trim(); if(!v) return;
+    var u='/arama/?q='+encodeURIComponent(v);
+    if(inTr){ ['_x_tr_sl','_x_tr_tl','_x_tr_hl'].forEach(function(k){ if(P.get(k)) u+='&'+k+'='+encodeURIComponent(P.get(k)); }); u=u.replace('_x_tr_sl='+encodeURIComponent(P.get('_x_tr_sl')||''),'_x_tr_sl=tr'); }
+    location.href=u; };
+})();
+</script>
 </form>
     
 

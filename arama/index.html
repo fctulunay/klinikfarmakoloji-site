@@ -26,7 +26,7 @@
 <link rel="shortcut icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
 <script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
 
-    <title>Arama | Klinik Farmakoloji Dosyası</title>
+    <title>Arama Sonuçları | Klinik Farmakoloji Dosyası</title>
     <link rel="stylesheet" media="all" href="/core/assets/vendor/normalize-css/normalize.css" />
 <link rel="stylesheet" media="all" href="/core/misc/normalize-fixes.css" />
 <link rel="stylesheet" media="all" href="/libraries/superfish/css/superfish.css" />
@@ -249,6 +249,18 @@
 </style>
 <label for="kfd-q" class="visually-hidden">Sitede ara</label>
 <input id="kfd-q" type="search" name="q" placeholder="Sitede ara…" autocomplete="off"><button type="submit">Ara</button>
+<script>
+(function(){
+  var S='.translate.goog', inTr=location.hostname.slice(-S.length)===S, P=new URLSearchParams(location.search);
+  var f=document.currentScript.parentNode, ui=(inTr?(P.get('_x_tr_tl')||'en'):(document.documentElement.getAttribute('data-kfd-src')||'tr')).split('-')[0];
+  var L={tr:['Sitede ara…','Ara'],en:['Search the site…','Search'],de:['Website durchsuchen…','Suchen'],es:['Buscar en el sitio…','Buscar'],ru:['Поиск по сайту…','Найти'],zh:['站内搜索…','搜索'],hi:['साइट में खोजें…','खोजें']}[ui];
+  if(L){ f.querySelector('input').placeholder=L[0]; f.querySelector('button').textContent=L[1]; }
+  f.onsubmit=function(ev){ ev.preventDefault(); var v=f.querySelector('input').value.trim(); if(!v) return;
+    var u='/arama/?q='+encodeURIComponent(v);
+    if(inTr){ ['_x_tr_sl','_x_tr_tl','_x_tr_hl'].forEach(function(k){ if(P.get(k)) u+='&'+k+'='+encodeURIComponent(P.get(k)); }); u=u.replace('_x_tr_sl='+encodeURIComponent(P.get('_x_tr_sl')||''),'_x_tr_sl=tr'); }
+    location.href=u; };
+})();
+</script>
 </form>
     
 
@@ -361,7 +373,7 @@
               </li>
           <li class="breadcrumb__item">
         <span class="breadcrumb__item-separator fa fa-angle-right"></span>
-                  <span>Arama</span>
+                  <span>Arama Sonuçları</span>
               </li>
         </ol>
   </nav>
@@ -391,27 +403,93 @@
     
       <div class="content">
       
-  <h1 class="title page-title" data-pagefind-meta="title">Arama</h1>
+  <h1 class="title page-title" data-pagefind-meta="title">Arama Sonuçları</h1>
 
 
     </div>
   </div>
 <div id="block-topplus-lite-content" class="clearfix block block-system block-system-main-block"><div class="content"><div id="kfd-arama" data-pagefind-ignore>
-<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
 <style>
-#kfd-arama{--pagefind-ui-primary:#651320;--pagefind-ui-text:#1c1a1b;--pagefind-ui-border:#d0c5b3;--pagefind-ui-tag:#f5eee0;--pagefind-ui-font:Georgia,"Times New Roman",serif;--pagefind-ui-scale:.95}
-#kfd-arama .pagefind-ui__result-link{color:#651320}
-#kfd-arama .pagefind-ui__result-title{font-size:1.1em}
-#kfd-arama mark{background:#f1dfe3;color:inherit}
+#kfd-arama{font-family:Georgia,"Times New Roman",serif;color:#1c1a1b}
+#kfd-arama form{display:flex;margin:0 0 14px}
+#kfd-arama input{flex:1;font:17px Georgia,serif;padding:9px 12px;border:1px solid #cdbfc3;border-right:0;border-radius:3px 0 0 3px}
+#kfd-arama input:focus{outline:2px solid #651320}
+#kfd-arama button.kfd-go{font:bold 15px Georgia,serif;padding:9px 16px;border:1px solid #651320;background:#651320;color:#fff;border-radius:0 3px 3px 0;cursor:pointer}
+#kfd-status{font-weight:bold;margin:0 0 10px;color:#651320}
+#kfd-filters{margin:0 0 12px}
+#kfd-filters button{font:14px Georgia,serif;margin:0 6px 6px 0;padding:4px 10px;border:1px solid #d0c5b3;background:#f5eee0;border-radius:14px;cursor:pointer;color:#1c1a1b}
+#kfd-filters button.on{background:#651320;color:#fff;border-color:#651320}
+.kfd-res{display:flex;gap:12px;padding:10px 0;border-bottom:1px dotted #d0c5b3}
+.kfd-res img{width:120px;height:auto;flex:0 0 120px;border-radius:3px;align-self:flex-start}
+.kfd-res a.t{font-weight:bold;color:#651320;font-size:1.08em;text-decoration:none}
+.kfd-res a.t:hover{text-decoration:underline}
+.kfd-res p{margin:4px 0 0;font-size:.95em;line-height:1.45}
+.kfd-res mark{background:#f1dfe3;color:inherit}
+.kfd-res .sec{font-size:.8em;color:#666}
+#kfd-more{display:none;margin:14px 0;font:bold 15px Georgia,serif;padding:8px 16px;border:1px solid #651320;background:#fff;color:#651320;border-radius:3px;cursor:pointer}
+@media (max-width:600px){.kfd-res img{width:90px;flex-basis:90px}}
 </style>
-<div id="kfd-search-ui"></div>
-<script src="/pagefind/pagefind-ui.js"></script>
+<form id="kfd-form" class="notranslate"><input id="kfd-input" type="search" name="q" autocomplete="off"><button class="kfd-go" type="submit">Ara</button></form>
+<div id="kfd-status"></div>
+<div id="kfd-filters"></div>
+<div id="kfd-results"></div>
+<button id="kfd-more" type="button">Daha fazla sonuç</button>
 <script>
-window.addEventListener('DOMContentLoaded',function(){
-  var ui=new PagefindUI({element:'#kfd-search-ui',showSubResults:true,showImages:true,resetStyles:false,
-    translations:{placeholder:'Yazılarda ara (ör. biyoeşdeğerlik, TİTCK, statin)',zero_results:'"[SEARCH_TERM]" için sonuç bulunamadı',many_results:'"[SEARCH_TERM]" için [COUNT] sonuç',one_result:'"[SEARCH_TERM]" için [COUNT] sonuç',load_more:'Daha fazla sonuç',filters_label:'Bölüm',clear_search:'Temizle',searching:'"[SEARCH_TERM]" aranıyor…'}});
-  var q=new URLSearchParams(location.search).get('q'); if(q){ui.triggerSearch(q);}
-});
+(function(){
+  var S='.translate.goog', inTr=location.hostname.slice(-S.length)===S, P=new URLSearchParams(location.search);
+  var UI=(inTr?(P.get('_x_tr_tl')||'en'):'tr').split('-')[0];
+  var L={tr:['Sitede ara…','Ara'],en:['Search the site…','Search'],de:['Website durchsuchen…','Suchen'],es:['Buscar en el sitio…','Buscar'],ru:['Поиск по сайту…','Найти'],zh:['站内搜索…','搜索'],hi:['साइट में खोजें…','खोजें']}[UI]||['Search…','Search'];
+  var input=document.getElementById('kfd-input'), st=document.getElementById('kfd-status'), box=document.getElementById('kfd-results'),
+      fl=document.getElementById('kfd-filters'), more=document.getElementById('kfd-more');
+  input.placeholder=L[0]; document.querySelector('#kfd-form .kfd-go').textContent=L[1];
+  var q=(P.get('q')||'').trim(); input.value=q;
+  document.getElementById('kfd-form').onsubmit=function(ev){ev.preventDefault(); var u=new URL(location.href); u.searchParams.set('q',input.value.trim()); location.href=u.toString();};
+  if(!q){ input.focus(); return; }
+  st.textContent='"'+q+'" aranıyor…';
+  function toTurkish(s){ /* search words in another language are also looked up in Turkish */
+    return fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=tr&dt=t&q='+encodeURIComponent(s))
+      .then(function(r){return r.json();}).then(function(j){ return (j[0]||[]).map(function(x){return x[0];}).join('').trim(); })
+      .catch(function(){ return ''; });
+  }
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+  import(location.origin+'/pagefind/pagefind.js').then(function(pf){
+    pf.options({excerptLength:30});
+    return toTurkish(q).then(function(tq){
+      var terms=[q]; if(tq && tq.toLowerCase()!==q.toLowerCase()) terms.push(tq);
+      return Promise.all(terms.map(function(x){return pf.search(x);})).then(function(rs){
+        var seen={}, all=[];
+        rs.forEach(function(r){ (r&&r.results||[]).forEach(function(x){ if(!seen[x.id]){seen[x.id]=1; all.push(x);} else { all.forEach(function(y){ if(y.id===x.id) y.score=Math.max(y.score,x.score); }); } }); });
+        all.sort(function(a,b){return b.score-a.score;});
+        return {all:all, terms:terms};
+      });
+    });
+  }).then(function(R){
+    var all=R.all, shown=0, filter='', data=[];
+    if(!all.length){ st.textContent='"'+R.terms.join('" / "')+'" için sonuç bulunamadı.'; return; }
+    function render(){
+      var list=data.filter(function(d){return !filter || (d.filters && d.filters['Bölüm'] && d.filters['Bölüm'].indexOf(filter)>=0);});
+      st.textContent='"'+R.terms.join('" / "')+'" için '+(filter?list.length+' / ':'')+all.length+' sonuç';
+      box.innerHTML=list.map(function(d){
+        var img=d.meta&&d.meta.image?'<img src="'+d.meta.image+'" alt="" loading="lazy">':'';
+        var sec=d.filters&&d.filters['Bölüm']?'<div class="sec">'+esc(d.filters['Bölüm'].join(', '))+'</div>':'';
+        return '<div class="kfd-res">'+img+'<div><a class="t" href="'+d.url+'">'+esc(d.meta&&d.meta.title||d.url)+'</a>'+sec+'<p>'+d.excerpt+'</p></div></div>';
+      }).join('');
+      more.style.display=shown<all.length?'inline-block':'none';
+    }
+    function load(n){
+      var part=all.slice(shown,shown+n); shown+=part.length;
+      return Promise.all(part.map(function(x){return x.data();})).then(function(ds){
+        ds.forEach(function(d){ d.url=d.url.replace(/index\.html$/,''); data.push(d); });
+        var secs={}; data.forEach(function(d){ (d.filters&&d.filters['Bölüm']||[]).forEach(function(s){secs[s]=(secs[s]||0)+1;}); });
+        fl.innerHTML=Object.keys(secs).length>1?Object.keys(secs).map(function(s){return '<button type="button" class="'+(s===filter?'on':'')+'" data-s="'+esc(s)+'">'+esc(s)+' ('+secs[s]+')</button>';}).join(''):'';
+        Array.prototype.forEach.call(fl.querySelectorAll('button'),function(b){ b.onclick=function(){ filter=(filter===b.getAttribute('data-s'))?'':b.getAttribute('data-s'); load(0); }; });
+        render();
+      });
+    }
+    more.onclick=function(){ load(20); };
+    load(20);
+  }).catch(function(e){ st.textContent='Arama şu anda yüklenemedi. Lütfen sayfayı yenileyin.'; if(window.console) console.error(e); });
+})();
 </script>
 </div></div></div>
 
