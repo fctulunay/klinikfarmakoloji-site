@@ -202,19 +202,36 @@ KARA KUTU UYARI: TİROİD C-HÜCRESİ TÜMÖRÜ RİSKİ" />
 <script>
 (function(){
   var S='.translate.goog', h=location.hostname, inTr=h.slice(-S.length)===S;
+  var LANGS={en:'en',de:'de',es:'es',ru:'ru',zh:'zh-CN',hi:'hi',tr:'tr'};
   var cur=inTr?(new URLSearchParams(location.search).get('_x_tr_tl')||'en'):'tr';
   function origHost(){return h.slice(0,-S.length).replace(/--/g,'\u0000').replace(/-/g,'.').replace(/\u0000/g,'-');}
   function encHost(x){return x.replace(/-/g,'--').replace(/\./g,'-');}
+  function save(l){try{localStorage.setItem('kfd-lang',l);}catch(e){}}
+  function saved(){try{return localStorage.getItem('kfd-lang');}catch(e){return null;}}
+  function toLang(l){
+    if(l==='tr'){location.href='https://'+(inTr?origHost():h)+location.pathname+'?kfd_lang=tr'+location.hash;return;}
+    var host=inTr?h:encHost(h)+S;
+    location.href='https://'+host+location.pathname+'?_x_tr_sl=tr&_x_tr_tl='+l+'&_x_tr_hl='+l+location.hash;
+  }
+  /* buttons */
   var bs=document.querySelectorAll('.kfd-lang button');
   for(var i=0;i<bs.length;i++){(function(b){
     var l=b.getAttribute('data-lang'); b.className=(l===cur)?'on':'';
-    b.onclick=function(){
-      if(l===cur) return;
-      if(l==='tr'){location.href='https://'+origHost()+location.pathname+location.hash;return;}
-      var host=inTr?h:encHost(h)+S;
-      location.href='https://'+host+location.pathname+'?_x_tr_sl=tr&_x_tr_tl='+l+'&_x_tr_hl='+l+location.hash;
-    };
+    b.onclick=function(){ if(l===cur) return; if(!inTr) save(l); toLang(l); };
   })(bs[i]);}
+  if(inTr) return;
+  /* a choice made on a translated page comes back as ?kfd_lang=… */
+  var qs=new URLSearchParams(location.search), q=qs.get('kfd_lang');
+  if(q){ save(q); qs.delete('kfd_lang'); var rest=qs.toString();
+    history.replaceState(null,'',location.pathname+(rest?'?'+rest:'')+location.hash); return; }
+  /* automatic language: the visitor's saved choice, otherwise their browser language */
+  if(/bot|crawl|spider|slurp|preview|facebookexternalhit|embedly|lighthouse|headless|pagespeed/i.test(navigator.userAgent)) return;
+  var want=saved();
+  if(!want){
+    var list=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'tr'];
+    for(var k=0;k<list.length;k++){ var code=String(list[k]).toLowerCase().split('-')[0]; if(LANGS[code]){ want=LANGS[code]; break; } }
+  }
+  if(want && want!=='tr' && LANGS[want.split('-')[0]]) toLang(want);
 })();
 </script>
 </div>
