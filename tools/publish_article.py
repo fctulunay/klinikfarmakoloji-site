@@ -343,6 +343,7 @@ def main(cfg_path):
     if loc not in sm: write('sitemap.xml', sm.replace('</urlset>', loc + '\n</urlset>'))
     # 6. link-preview tags (Facebook / X / LinkedIn / WhatsApp) for the new and updated pages
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import clean_articles; clean_articles.main([url.lstrip('/') + '/index.html'])
     import social_meta; social_meta.main()
     import like_button; like_button.main()
     import analytics; analytics.main()
