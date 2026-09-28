@@ -256,7 +256,7 @@
   var L={tr:['Sitede ara…','Ara'],en:['Search the site…','Search'],de:['Website durchsuchen…','Suchen'],es:['Buscar en el sitio…','Buscar'],ru:['Поиск по сайту…','Найти'],zh:['站内搜索…','搜索'],hi:['साइट में खोजें…','खोजें']}[ui];
   if(L){ f.querySelector('input').placeholder=L[0]; f.querySelector('button').textContent=L[1]; }
   f.onsubmit=function(ev){ ev.preventDefault(); var v=f.querySelector('input').value.trim(); if(!v) return;
-    var u='/arama/?q='+encodeURIComponent(v);
+    var u=location.origin+'/arama/?q='+encodeURIComponent(v);
     if(inTr){ ['_x_tr_sl','_x_tr_tl','_x_tr_hl'].forEach(function(k){ if(P.get(k)) u+='&'+k+'='+encodeURIComponent(P.get(k)); }); u=u.replace('_x_tr_sl='+encodeURIComponent(P.get('_x_tr_sl')||''),'_x_tr_sl=tr'); }
     location.href=u; };
 })();
@@ -451,6 +451,8 @@
       .then(function(r){return r.json();}).then(function(j){ return (j[0]||[]).map(function(x){return x[0];}).join('').trim(); })
       .catch(function(){ return ''; });
   }
+  function link(u){ /* stay inside the translation (its pages carry a base link to the original site) */
+    if(!inTr) return u; var x=new URL(location.origin+u); ['_x_tr_sl','_x_tr_tl','_x_tr_hl'].forEach(function(k){ if(P.get(k)) x.searchParams.set(k,P.get(k)); }); return x.toString(); }
   function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
   import(location.origin+'/pagefind/pagefind.js').then(function(pf){
     pf.options({excerptLength:30});
@@ -472,7 +474,7 @@
       box.innerHTML=list.map(function(d){
         var img=d.meta&&d.meta.image?'<img src="'+d.meta.image+'" alt="" loading="lazy">':'';
         var sec=d.filters&&d.filters['Bölüm']?'<div class="sec">'+esc(d.filters['Bölüm'].join(', '))+'</div>':'';
-        return '<div class="kfd-res">'+img+'<div><a class="t" href="'+d.url+'">'+esc(d.meta&&d.meta.title||d.url)+'</a>'+sec+'<p>'+d.excerpt+'</p></div></div>';
+        return '<div class="kfd-res">'+img+'<div><a class="t" href="'+link(d.url)+'">'+esc(d.meta&&d.meta.title||d.url)+'</a>'+sec+'<p>'+d.excerpt+'</p></div></div>';
       }).join('');
       more.style.display=shown<all.length?'inline-block':'none';
     }
