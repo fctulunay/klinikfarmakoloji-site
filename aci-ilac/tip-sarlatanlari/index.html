@@ -198,15 +198,17 @@ Prof. Dr. F. Cankat Tulunay" />
 (function(){
   var S='.translate.goog', h=location.hostname, inTr=h.slice(-S.length)===S;
   var LANGS={en:'en',de:'de',es:'es',ru:'ru',zh:'zh-CN',hi:'hi',tr:'tr'};
-  var cur=inTr?(new URLSearchParams(location.search).get('_x_tr_tl')||'en'):'tr';
+  /* language the page was written in (most are Turkish; a few articles are English) */
+  var SRC=(document.documentElement.getAttribute('data-kfd-src')||'tr');
+  var cur=inTr?(new URLSearchParams(location.search).get('_x_tr_tl')||'en'):SRC;
   function origHost(){return h.slice(0,-S.length).replace(/--/g,'\u0000').replace(/-/g,'.').replace(/\u0000/g,'-');}
   function encHost(x){return x.replace(/-/g,'--').replace(/\./g,'-');}
   function save(l){try{localStorage.setItem('kfd-lang2',l);}catch(e){}}
   function saved(){try{return localStorage.getItem('kfd-lang2');}catch(e){return null;}}
   function toLang(l){
-    if(l==='tr'){location.href='https://'+(inTr?origHost():h)+location.pathname+'?kfd_lang=tr'+location.hash;return;}
+    if(l===SRC){location.href='https://'+(inTr?origHost():h)+location.pathname+'?kfd_lang='+l+location.hash;return;}
     var host=inTr?h:encHost(h)+S;
-    location.href='https://'+host+location.pathname+'?_x_tr_sl=tr&_x_tr_tl='+l+'&_x_tr_hl='+l+location.hash;
+    location.href='https://'+host+location.pathname+'?_x_tr_sl='+SRC+'&_x_tr_tl='+l+'&_x_tr_hl='+l+location.hash;
   }
   /* buttons */
   var bs=document.querySelectorAll('.kfd-lang button');
@@ -237,7 +239,7 @@ Prof. Dr. F. Cankat Tulunay" />
     var list=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'tr'];
     for(var k=0;k<list.length;k++){ var code=String(list[k]).toLowerCase().split('-')[0]; if(LANGS[code]){ want=LANGS[code]; break; } }
   }
-  if(want && want!=='tr' && LANGS[want.split('-')[0]]) toLang(want);
+  if(want && want!==SRC && LANGS[want.split('-')[0]]) toLang(want);
 })();
 </script>
 </div>

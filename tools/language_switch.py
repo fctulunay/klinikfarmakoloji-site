@@ -6,7 +6,7 @@ translates the whole page (menus, sidebars, articles) and keeps the visitor in E
 click through the site. TR returns to the original Turkish page.
 Usage: python3 tools/language_switch.py
 """
-import os, re, glob
+import html, os, re, glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ANCHOR = '<div class="region region-header-top-highlighted-second">'
@@ -23,15 +23,17 @@ BLOCK = r'''<div class="kfd-lang notranslate" translate="no">
 (function(){
   var S='.translate.goog', h=location.hostname, inTr=h.slice(-S.length)===S;
   var LANGS={en:'en',de:'de',es:'es',ru:'ru',zh:'zh-CN',hi:'hi',tr:'tr'};
-  var cur=inTr?(new URLSearchParams(location.search).get('_x_tr_tl')||'en'):'tr';
+  /* language the page was written in (most are Turkish; a few articles are English) */
+  var SRC=(document.documentElement.getAttribute('data-kfd-src')||'tr');
+  var cur=inTr?(new URLSearchParams(location.search).get('_x_tr_tl')||'en'):SRC;
   function origHost(){return h.slice(0,-S.length).replace(/--/g,'\u0000').replace(/-/g,'.').replace(/\u0000/g,'-');}
   function encHost(x){return x.replace(/-/g,'--').replace(/\./g,'-');}
   function save(l){try{localStorage.setItem('kfd-lang2',l);}catch(e){}}
   function saved(){try{return localStorage.getItem('kfd-lang2');}catch(e){return null;}}
   function toLang(l){
-    if(l==='tr'){location.href='https://'+(inTr?origHost():h)+location.pathname+'?kfd_lang=tr'+location.hash;return;}
+    if(l===SRC){location.href='https://'+(inTr?origHost():h)+location.pathname+'?kfd_lang='+l+location.hash;return;}
     var host=inTr?h:encHost(h)+S;
-    location.href='https://'+host+location.pathname+'?_x_tr_sl=tr&_x_tr_tl='+l+'&_x_tr_hl='+l+location.hash;
+    location.href='https://'+host+location.pathname+'?_x_tr_sl='+SRC+'&_x_tr_tl='+l+'&_x_tr_hl='+l+location.hash;
   }
   /* buttons */
   var bs=document.querySelectorAll('.kfd-lang button');
@@ -62,11 +64,47 @@ BLOCK = r'''<div class="kfd-lang notranslate" translate="no">
     var list=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'tr'];
     for(var k=0;k<list.length;k++){ var code=String(list[k]).toLowerCase().split('-')[0]; if(LANGS[code]){ want=LANGS[code]; break; } }
   }
-  if(want && want!=='tr' && LANGS[want.split('-')[0]]) toLang(want);
+  if(want && want!==SRC && LANGS[want.split('-')[0]]) toLang(want);
 })();
 </script>
 </div>'''
 OLD = re.compile(r'\n?<div class="kfd-lang notranslate".*?</script>\n</div>', re.S)
+
+TR_CHARS = set('ğüşıöçĞÜŞİÖÇ')
+EN_WORDS = re.compile(r'\b(the|and|of|to|in|is|that|with|for|are|this|was)\b', re.I)
+TR_WORDS = re.compile(r'\b(ve|bir|bu|ile|için|olarak|da|de|olan|gibi|daha)\b', re.I)
+
+def body_text(t):
+    m = re.search(r'<div property="schema:text"[^>]*class="[^"]*field--name-body[^"]*"[^>]*>', t)
+    if not m: return ''
+    i = m.end(); d = 1
+    for x in re.finditer(r'<(/?)div\b', t[i:]):
+        d += -1 if x.group(1) else 1
+        if d == 0: break
+    seg = t[i:i + x.start()] if d == 0 else t[i:i + 200000]
+    seg = re.sub(r'<script.*?</script>|<style.*?</style>', ' ', seg, flags=re.S)
+    return html.unescape(re.sub(r'<[^>]+>', ' ', seg))[:20000]
+
+def detect_lang(t):
+    """'en' when the article text is clearly English, otherwise 'tr'."""
+    s = body_text(t)
+    words = re.findall(r'\w+', s)
+    if len(words) < 80: return 'tr'
+    en = len(EN_WORDS.findall(s)); tr = len(TR_WORDS.findall(s))
+    trc = sum(c in TR_CHARS for c in s) / max(1, len(s))
+    return 'en' if en > 3 * max(tr, 1) and trc < 0.004 else 'tr'
+
+def mark_source_language(t):
+    m = re.search(r'<html\b[^>]*>', t)
+    if not m: return t
+    tag = re.sub(r'\s+data-kfd-src="[^"]*"', '', m.group(0))
+    lang = detect_lang(t) if 'node--view-mode-full' in t else 'tr'
+    if lang != 'tr':
+        tag = tag[:-1] + f' data-kfd-src="{lang}">'
+        tag = re.sub(r'\blang="tr"', f'lang="{lang}"', tag)
+    else:
+        tag = re.sub(r'\blang="en"', 'lang="tr"', tag)
+    return t[:m.start()] + tag + t[m.end():]
 
 def main():
     n = 0
@@ -77,6 +115,7 @@ def main():
         if ANCHOR not in t: continue
         t2 = OLD.sub('', t)
         t2 = t2.replace(ANCHOR, ANCHOR + '\n' + BLOCK, 1)
+        t2 = mark_source_language(t2)
         if t2 != t: open(fp, 'w', encoding='utf-8').write(t2); n += 1
     print(f'language switch on {n} pages')
 
