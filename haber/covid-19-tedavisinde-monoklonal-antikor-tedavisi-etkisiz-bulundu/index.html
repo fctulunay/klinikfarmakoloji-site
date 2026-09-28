@@ -203,8 +203,10 @@ A Neutralizing Monoclonal Antibody for Hospitalized Patients with Covid-19 ACTIV
   var cur=inTr?(new URLSearchParams(location.search).get('_x_tr_tl')||'en'):SRC;
   function origHost(){return h.slice(0,-S.length).replace(/--/g,'\u0000').replace(/-/g,'.').replace(/\u0000/g,'-');}
   function encHost(x){return x.replace(/-/g,'--').replace(/\./g,'-');}
-  function save(l){try{localStorage.setItem('kfd-lang2',l);}catch(e){}}
-  function saved(){try{return localStorage.getItem('kfd-lang2');}catch(e){return null;}}
+  /* a flag choice lasts for this visit only; every new visit starts from the visitor's country */
+  function save(l){try{sessionStorage.setItem('kfd-lang',l);}catch(e){}}
+  function saved(){try{return sessionStorage.getItem('kfd-lang');}catch(e){return null;}}
+  try{localStorage.removeItem('kfd-lang');localStorage.removeItem('kfd-lang2');}catch(e){}
   function toLang(l){
     if(l===SRC){location.href='https://'+(inTr?origHost():h)+location.pathname+'?kfd_lang='+l+location.hash;return;}
     var host=inTr?h:encHost(h)+S;
@@ -229,7 +231,7 @@ A Neutralizing Monoclonal Antibody for Hospitalized Patients with Covid-19 ACTIV
   if(q){ save(q); qs.delete('kfd_lang'); var rest=qs.toString();
     history.replaceState(null,'',location.pathname+(rest?'?'+rest:'')+location.hash); return; }
   /* automatic language: the visitor's saved choice, otherwise their browser language */
-  if(/bot|crawl|spider|slurp|preview|facebookexternalhit|embedly|lighthouse|headless|pagespeed/i.test(navigator.userAgent)) return;
+  if(/googlebot|bingbot|yandexbot|baiduspider|duckduckbot|applebot|crawler|spider|slurp|facebookexternalhit|twitterbot|linkedinbot|whatsapp\/|telegrambot|slackbot|discordbot|embedly|lighthouse|headlesschrome|pagespeed/i.test(navigator.userAgent)) return;
   var want=saved();
   /* the visitor's country, read from the computer's time zone (no lookup needed) */
   if(!want){ try{ var z=Intl.DateTimeFormat().resolvedOptions().timeZone||'';
