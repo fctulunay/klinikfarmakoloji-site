@@ -355,3 +355,13 @@ h1.page-title{
 .header__container {
     padding: 5px 0;
 }
+/* Phones: news/article lists as a tidy list (small picture left, title right).
+   The old fixed 140px height let full-width pictures cover the titles. */
+@media (max-width:767px){
+  #yazi-blok, #yazi-sayfa{ height:auto !important; min-height:0 !important; overflow:hidden; padding:0 0 10px !important; margin:0 0 10px !important; }
+  #yazi-blok-gorsel, #yazi-sayfa-gorsel{ width:36% !important; float:left !important; margin:0 3% 0 0 !important; }
+  #yazi-blok-gorsel img, #yazi-sayfa-gorsel img{ width:100% !important; height:auto !important; display:block; border-radius:3px; }
+  #yazi-blok-yazi, #yazi-sayfa-yazi{ overflow:hidden; }
+  #yazi-blok-baslik a, #yazi-sayfa-baslik a{ font-size:15px; line-height:1.3; display:block; }
+  #yazi-blok-tarih, #yazi-sayfa-tarih{ font-size:12px; margin:0 0 2px; }
+}
