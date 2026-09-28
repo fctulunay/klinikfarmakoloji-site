@@ -209,6 +209,13 @@ Son günlerde tekrar gündeme gelen çocuk üzerinde araştırma konusu,  bilen
     var host=inTr?h:encHost(h)+S;
     location.href='https://'+host+location.pathname+'?_x_tr_sl='+SRC+'&_x_tr_tl='+l+'&_x_tr_hl='+l+location.hash;
   }
+  /* the search page translates its own results: the flags just change its language */
+  if(!inTr && location.pathname.indexOf('/arama/')===0){
+    var sp=new URLSearchParams(location.search), sl=sp.get('lang')||'tr', fb=document.querySelectorAll('.kfd-lang button');
+    for(var j=0;j<fb.length;j++){(function(b){ var l=b.getAttribute('data-lang'); b.className=(l===sl)?'on':'';
+      b.onclick=function(){ save(l); if(l==='tr') sp.delete('lang'); else sp.set('lang',l); location.search=sp.toString(); }; })(fb[j]);}
+    return;
+  }
   /* buttons */
   var bs=document.querySelectorAll('.kfd-lang button');
   for(var i=0;i<bs.length;i++){(function(b){
@@ -255,13 +262,13 @@ Son günlerde tekrar gündeme gelen çocuk üzerinde araştırma konusu,  bilen
 <script>
 (function(){
   var S='.translate.goog', inTr=location.hostname.slice(-S.length)===S, P=new URLSearchParams(location.search);
-  var f=document.currentScript.parentNode, ui=(inTr?(P.get('_x_tr_tl')||'en'):(document.documentElement.getAttribute('data-kfd-src')||'tr')).split('-')[0];
+  var f=document.currentScript.parentNode, ui=(inTr?(P.get('_x_tr_tl')||'en'):(location.pathname.indexOf('/arama/')===0?(P.get('lang')||'tr'):(document.documentElement.getAttribute('data-kfd-src')||'tr'))).split('-')[0];
   var L={tr:['Sitede ara…','Ara'],en:['Search the site…','Search'],de:['Website durchsuchen…','Suchen'],es:['Buscar en el sitio…','Buscar'],ru:['Поиск по сайту…','Найти'],zh:['站内搜索…','搜索'],hi:['साइट में खोजें…','खोजें']}[ui];
   if(L){ f.querySelector('input').placeholder=L[0]; f.querySelector('button').textContent=L[1]; }
   f.onsubmit=function(ev){ ev.preventDefault(); var v=f.querySelector('input').value.trim(); if(!v) return;
-    var u=location.origin+'/arama/?q='+encodeURIComponent(v);
-    if(inTr){ ['_x_tr_sl','_x_tr_tl','_x_tr_hl'].forEach(function(k){ if(P.get(k)) u+='&'+k+'='+encodeURIComponent(P.get(k)); }); u=u.replace('_x_tr_sl='+encodeURIComponent(P.get('_x_tr_sl')||''),'_x_tr_sl=tr'); }
-    location.href=u; };
+    var host=inTr?location.hostname.slice(0,-S.length).replace(/--/g,'\u0000').replace(/-/g,'.').replace(/\u0000/g,'-'):location.hostname;
+    var lang=inTr?(P.get('_x_tr_tl')||'en'):(location.pathname.indexOf('/arama/')===0?(P.get('lang')||'tr'):'tr');
+    location.href='https://'+host+'/arama/?q='+encodeURIComponent(v)+(lang!=='tr'?'&lang='+encodeURIComponent(lang):''); };
 })();
 </script>
 </form>

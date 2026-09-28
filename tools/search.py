@@ -11,7 +11,7 @@ import os, re, glob, html, subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ANCHOR = '<div class="region region-header-top-highlighted-second">'
-BOX = '''<form class="kfd-search notranslate" action="/arama/" method="get" role="search">
+BOX = r'''<form class="kfd-search notranslate" action="/arama/" method="get" role="search">
 <style>
 .kfd-search{display:flex;justify-content:flex-end;padding:6px 4px 2px;margin:0}
 .kfd-search input{width:100%;max-width:230px;font:15px Georgia,serif;padding:6px 10px;border:1px solid #cdbfc3;border-right:0;border-radius:3px 0 0 3px;background:#fff;color:#222}
@@ -24,19 +24,19 @@ BOX = '''<form class="kfd-search notranslate" action="/arama/" method="get" role
 <script>
 (function(){
   var S='.translate.goog', inTr=location.hostname.slice(-S.length)===S, P=new URLSearchParams(location.search);
-  var f=document.currentScript.parentNode, ui=(inTr?(P.get('_x_tr_tl')||'en'):(document.documentElement.getAttribute('data-kfd-src')||'tr')).split('-')[0];
+  var f=document.currentScript.parentNode, ui=(inTr?(P.get('_x_tr_tl')||'en'):(location.pathname.indexOf('/arama/')===0?(P.get('lang')||'tr'):(document.documentElement.getAttribute('data-kfd-src')||'tr'))).split('-')[0];
   var L={tr:['Sitede ara…','Ara'],en:['Search the site…','Search'],de:['Website durchsuchen…','Suchen'],es:['Buscar en el sitio…','Buscar'],ru:['Поиск по сайту…','Найти'],zh:['站内搜索…','搜索'],hi:['साइट में खोजें…','खोजें']}[ui];
   if(L){ f.querySelector('input').placeholder=L[0]; f.querySelector('button').textContent=L[1]; }
   f.onsubmit=function(ev){ ev.preventDefault(); var v=f.querySelector('input').value.trim(); if(!v) return;
-    var u=location.origin+'/arama/?q='+encodeURIComponent(v);
-    if(inTr){ ['_x_tr_sl','_x_tr_tl','_x_tr_hl'].forEach(function(k){ if(P.get(k)) u+='&'+k+'='+encodeURIComponent(P.get(k)); }); u=u.replace('_x_tr_sl='+encodeURIComponent(P.get('_x_tr_sl')||''),'_x_tr_sl=tr'); }
-    location.href=u; };
+    var host=inTr?location.hostname.slice(0,-S.length).replace(/--/g,'\u0000').replace(/-/g,'.').replace(/\u0000/g,'-'):location.hostname;
+    var lang=inTr?(P.get('_x_tr_tl')||'en'):(location.pathname.indexOf('/arama/')===0?(P.get('lang')||'tr'):'tr');
+    location.href='https://'+host+'/arama/?q='+encodeURIComponent(v)+(lang!=='tr'?'&lang='+encodeURIComponent(lang):''); };
 })();
 </script>
 </form>'''
 OLD_BOX = re.compile(r'\n?<form class="kfd-search notranslate".*?</form>', re.S)
 
-RESULTS = '''<div id="kfd-arama" data-pagefind-ignore>
+RESULTS = r'''<div id="kfd-arama" data-pagefind-ignore>
 <style>
 #kfd-arama{font-family:Georgia,"Times New Roman",serif;color:#1c1a1b}
 #kfd-arama form{display:flex;margin:0 0 14px}
@@ -64,62 +64,92 @@ RESULTS = '''<div id="kfd-arama" data-pagefind-ignore>
 <button id="kfd-more" type="button">Daha fazla sonuç</button>
 <script>
 (function(){
-  var S='.translate.goog', inTr=location.hostname.slice(-S.length)===S, P=new URLSearchParams(location.search);
-  var UI=(inTr?(P.get('_x_tr_tl')||'en'):'tr').split('-')[0];
-  var L={tr:['Sitede ara…','Ara'],en:['Search the site…','Search'],de:['Website durchsuchen…','Suchen'],es:['Buscar en el sitio…','Buscar'],ru:['Поиск по сайту…','Найти'],zh:['站内搜索…','搜索'],hi:['साइट में खोजें…','खोजें']}[UI]||['Search…','Search'];
+  var S='.translate.goog', h=location.hostname, inTr=h.slice(-S.length)===S, P=new URLSearchParams(location.search);
+  function origHost(x){return x.slice(0,-S.length).replace(/--/g,'\u0000').replace(/-/g,'.').replace(/\u0000/g,'-');}
+  function encHost(x){return x.replace(/-/g,'--').replace(/\./g,'-');}
+  /* the search runs on the site itself (Google's translation window can't load the search index) */
+  if(inTr){ location.replace('https://'+origHost(h)+'/arama/?q='+encodeURIComponent(P.get('q')||'')+'&lang='+encodeURIComponent(P.get('_x_tr_tl')||'en')); return; }
+  var LANG=(P.get('lang')||'tr'), UI=LANG.split('-')[0];
+  var T={
+    tr:{ph:'Sitede ara…',go:'Ara',h:'Arama Sonuçları',ing:'aranıyor…',res:'sonuç',none:'için sonuç bulunamadı.',for_:'için',more:'Daha fazla sonuç',err:'Arama şu anda yüklenemedi. Lütfen sayfayı yenileyin.',home:'Ana Sayfa'},
+    en:{ph:'Search the site…',go:'Search',h:'Search Results',ing:'searching…',res:'results',none:'no results found.',for_:'for',more:'More results',err:'Search could not load. Please refresh the page.',home:'Home'},
+    de:{ph:'Website durchsuchen…',go:'Suchen',h:'Suchergebnisse',ing:'wird gesucht…',res:'Ergebnisse',none:'keine Ergebnisse.',for_:'für',more:'Weitere Ergebnisse',err:'Die Suche konnte nicht geladen werden.',home:'Startseite'},
+    es:{ph:'Buscar en el sitio…',go:'Buscar',h:'Resultados de búsqueda',ing:'buscando…',res:'resultados',none:'sin resultados.',for_:'para',more:'Más resultados',err:'No se pudo cargar la búsqueda.',home:'Inicio'},
+    ru:{ph:'Поиск по сайту…',go:'Найти',h:'Результаты поиска',ing:'поиск…',res:'результатов',none:'ничего не найдено.',for_:'для',more:'Ещё результаты',err:'Не удалось загрузить поиск.',home:'Главная'},
+    zh:{ph:'站内搜索…',go:'搜索',h:'搜索结果',ing:'正在搜索…',res:'条结果',none:'没有找到结果。',for_:'',more:'更多结果',err:'搜索无法加载。',home:'首页'},
+    hi:{ph:'साइट में खोजें…',go:'खोजें',h:'खोज परिणाम',ing:'खोज रहे हैं…',res:'परिणाम',none:'कोई परिणाम नहीं मिला।',for_:'के लिए',more:'और परिणाम',err:'खोज लोड नहीं हो सकी।',home:'होम'}
+  }[UI]||null; if(!T){ UI='en'; LANG='en'; }
+  T=T||{ph:'Search the site…',go:'Search',h:'Search Results',ing:'searching…',res:'results',none:'no results found.',for_:'for',more:'More results',err:'Search could not load.',home:'Home'};
   var input=document.getElementById('kfd-input'), st=document.getElementById('kfd-status'), box=document.getElementById('kfd-results'),
       fl=document.getElementById('kfd-filters'), more=document.getElementById('kfd-more');
-  input.placeholder=L[0]; document.querySelector('#kfd-form .kfd-go').textContent=L[1];
+  input.placeholder=T.ph; document.querySelector('#kfd-form .kfd-go').textContent=T.go; more.textContent=T.more;
+  if(UI!=='tr'){
+    document.documentElement.lang=UI;
+    var h1=document.querySelector('h1.page-title'); if(h1) h1.textContent=T.h;
+    document.title=T.h+' | Klinik Farmakoloji Dosyası';
+    var bc=document.querySelectorAll('.breadcrumb__items li'); if(bc.length){ var a=bc[0].querySelector('a'); if(a) a.textContent=T.home; var sp=bc[bc.length-1].querySelector('span'); if(sp) sp.textContent=T.h; }
+  }
   var q=(P.get('q')||'').trim(); input.value=q;
   document.getElementById('kfd-form').onsubmit=function(ev){ev.preventDefault(); var u=new URL(location.href); u.searchParams.set('q',input.value.trim()); location.href=u.toString();};
   if(!q){ input.focus(); return; }
-  st.textContent='"'+q+'" aranıyor…';
-  function toTurkish(s){ /* search words in another language are also looked up in Turkish */
-    return fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=tr&dt=t&q='+encodeURIComponent(s))
-      .then(function(r){return r.json();}).then(function(j){ return (j[0]||[]).map(function(x){return x[0];}).join('').trim(); })
-      .catch(function(){ return ''; });
+  function quote(x){return (UI==='zh'?'“'+x+'”':'"'+x+'"');}
+  st.textContent=quote(q)+' '+T.ing;
+  function gt(s,tl){ /* Google Translate (free web endpoint); on failure the text stays as it is */
+    return fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl='+tl+'&dt=t&q='+encodeURIComponent(s))
+      .then(function(r){return r.json();}).then(function(j){ return (j[0]||[]).map(function(x){return x[0];}).join('').trim()||s; })
+      .catch(function(){ return s; });
   }
-  function link(u){ /* stay inside the translation (its pages carry a base link to the original site) */
-    if(!inTr) return u; var x=new URL(location.origin+u); ['_x_tr_sl','_x_tr_tl','_x_tr_hl'].forEach(function(k){ if(P.get(k)) x.searchParams.set(k,P.get(k)); }); return x.toString(); }
   function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
-  import(location.origin+'/pagefind/pagefind.js').then(function(pf){
-    return pf.options({basePath:location.origin+'/pagefind/', baseUrl:'/', excerptLength:30}).then(function(){
-    return toTurkish(q).then(function(tq){
+  function link(u){ if(LANG==='tr') return u;
+    return 'https://'+encHost(h)+S+u+'?_x_tr_sl=auto&_x_tr_tl='+LANG+'&_x_tr_hl='+LANG; }
+  import('/pagefind/pagefind.js').then(function(pf){
+    return pf.options({excerptLength:30}).then(function(){
+    return gt(q,'tr').then(function(tq){
       var terms=[q]; if(tq && tq.toLowerCase()!==q.toLowerCase()) terms.push(tq);
       return Promise.all(terms.map(function(x){return pf.search(x);})).then(function(rs){
         var seen={}, all=[];
-        rs.forEach(function(r){ (r&&r.results||[]).forEach(function(x){ if(!seen[x.id]){seen[x.id]=1; all.push(x);} else { all.forEach(function(y){ if(y.id===x.id) y.score=Math.max(y.score,x.score); }); } }); });
+        rs.forEach(function(r){ (r&&r.results||[]).forEach(function(x){ if(!seen[x.id]){seen[x.id]=x; all.push(x);} else { seen[x.id].score=Math.max(seen[x.id].score,x.score); } }); });
         all.sort(function(a,b){return b.score-a.score;});
         return {all:all, terms:terms};
       });
     });
     });
   }).then(function(R){
-    var all=R.all, shown=0, filter='', data=[];
-    if(!all.length){ st.textContent='"'+R.terms.join('" / "')+'" için sonuç bulunamadı.'; return; }
+    var all=R.all, shown=0, filter='', data=[], secName={};
+    var label=R.terms.map(quote).join(' / ');
+    if(!all.length){ st.textContent=label+' '+T.none; return; }
+    function secLabel(s){ return secName[s]||s; }
     function render(){
       var list=data.filter(function(d){return !filter || (d.filters && d.filters['Bölüm'] && d.filters['Bölüm'].indexOf(filter)>=0);});
-      st.textContent='"'+R.terms.join('" / "')+'" için '+(filter?list.length+' / ':'')+all.length+' sonuç';
+      st.textContent=(UI==='tr'||UI==='hi'?label+' '+T.for_+' ':(T.for_?'':''))+(filter?list.length+' / ':'')+all.length+' '+T.res+(UI!=='tr'&&UI!=='hi'?(T.for_?' '+T.for_+' ':' ')+label:'');
       box.innerHTML=list.map(function(d){
         var img=d.meta&&d.meta.image?'<img src="'+d.meta.image+'" alt="" loading="lazy">':'';
-        var sec=d.filters&&d.filters['Bölüm']?'<div class="sec">'+esc(d.filters['Bölüm'].join(', '))+'</div>':'';
-        return '<div class="kfd-res">'+img+'<div><a class="t" href="'+link(d.url)+'">'+esc(d.meta&&d.meta.title||d.url)+'</a>'+sec+'<p>'+d.excerpt+'</p></div></div>';
+        var sec=d.filters&&d.filters['Bölüm']?'<div class="sec">'+esc(d.filters['Bölüm'].map(secLabel).join(', '))+'</div>':'';
+        return '<div class="kfd-res">'+img+'<div><a class="t" href="'+link(d.url)+'">'+esc(d.tTitle||d.meta&&d.meta.title||d.url)+'</a>'+sec+'<p>'+(d.tExcerpt?esc(d.tExcerpt):d.excerpt)+'</p></div></div>';
       }).join('');
       more.style.display=shown<all.length?'inline-block':'none';
+    }
+    function filters(){
+      var secs={}; data.forEach(function(d){ (d.filters&&d.filters['Bölüm']||[]).forEach(function(s){secs[s]=(secs[s]||0)+1;}); });
+      var keys=Object.keys(secs);
+      fl.innerHTML=keys.length>1?keys.map(function(s){return '<button type="button" class="'+(s===filter?'on':'')+'" data-s="'+esc(s)+'">'+esc(secLabel(s))+' ('+secs[s]+')</button>';}).join(''):'';
+      Array.prototype.forEach.call(fl.querySelectorAll('button'),function(b){ b.onclick=function(){ filter=(filter===b.getAttribute('data-s'))?'':b.getAttribute('data-s'); filters(); render(); }; });
+      if(UI!=='tr') keys.forEach(function(s){ if(!secName[s]){ secName[s]=s; gt(s,LANG).then(function(x){ secName[s]=x; filters(); render(); }); } });
     }
     function load(n){
       var part=all.slice(shown,shown+n); shown+=part.length;
       return Promise.all(part.map(function(x){return x.data();})).then(function(ds){
-        ds.forEach(function(d){ d.url=d.url.replace(/index\\.html$/,''); data.push(d); });
-        var secs={}; data.forEach(function(d){ (d.filters&&d.filters['Bölüm']||[]).forEach(function(s){secs[s]=(secs[s]||0)+1;}); });
-        fl.innerHTML=Object.keys(secs).length>1?Object.keys(secs).map(function(s){return '<button type="button" class="'+(s===filter?'on':'')+'" data-s="'+esc(s)+'">'+esc(s)+' ('+secs[s]+')</button>';}).join(''):'';
-        Array.prototype.forEach.call(fl.querySelectorAll('button'),function(b){ b.onclick=function(){ filter=(filter===b.getAttribute('data-s'))?'':b.getAttribute('data-s'); load(0); }; });
-        render();
+        ds.forEach(function(d){ d.url=d.url.replace(/index\.html$/,''); data.push(d); });
+        filters(); render();
+        if(UI!=='tr') ds.forEach(function(d){
+          var ex=d.excerpt.replace(/<[^>]+>/g,'');
+          gt((d.meta&&d.meta.title||'')+'\n'+ex, LANG).then(function(x){ var i=x.indexOf('\n'); d.tTitle=i<0?x:x.slice(0,i); d.tExcerpt=i<0?'':x.slice(i+1); render(); });
+        });
       });
     }
     more.onclick=function(){ load(20); };
     load(20);
-  }).catch(function(e){ st.textContent='Arama şu anda yüklenemedi. Lütfen sayfayı yenileyin.'; if(window.console) console.error(e); });
+  }).catch(function(e){ st.textContent=T.err; if(window.console) console.error(e); });
 })();
 </script>
 </div>'''

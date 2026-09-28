@@ -186,6 +186,13 @@
     var host=inTr?h:encHost(h)+S;
     location.href='https://'+host+location.pathname+'?_x_tr_sl='+SRC+'&_x_tr_tl='+l+'&_x_tr_hl='+l+location.hash;
   }
+  /* the search page translates its own results: the flags just change its language */
+  if(!inTr && location.pathname.indexOf('/arama/')===0){
+    var sp=new URLSearchParams(location.search), sl=sp.get('lang')||'tr', fb=document.querySelectorAll('.kfd-lang button');
+    for(var j=0;j<fb.length;j++){(function(b){ var l=b.getAttribute('data-lang'); b.className=(l===sl)?'on':'';
+      b.onclick=function(){ save(l); if(l==='tr') sp.delete('lang'); else sp.set('lang',l); location.search=sp.toString(); }; })(fb[j]);}
+    return;
+  }
   /* buttons */
   var bs=document.querySelectorAll('.kfd-lang button');
   for(var i=0;i<bs.length;i++){(function(b){
