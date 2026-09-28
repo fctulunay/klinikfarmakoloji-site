@@ -455,7 +455,7 @@
     if(!inTr) return u; var x=new URL(location.origin+u); ['_x_tr_sl','_x_tr_tl','_x_tr_hl'].forEach(function(k){ if(P.get(k)) x.searchParams.set(k,P.get(k)); }); return x.toString(); }
   function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
   import(location.origin+'/pagefind/pagefind.js').then(function(pf){
-    pf.options({excerptLength:30});
+    return pf.options({basePath:location.origin+'/pagefind/', baseUrl:'/', excerptLength:30}).then(function(){
     return toTurkish(q).then(function(tq){
       var terms=[q]; if(tq && tq.toLowerCase()!==q.toLowerCase()) terms.push(tq);
       return Promise.all(terms.map(function(x){return pf.search(x);})).then(function(rs){
@@ -464,6 +464,7 @@
         all.sort(function(a,b){return b.score-a.score;});
         return {all:all, terms:terms};
       });
+    });
     });
   }).then(function(R){
     var all=R.all, shown=0, filter='', data=[];
