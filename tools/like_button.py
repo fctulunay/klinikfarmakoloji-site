@@ -27,10 +27,10 @@ def main():
         parts = rel.split(os.sep)
         if len(parts) != 3 or parts[0] in ('index.php', 'node', 'tools') or parts[1] == 'page': continue
         t = open(fp, encoding='utf-8').read()
-        a = t.find('<article data-history-node-id')
+        a = (lambda _m: _m.start() if _m else -1)(re.search(r'<article[^>]*data-history-node-id', t))
         if a < 0 or 'node--view-mode-full' not in t[a:a + 400]: continue
         t = OLD.sub('', t)
-        a = t.find('<article data-history-node-id')
+        a = (lambda _m: _m.start() if _m else -1)(re.search(r'<article[^>]*data-history-node-id', t))
         b = t.find('property="schema:text"', a)
         if b < 0: continue
         # end of the body field div

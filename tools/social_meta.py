@@ -75,11 +75,11 @@ def main():
         m = re.search(r'<title>(.*?)</title>', t, re.S)
         full_title = html.unescape(m.group(1).strip()) if m else SITE_NAME
         title = re.sub(r'\s*\|\s*Klinik Farmakoloji Dosyası.*$', '', full_title) or SITE_NAME
-        art_s = t.find('<article data-history-node-id')
+        art_s = (lambda _m: _m.start() if _m else -1)(re.search(r'<article[^>]*data-history-node-id', t))
         is_article = art_s >= 0 and 'node--view-mode-full' in t[art_s:art_s + 400]
         img = None; desc = SITE_NAME + ': Türkiye Akılcı İlaç Kullanım Platformu'; published = None
         if is_article:
-            im = re.search(r'field--name-field-one-cikan-gorsel[^>]*>\s*<img src="([^"]+)"', t[art_s:])
+            im = re.search(r'field--name-field-one-cikan-gorsel[^>]*>\s*<img (?:data-pagefind-meta="[^"]*" )?src="([^"]+)"', t[art_s:])
             img = share_image(im.group(1) if im else DEFAULT_IMG)
             b = t.find('property="schema:text"', art_s)
             if b > 0: desc = description(t[b:t.find('</article>', b)], title)

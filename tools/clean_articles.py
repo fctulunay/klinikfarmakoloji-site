@@ -40,7 +40,7 @@ def span_end(t, s):
     raise ValueError('unbalanced')
 
 def body_span(t):
-    a = t.find('<article data-history-node-id')
+    a = (lambda _m: _m.start() if _m else -1)(re.search(r'<article[^>]*data-history-node-id', t))
     if a < 0 or 'node--view-mode-full' not in t[a:a + 400]: return None
     b = t.find('property="schema:text"', a)
     if b < 0: return None

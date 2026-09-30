@@ -170,7 +170,7 @@ def pages():
         yield fp, rel
 
 def mark_article(t):
-    a = t.find('<article data-history-node-id')
+    a = (lambda _m: _m.start() if _m else -1)(re.search(r'<article[^>]*data-history-node-id', t))
     if a < 0 or 'node--view-mode-full' not in t[a:a + 400]: return t
     head = t[a:t.find('>', a) + 1]
     if 'data-pagefind-body' not in head:

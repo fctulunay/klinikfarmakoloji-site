@@ -207,14 +207,15 @@ def main(cfg_path):
 
     # 1. article page, cloned from the newest article in this section
     sidebar_src = read('index.html')
-    first_link = re.search(r'id="block-views-block-yazi-kategorileri-block-1".*?href="(/' + sec + r'/[^"]+)"', sidebar_src, re.S)
-    tpl_path = first_link.group(1).rstrip('/') + '/index.html'
+    sec_links = [l for l in re.findall(r'<div id="yazi-blok-baslik"><a href="(/' + sec + r'/[^"]+)"', sidebar_src)]
+    sec_links = list(dict.fromkeys(l.rstrip('/') for l in sec_links))
+    tpl_path = sec_links[0] + '/index.html'
     if tpl_path == url + '/index.html':    # re-running: newest is this article; use the second
-        tpl_path = re.findall(r'<div id="yazi-blok-baslik"><a href="(/' + sec + r'/[^"]+)"', sidebar_src)[1].rstrip('/') + '/index.html'
+        tpl_path = sec_links[1] + '/index.html'
     tpl = read(tpl_path)
     old_url = tpl_path[:-len('/index.html')]
     old_title = html.unescape(re.search(r'<meta name="title" content="(.*?) \| Klinik', tpl).group(1))
-    s = tpl.find('<article data-history-node-id'); e = span_end(tpl, s)
+    s = re.search(r'<article[^>]*data-history-node-id', tpl).start(); e = span_end(tpl, s)
     art = tpl[s:e]
     art = re.sub(r'data-history-node-id="\d+"', f'data-history-node-id="{nid}"', art, count=1)
     art = art.replace(f'about="/index.php{old_url}"', f'about="/index.php{url}"').replace(f'about="{old_url}"', f'about="{url}"')
@@ -223,8 +224,9 @@ def main(cfg_path):
     art = re.sub(r'<div class="day">.*?</div>', f'<div class="day">{d.day}</div>', art, count=1)
     art = re.sub(r'<div class="year">.*?</div>', f'<div class="year">{d.year}</div>', art, count=1)
     art = re.sub(r'(<span property="schema:name" content=")[^"]*', r'\g<1>' + t_esc, art, count=1)
-    art = re.sub(r'(<div class="field field--name-field-one-cikan-gorsel[^>]*>\s*<img src=")[^"]+(" width=")\d+(" height=")\d+',
+    art = re.sub(r'(<div class="field field--name-field-one-cikan-gorsel[^>]*>\s*<img (?:data-pagefind-meta="[^"]*" )?src=")[^"]+(" width=")\d+(" height=")\d+',
                  lambda m: f'{m.group(1)}{img}{m.group(2)}{iw}{m.group(3)}{ih}', art, count=1)
+    art = art.replace(f'title="{html.escape(old_title, quote=True)}"', f'title="{t_esc}"')
     share = urllib.parse.quote(f'https://klinikfarmakoloji.com{url}', safe='')
     art = re.sub(r'<span class="a2a_kit.*?</span>',
                  f'<span class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://klinikfarmakoloji.com{url}" data-a2a-title="{t_esc}">'
@@ -238,7 +240,7 @@ def main(cfg_path):
     page = re.sub(r'<meta name="description" content="[^"]*" />', f'<meta name="description" content="{html.escape(cfg.get("summary") or title, quote=True)}" />', page, count=1)
     page = re.sub(r'<title>.*?</title>', f'<title>{t_esc} | Klinik Farmakoloji Dosyası</title>', page, count=1, flags=re.S)
     page = re.sub(r'<link rel="canonical" href="[^"]*" />', f'<link rel="canonical" href="{url}" />', page, count=1)
-    page = re.sub(r'(<h1 class="title page-title"><span[^>]*>).*?(</span>)', lambda m: m.group(1) + t_esc + m.group(2), page, count=1, flags=re.S)
+    page = re.sub(r'(<h1 class="title page-title"[^>]*><span[^>]*>).*?(</span>)', lambda m: m.group(1) + t_esc + m.group(2), page, count=1, flags=re.S)
     page = re.sub(r'(<li class="breadcrumb__item">(?:(?!</li>).)*?<span>)' + re.escape(oe) + r'(</span>)',
                   lambda m: m.group(1) + t_esc + m.group(2), page, count=1, flags=re.S)
     write(url + '/index.html', page)
@@ -326,7 +328,16 @@ def main(cfg_path):
             if not vc: continue
             rs = rows_in(t, *vc)
             if rs and url in rs[0]: continue
-            rs = [newrow] + [r for r in rs if url not in r][:4]
+            n_keep = len(rs)
+            row = newrow
+            if 'id="yazi-blok-gorsel"' in (rs[0] if rs else ''):   # box with images (e.g. homepage Haberler)
+                row = newrow.replace('<div id="yazi-blok-yazi">', f'''<div id="yazi-blok">
+<div id="yazi-blok-gorsel">  <a href="{url}" hreflang="tr"><img src="{img750}" width="750" height="400" alt="" title="{t_esc}" typeof="Image" class="image-style-manset-resim-stili-750x400" />
+
+</a>
+</div>
+<div id="yazi-blok-yazi">''', 1).replace('</div></span></div></div>', '</div>\n</div></span></div></div>', 1)
+            rs = [row] + [r for r in rs if url not in r][:max(n_keep - 1, 4)]
             t = t[:vc[0]] + '<div class="view-content">\n          ' + '\n    '.join(rs) + '\n    </div>' + t[vc[1]:]
             open(fp, 'w', encoding='utf-8').write(t); changed += 1
     print(f'  sidebar box updated on {changed} pages')
