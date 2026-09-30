@@ -722,17 +722,18 @@ EACPT Onursal Başkanı</p>
   
       <h2 class="title">İndirilebilir Belgeler</h2>
     
-      <div class="content">
-      <div><div class="view view-indirilebilir-belgeler view-id-indirilebilir_belgeler view-display-id-block_1 js-view-dom-id-c829b4c029e1e0b46a334b65cf3e1b6deb456a99a47ea3ed10877baacff5912c">
-  
-    
-      
-      <div class="view-content"> <div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/indirilebilir-belge/agri-ve-kanser-agrilarinda-tedavi/" hreflang="tr">AĞRI VE KANSER AĞRILARINDA TEDAVİ</a></span></div></div> </div>
-  
-          </div>
-</div>
-
-    </div>
+      <div class="content"><div class="view-content kfd-belge-box"><div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/belgeler">Tüm belgeler</a></span></div></div></div>
+<script>(function(){function kfdBelgeler(cb){var o=location.origin;fetch(o+'/data/belgeler.json?'+Date.now()).then(function(r){return r.json();})
+.then(function(l){l=(Array.isArray(l)?l:[]).filter(function(b){return b&&b.baslik&&b.dosya;});
+l.sort(function(a,b){return String(b.tarih||'').localeCompare(String(a.tarih||''));});cb(l);}).catch(function(){});}
+function kfdEsc(s){var d=document.createElement('div');d.textContent=s==null?'':String(s);return d.innerHTML;}
+function kfdHref(f){f=String(f||'');return /^https?:/.test(f)?f:'https://klinikfarmakoloji.com'+(f.charAt(0)==='/'?'':'/')+f;}
+function kfdType(f){var m=String(f).toLowerCase().match(/\.([a-z0-9]+)(?:$|\?)/);return m?m[1].toUpperCase():'';}
+var box=document.currentScript.previousElementSibling;
+kfdBelgeler(function(l){ if(!l.length) return;
+  box.innerHTML=l.slice(0,5).map(function(b){return '<div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="'+kfdHref(b.dosya)+'" target="_blank" rel="noopener">'+kfdEsc(b.baslik)+'</a></span></div></div>';}).join('')
+   +'<div class="views-row"><div class="views-field views-field-title"><span class="field-content"><a href="/belgeler"><b>Tüm belgeler »</b></a></span></div></div>';
+});})();</script></div>
   </div>
 
   </div>

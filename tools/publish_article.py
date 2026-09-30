@@ -360,6 +360,7 @@ def main(cfg_path):
     import analytics; analytics.main()
     import language_switch; language_switch.main()
     import search; search.main()
+    import documents; documents.main()
     import seo; seo.main()
     print('done')
 
