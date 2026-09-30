@@ -131,6 +131,8 @@ def main(all_=False):
         meta, body = parse(path)
         if not meta or not meta.get('baslik'):
             print(f'{key}: no title, skipped'); continue
+        if str(meta['baslik']).strip().upper().startswith(('DENEME', 'TEST')):
+            print(f'{key}: practice entry (title starts with DENEME), not published'); continue
         prev = state.get(key, {})
         title = re.sub(r'\s+', ' ', str(meta['baslik'])).strip()
         sec = prev.get('section') or str(meta.get('bolum') or '').strip()
