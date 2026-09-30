@@ -1,5 +1,13 @@
 # Pages CMS (https://app.pagescms.org) – Klinik Farmakoloji Dosyası yönetim ekranı
+# Yazılar: content/yazilar/*.md  → GitHub Actions (tools/cms_publish.py) siteyi günceller.
+# Belgeler: data/belgeler.json   → /belgeler sayfası ve yan kutu doğrudan okur.
 media:
+  - name: gorseller
+    label: Yazı görselleri
+    input: sites/default/files/yazi-gorselleri/cms
+    output: /sites/default/files/yazi-gorselleri/cms
+    categories: [image]
+    rename: safe
   - name: belgeler
     label: Belgeler (PDF, Word…)
     input: sites/default/files/belgeler
@@ -7,6 +15,67 @@ media:
     categories: [document, spreadsheet, image, compressed]
     rename: safe
 content:
+  - name: yazilar
+    label: Yazılar (Acı İlaç, Haberler, Editörden…)
+    type: collection
+    path: content/yazilar
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      primary: baslik
+      fields: [baslik, bolum, tarih]
+      sort: [tarih, baslik]
+      default:
+        sort: tarih
+        order: desc
+    fields:
+      - name: baslik
+        label: Başlık
+        type: string
+        required: true
+      - name: bolum
+        label: Bölüm
+        type: select
+        required: true
+        options:
+          values:
+            - { name: aci-ilac, label: "Acı İlaç" }
+            - { name: haber, label: "Haberler" }
+            - { name: editorden, label: "Editörden" }
+            - { name: bilimsel-yazilar, label: "Bilimsel Yazılar" }
+            - { name: konuk-yazar, label: "Konuk Yazar" }
+            - { name: sektoru-taniyalim, label: "Sektörü Tanıyalım" }
+      - name: tarih
+        label: Yayın tarihi
+        type: date
+        required: true
+      - name: gorsel
+        label: Ana görsel (liste ve ana sayfada görünür)
+        type: image
+        required: true
+        options:
+          media: gorseller
+      - name: ozet
+        label: Kısa özet (isteğe bağlı; paylaşımlarda ve Google'da görünür)
+        type: text
+      - name: word_dosyasi
+        label: Word dosyası (isteğe bağlı – metin kutusu boşsa yazı bu dosyadan alınır)
+        type: file
+        options:
+          media: belgeler
+          extensions: [docx]
+      - name: ekler
+        label: Ek belgeler (PDF, Word… yazının sonunda indirilebilir)
+        type: file
+        options:
+          media: belgeler
+          multiple: true
+      - name: body
+        label: Yazı metni
+        type: rich-text
+        options:
+          format: html
+          media: gorseller
   - name: belgeler
     label: İndirilebilir Belgeler
     type: file
@@ -30,5 +99,3 @@ content:
       - name: tarih
         label: Tarih
         type: date
-settings:
-  hide: false
