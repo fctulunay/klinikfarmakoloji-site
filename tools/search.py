@@ -25,7 +25,7 @@ BOX = r'''<form class="kfd-search notranslate" action="/arama/" method="get" rol
 (function(){
   var S='.translate.goog', inTr=location.hostname.slice(-S.length)===S, P=new URLSearchParams(location.search);
   var f=document.currentScript.parentNode, ui=(inTr?(P.get('_x_tr_tl')||'en'):(location.pathname.indexOf('/arama/')===0?(P.get('lang')||'tr'):(document.documentElement.getAttribute('data-kfd-src')||'tr'))).split('-')[0];
-  var L={tr:['Sitede ara…','Ara'],en:['Search the site…','Search'],de:['Website durchsuchen…','Suchen'],es:['Buscar en el sitio…','Buscar'],ru:['Поиск по сайту…','Найти'],zh:['站内搜索…','搜索'],hi:['साइट में खोजें…','खोजें']}[ui];
+  var L={tr:['Sitede ara…','Ara'],en:['Search the site…','Search'],de:['Website durchsuchen…','Suchen'],es:['Buscar en el sitio…','Buscar'],ru:['Поиск по сайту…','Найти'],ja:['サイト内検索…','検索'],zh:['站内搜索…','搜索'],hi:['साइट में खोजें…','खोजें']}[ui];
   if(L){ f.querySelector('input').placeholder=L[0]; f.querySelector('button').textContent=L[1]; }
   f.onsubmit=function(ev){ ev.preventDefault(); var v=f.querySelector('input').value.trim(); if(!v) return;
     var host=inTr?location.hostname.slice(0,-S.length).replace(/--/g,'\u0000').replace(/-/g,'.').replace(/\u0000/g,'-'):location.hostname;
@@ -76,6 +76,7 @@ RESULTS = r'''<div id="kfd-arama" data-pagefind-ignore>
     de:{ph:'Website durchsuchen…',go:'Suchen',h:'Suchergebnisse',ing:'wird gesucht…',res:'Ergebnisse',none:'keine Ergebnisse.',for_:'für',more:'Weitere Ergebnisse',err:'Die Suche konnte nicht geladen werden.',home:'Startseite'},
     es:{ph:'Buscar en el sitio…',go:'Buscar',h:'Resultados de búsqueda',ing:'buscando…',res:'resultados',none:'sin resultados.',for_:'para',more:'Más resultados',err:'No se pudo cargar la búsqueda.',home:'Inicio'},
     ru:{ph:'Поиск по сайту…',go:'Найти',h:'Результаты поиска',ing:'поиск…',res:'результатов',none:'ничего не найдено.',for_:'для',more:'Ещё результаты',err:'Не удалось загрузить поиск.',home:'Главная'},
+    ja:{ph:'サイト内検索…',go:'検索',h:'検索結果',ing:'検索中…',res:'件',none:'結果が見つかりません。',for_:'',more:'さらに表示',err:'検索を読み込めませんでした。',home:'ホーム'},
     zh:{ph:'站内搜索…',go:'搜索',h:'搜索结果',ing:'正在搜索…',res:'条结果',none:'没有找到结果。',for_:'',more:'更多结果',err:'搜索无法加载。',home:'首页'},
     hi:{ph:'साइट में खोजें…',go:'खोजें',h:'खोज परिणाम',ing:'खोज रहे हैं…',res:'परिणाम',none:'कोई परिणाम नहीं मिला।',for_:'के लिए',more:'और परिणाम',err:'खोज लोड नहीं हो सकी।',home:'होम'}
   }[UI]||null; if(!T){ UI='en'; LANG='en'; }
@@ -92,7 +93,7 @@ RESULTS = r'''<div id="kfd-arama" data-pagefind-ignore>
   var q=(P.get('q')||'').trim(); input.value=q;
   document.getElementById('kfd-form').onsubmit=function(ev){ev.preventDefault(); var u=new URL(location.href); u.searchParams.set('q',input.value.trim()); location.href=u.toString();};
   if(!q){ input.focus(); return; }
-  function quote(x){return (UI==='zh'?'“'+x+'”':'"'+x+'"');}
+  function quote(x){return (UI==='zh'?'“'+x+'”':UI==='ja'?'「'+x+'」':'"'+x+'"');}
   st.textContent=quote(q)+' '+T.ing;
   function gt(s,tl){ /* Google Translate (free web endpoint); on failure the text stays as it is */
     return fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl='+tl+'&dt=t&q='+encodeURIComponent(s))
