@@ -1,0 +1,41 @@
+# Yönetim ekranında (Pages CMS) kaydedilen yazıları siteye yayınlar.
+name: Yazıları yayınla
+on:
+  push:
+    branches: [main]
+    paths: ['content/yazilar/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: yayinla
+  cancel-in-progress: false
+jobs:
+  yayinla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Araçlar
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq pandoc
+          pip install -q pillow beautifulsoup4 lxml pyyaml
+      - name: Yayınla
+        run: python3 tools/cms_publish.py
+      - name: Siteye kaydet
+        run: |
+          git config user.name "KFD yayın robotu"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "değişiklik yok"; exit 0; fi
+          git commit -q -m "Yayın: yönetim ekranından gelen yazılar"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1
