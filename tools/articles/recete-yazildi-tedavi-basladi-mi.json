@@ -1,0 +1,11 @@
+{
+  "section": "aci-ilac",
+  "slug": "recete-yazildi-tedavi-basladi-mi",
+  "title": "REÇETE YAZILDI, TEDAVİ BAŞLADI MI?",
+  "date": "2026-10-01",
+  "image": "/sites/default/files/yazi-gorselleri/cms/recete-yazildi-kapak.png",
+  "image_750x400": "/sites/default/files/styles/manset_resim_stili_750x400/public/yazi-gorselleri/cms/recete-yazildi-kapak.png",
+  "body_file": "tools/articles/recete-yazildi-tedavi-basladi-mi.body.html",
+  "summary": "Hastalar ilaçlarını neden kullanmıyor? Tedaviye uyumun klinik, ekonomik ve etik boyutları; Türkiye verileri, 2027'de başlayacak e-KT (karekodlu kullanma talimatı) uygulaması ve hukuki sorumluluk.",
+  "source": "content/yazilar/2026-10-01-recete-yazildi-tedavi-basladi-mi.md"
+}
