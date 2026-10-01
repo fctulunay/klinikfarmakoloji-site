@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1500px;height:800px;background:#7A1F2B;font-family:Georgia,'DejaVu Serif',serif;color:#F7F0E3;position:relative;overflow:hidden;display:flex;align-items:center}
+.l{padding:0 0 0 90px;width:1020px;z-index:2}
+.k{color:#E9C46A;letter-spacing:6px;font-size:26px;margin-bottom:24px}
+h1{font-size:62px;line-height:1.05;margin-bottom:28px}
+p{font-size:32px;font-style:italic;opacity:.92;line-height:1.3}
+.r{position:absolute;right:60px;top:0;bottom:0;width:560px;display:flex;align-items:center;justify-content:center}
+.c{position:absolute;border-radius:50%;opacity:.13;background:#F7F0E3}
+</style></head><body>
+<div class="c" style="width:700px;height:700px;right:-120px;top:-180px"></div>
+<div class="c" style="width:380px;height:380px;right:380px;bottom:-200px"></div>
+<div class="l"><div class="k">BITTER MEDICINE</div><h1>THE PRESCRIPTION IS WRITTEN. HAS TREATMENT BEGUN?</h1><p>Why don't patients take their medicines?<br>Adherence, e-leaflets and legal liability</p></div>
+<div class="r"><svg width="460" height="460" viewBox="0 0 200 200">
+ <rect x="30" y="25" width="110" height="145" rx="10" fill="#F7F0E3"/>
+ <rect x="50" y="15" width="70" height="22" rx="6" fill="#E9C46A"/>
+ <g stroke="#7A1F2B" stroke-width="5" stroke-linecap="round"><line x1="50" y1="65" x2="120" y2="65"/><line x1="50" y1="88" x2="110" y2="88"/><line x1="50" y1="111" x2="100" y2="111"/></g>
+ <text x="48" y="150" font-family="Georgia" font-size="30" font-weight="bold" fill="#7A1F2B">Rx</text>
+ <g transform="rotate(-35 150 145)"><rect x="110" y="128" width="80" height="34" rx="17" fill="#E76F51"/><rect x="150" y="128" width="40" height="34" rx="17" fill="#F7F0E3"/><rect x="150" y="128" width="12" height="34" fill="#F7F0E3"/></g>
+ <circle cx="165" cy="60" r="26" fill="#2A9D8F"/><text x="165" y="72" text-anchor="middle" font-size="36" font-weight="bold" fill="#fff" font-family="Georgia">?</text>
+</svg></div>
+</body></html>

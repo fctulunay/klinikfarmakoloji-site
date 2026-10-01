@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1080px;background:#fbfdff;font-family:'DejaVu Sans Condensed','DejaVu Sans',sans-serif;color:#12264d;position:relative;overflow:hidden}
+h1{text-align:center;font-size:54px;font-weight:bold;padding-top:22px;letter-spacing:.5px}
+.sub{text-align:center;font-size:22px;margin-top:4px;color:#1c3464}
+.side{position:absolute;width:268px;border-radius:14px;padding:16px 18px;background:linear-gradient(180deg,#e9f3fd,#e6f6f3)}
+.side b{font-size:25px;display:block;margin-bottom:4px}.side span{font-size:19px;line-height:1.25;display:block;color:#1c3464}
+.pyr{position:absolute;left:180px;top:128px}
+.pt{fill:#fff;font-weight:bold;text-anchor:middle;font-family:'DejaVu Sans Condensed','DejaVu Sans'}
+.band{position:absolute;left:22px;right:22px;border-radius:12px}
+.tot{top:712px;left:190px;right:190px;background:#eaf2fb;padding:12px 24px;display:flex;align-items:center;gap:20px}.tot b{font-size:34px;display:block}.tot span{font-size:22px}
+.reg{top:798px;background:#dde8fa;display:flex;padding:10px 26px;font-size:19px;align-items:center}.reg div{flex:1;display:flex;align-items:center;gap:16px}.reg b{font-size:24px}
+.flag{width:54px;height:54px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-weight:bold;color:#ffd500;background:#1a3d9a;font-size:15px}
+.tr{top:880px;height:158px;border:2px solid #f0a35a;background:#fff7ee;padding:12px 24px}.tr h2{color:#b01e22;font-size:27px;text-align:center;white-space:nowrap}.tr h2 span{color:#12264d}
+.q{display:flex;gap:18px;margin-top:22px}.q div{flex:1;display:flex;gap:12px;align-items:center;font-size:20px;line-height:1.2}.q i{flex:none;width:46px;height:46px;border-radius:50%;background:#f08a1c;color:#fff;font-style:normal;font-weight:bold;font-size:28px;display:flex;align-items:center;justify-content:center}
+.foot{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-size:19px;color:#1c3464}
+</style></head><body>
+<h1>CLINICAL TRIALS FOR BIOSIMILARS</h1>
+<div class="sub">The efficacy of a new drug is not proven from scratch; residual uncertainty is reduced.</div>
+<div class="side" style="left:22px;top:140px;height:226px"><b>PK/PD</b><span>Similar exposure and biological response</span>
+ <svg width="230" height="100" viewBox="0 0 230 100" style="margin-top:6px"><path d="M22 6v78h200" stroke="#12264d" stroke-width="2" fill="none"/><path d="M24 82C40 10 60 6 80 30s50 46 130 50" stroke="#1f6fd6" stroke-width="3" fill="none"/><path d="M24 82C42 22 62 16 82 38s52 38 128 44" stroke="#1f6fd6" stroke-width="2.5" stroke-dasharray="6 4" fill="none"/><text x="140" y="24" font-size="12" fill="#12264d">— Reference</text><text x="140" y="42" font-size="12" fill="#12264d">- - Biosimilar</text><text x="100" y="98" font-size="12" fill="#12264d">Time</text><text x="12" y="70" font-size="11" fill="#12264d" transform="rotate(-90 12 70)">Conc.</text></svg></div>
+<div class="side" style="left:22px;top:386px;height:244px"><b>EFFICACY TRIAL</b><span>Not always required</span>
+ <svg width="220" height="120" viewBox="0 0 220 120" style="margin-top:14px"><g fill="#2a5aa0"><circle cx="30" cy="46" r="14"/><path d="M8 110a22 22 0 0144 0z"/><circle cx="66" cy="38" r="17" fill="#4a86cc"/><path d="M40 110a26 26 0 0152 0z" fill="#4a86cc"/></g><rect x="120" y="22" width="70" height="92" rx="8" fill="#fff" stroke="#12264d" stroke-width="4"/><g stroke="#12264d" stroke-width="3"><path d="M132 48h34M132 66h34M132 84h22"/></g><circle cx="186" cy="100" r="17" fill="#1fa38a"/><path d="M178 100l6 6 11-12" stroke="#fff" stroke-width="4" fill="none"/></svg></div>
+<div class="side" style="right:22px;top:140px;height:226px"><b>IMMUNOGENICITY</b><span>ADA and neutralizing antibodies</span>
+ <svg width="230" height="96" viewBox="0 0 230 96" style="margin-top:8px"><g stroke-width="7" fill="none" stroke-linecap="round"><path d="M30 86V52M30 52L12 26M30 52l18-26" stroke="#2f7fd6"/><path d="M84 70V50M84 50L72 34M84 50l12-16" stroke="#f0a020"/></g><circle cx="170" cy="50" r="42" fill="#d6ebfb" stroke="#2f7fd6" stroke-width="2"/><g stroke-width="5" fill="none" stroke-linecap="round"><path d="M158 62V46M158 46l-9-12M158 46l9-12" stroke="#f0a020"/><path d="M186 58V44M186 44l-8-11M186 44l8-11" stroke="#12569e"/></g></svg></div>
+<div class="side" style="right:22px;top:386px;height:244px"><b>EXTRAPOLATION</b><span>With scientific justification, can be extended to other indications</span>
+ <svg width="230" height="92" viewBox="0 0 230 92" style="margin-top:6px"><circle cx="40" cy="16" r="13" fill="#1c3f7c"/><path d="M14 92V52a26 22 0 0152 0v40z" fill="#1c3f7c"/><g fill="#f0a020"><circle cx="40" cy="44" r="5"/><circle cx="46" cy="62" r="5"/><circle cx="36" cy="80" r="5"/></g><g fill="#eaf4fd" stroke="#1f6fd6" stroke-width="3"><circle cx="150" cy="18" r="16"/><circle cx="190" cy="48" r="16"/><circle cx="150" cy="76" r="16"/></g><g stroke="#1f6fd6" stroke-dasharray="4 4" stroke-width="2"><path d="M46 44l88-24M52 62h120M42 80h92"/></g></svg></div>
+<svg class="pyr" width="720" height="580" viewBox="0 0 720 580">
+ 
+ <path d="M360 10L500 232H220z" fill="#1f4fb8"/><path d="M212 248h296l98 172H114z" fill="#178a93"/><path d="M106 436h508l92 132H14z" fill="#1c3f7c"/>
+ <circle cx="360" cy="92" r="20" fill="#fff"/><text x="360" y="101" text-anchor="middle" font-size="26" font-weight="bold" fill="#1f4fb8">3</text>
+ <text class="pt" x="360" y="158" font-size="36">CLINICAL</text><text class="pt" x="360" y="192" font-size="16" font-weight="normal">PK/PD • Immunogenicity •</text><text class="pt" x="360" y="214" font-size="16" font-weight="normal">Efficacy when needed</text>
+ <circle cx="360" cy="286" r="20" fill="#fff"/><text x="360" y="295" text-anchor="middle" font-size="26" font-weight="bold" fill="#178a93">2</text>
+ <text class="pt" x="360" y="350" font-size="38">NON-CLINICAL</text><text class="pt" x="360" y="382" font-size="17" font-weight="normal">In vitro function •</text><text class="pt" x="360" y="404" font-size="17" font-weight="normal">Limited animal data when needed</text>
+ <circle cx="360" cy="472" r="20" fill="#fff"/><text x="360" y="481" text-anchor="middle" font-size="26" font-weight="bold" fill="#1c3f7c">1</text>
+ <text class="pt" x="360" y="528" font-size="36">ANALYTICAL AND QUALITY</text><text class="pt" x="360" y="556" font-size="17" font-weight="normal">Structure • Purity • Glycosylation • Biological activity</text>
+</svg>
+<div class="band tot"><svg width="80" height="64" viewBox="0 0 80 64"><path d="M40 4l34 14-34 14L6 18z" fill="#2f6fe0"/><path d="M40 24l34 14-34 14L6 38z" fill="#1fa39a"/><path d="M40 40l34 12-34 10L6 52z" fill="#1c3f7c"/></svg><div style="border-left:3px solid #12264d;padding-left:18px"><b>TOTALITY OF EVIDENCE</b><span>The strongest evidence is at the base.</span></div></div>
+<div class="band reg"><div><span class="flag">★★★</span><span><b>EMA:</b> Biosimilars are interchangeable in principle</span></div><div><span class="flag" style="background:#b22234;color:#fff">US</span><span><b>FDA:</b> A separate "interchangeable" category</span></div></div>
+<div class="band tr"><h2>THE REAL ISSUE IN TÜRKİYE: <span>TRANSPARENCY AND TRACEABILITY</span></h2>
+ <div class="q"><div><i>?</i>Are the assessment rationales open to the public?</div><div><i>?</i>Is brand- and batch-level pharmacovigilance adequate?</div><div><i>?</i>Are the rules for automatic substitution clear?</div></div></div>
+<div class="foot">Prof. Dr. F. Cankat Tulunay</div>
+</body></html>

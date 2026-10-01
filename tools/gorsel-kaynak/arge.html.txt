@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1080px;background:linear-gradient(160deg,#0b2046,#081530 60%,#060e22);font-family:'DejaVu Sans Condensed','DejaVu Sans',sans-serif;color:#fff;position:relative;overflow:hidden}
+h1{text-align:center;font-size:42px;line-height:1.15;font-weight:bold;padding-top:26px;letter-spacing:.5px}h1 span{color:#5fe0e6}
+.sub{text-align:center;font-size:21px;color:#dbe9ff;margin-top:8px}
+.box{position:absolute;border:2px solid #3f8fd0;border-radius:14px;background:#0d2a55cc;padding:18px 22px}
+.box.r{border-color:#e06a6a;background:#2a1528cc}
+.num{position:absolute;left:18px;top:18px;width:58px;height:44px;border-radius:22px;background:#2e7f8c;font-weight:bold;font-size:24px;display:flex;align-items:center;justify-content:center}.r .num{background:#d9534f}
+.ttl{white-space:nowrap;font-size:27px;font-weight:bold;margin-left:78px;line-height:44px;border-left:2px solid #5a7fb0;padding-left:16px}
+.it{display:flex;gap:18px;align-items:center;margin-top:12px}.it svg{width:60px;height:60px;flex:none}
+.it div{font-size:18px;line-height:1.2}.it b{display:block;color:#5fe0e6;font-size:40px;line-height:1}
+.src{font-style:italic;font-size:14px;color:#c8d8ee;margin-top:10px;border-top:1px solid #36578a;padding-top:8px}
+.bigr{color:#ff6b6b;font-size:78px;font-weight:bold;line-height:1}.bigc{color:#5fe0e6;font-size:78px;font-weight:bold;line-height:1}
+.flask{position:absolute;left:476px;top:215px}
+.msg{position:absolute;left:36px;right:36px;top:942px;border:2px solid #e06a6a;border-radius:14px;background:#3a1420;text-align:center;font-family:'DejaVu Serif',serif;font-style:italic;font-weight:bold;font-size:23px;padding:16px;white-space:nowrap}
+.foot{position:absolute;left:44px;right:44px;bottom:16px;display:flex;justify-content:space-between;font-size:16px;color:#c8d8ee}.foot b{color:#fff;font-size:18px}
+</style></head><body>
+<h1>IN THE TURKISH PHARMA SECTOR<br><span>THERE IS R&amp;D, BUT NO DISCOVERY</span></h1>
+<div class="sub">Do spending and project counts prove original drug discovery?</div>
+<div class="box" style="left:36px;top:192px;width:420px;height:330px"><div class="num">01</div><div class="ttl">MILLION DOLLARS</div>
+ <div class="it"><svg viewBox="0 0 24 24" fill="#5fc8ee"><ellipse cx="9" cy="8" rx="7" ry="2.6"/><ellipse cx="9" cy="12" rx="7" ry="2.6"/><ellipse cx="9" cy="16" rx="7" ry="2.6"/><ellipse cx="15" cy="13" rx="7" ry="2.6" opacity=".7"/><ellipse cx="15" cy="17" rx="7" ry="2.6" opacity=".7"/></svg><div>Turkish pharma industry<b>136</b>22 companies, 1 year</div></div>
+ <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="#5fc8ee" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h8"/></svg><div>A single new drug<b>985</b>Independent estimate, median</div></div>
+ <div class="src">Source: Wouters et al., JAMA 2020</div></div>
+<svg class="flask" width="180" height="300" viewBox="0 0 120 200"><path d="M45 10h30v60l38 105a12 12 0 01-11 16H18a12 12 0 01-11-16L45 70z" fill="#1b4f8f" fill-opacity=".45" stroke="#9fd3ff" stroke-width="3"/><path d="M26 120h68l19 55a12 12 0 01-11 16H18a12 12 0 01-11-16z" fill="#2d7fd6" fill-opacity=".8"/><rect x="40" y="4" width="40" height="9" rx="4" fill="#9fd3ff"/><g stroke="#cfe6ff" stroke-width="2"><path d="M70 100h12M70 120h12M70 140h12M70 160h12"/></g></svg>
+<div class="box" style="left:670px;top:192px;width:374px;height:215px"><div class="num">02</div>
+ <div style="display:flex;gap:20px;align-items:center;margin-top:8px;margin-left:70px"><svg width="96" height="96" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#f1d9dc"/><path d="M16 16V1a15 15 0 11-5.5 29z" fill="#8f1e28"/></svg><div class="bigr">56%</div></div>
+ <div style="font-size:21px;line-height:1.3;margin-top:10px;margin-left:70px">of projects have a budget<br><b>below 2 million TL</b></div></div>
+<svg style="position:absolute;left:700px;top:416px" width="330" height="110" viewBox="0 0 330 110"><g fill="#4fd0d8" opacity=".85"><rect x="0" y="80" width="42" height="30"/><rect x="58" y="62" width="42" height="48"/><rect x="116" y="44" width="42" height="66"/><rect x="174" y="24" width="42" height="86"/><rect x="232" y="4" width="42" height="106"/></g></svg>
+<div class="box r" style="left:36px;top:542px;width:545px;height:185px"><div class="num">03</div>
+ <div style="margin-left:80px;display:flex;align-items:center;gap:16px"><svg width="64" height="64" viewBox="0 0 24 24" fill="#ff7b7b"><circle cx="12" cy="7" r="5"/><path d="M2 23a10 10 0 0120 0z"/></svg><span class="bigr" style="font-size:52px;white-space:nowrap">1.6 patients</span></div>
+ <div style="font-size:18px;line-height:1.3;margin:8px 0 0 80px">An average project budget of $65,000 covers only 1.6 patients in a clinical trial</div></div>
+<div class="box" style="left:603px;top:542px;width:441px;height:185px"><div class="num">04</div>
+ <div style="margin-left:80px;display:flex;align-items:center;gap:16px"><svg width="70" height="64" viewBox="0 0 28 24" fill="#5fe0e6"><rect x="0" y="14" width="5" height="10"/><rect x="7" y="9" width="5" height="15"/><rect x="14" y="5" width="5" height="19"/><text x="20" y="23" font-size="13" font-weight="bold">$</text></svg><span class="bigc" style="font-size:64px">0%</span></div>
+ <div style="font-size:19px;line-height:1.3;margin:8px 0 0 80px">Growth in dollar terms<br>Nominal growth in TL: 20.8%</div></div>
+<div class="box" style="left:36px;top:748px;width:1008px;height:176px"><div class="num">05</div>
+ <div style="margin-left:80px;display:flex;align-items:center;gap:18px"><svg width="72" height="72" viewBox="0 0 24 24"><rect x="3" y="3" width="15" height="17" rx="2" fill="#9fc6f0"/><path d="M6 8h9M6 12h9M6 16h5" stroke="#1b3f78" stroke-width="2"/><circle cx="18" cy="18" r="5.5" fill="#1b3f78" stroke="#fff"/><text x="18" y="21.5" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">7</text></svg><span class="bigc" style="font-size:56px">7 CLINICAL TRIALS</span></div>
+ <div style="font-size:21px;line-height:1.3;margin:6px 0 0 80px">The sector's entire annual R&amp;D budget equals the median cost of just 7 pivotal trials supporting an FDA approval.</div></div>
+<div class="msg">Original drug R&amp;D cannot be done with 0.5–2 million lira per project.</div>
+<div class="foot"><span><b>klinikfarmakoloji.com</b> · Prof. Dr. F. Cankat Tulunay</span><span>Data: Turkishtime Ar-Ge 500</span></div>
+</body></html>

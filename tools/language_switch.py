@@ -28,6 +28,8 @@ BLOCK = r'''<div class="kfd-lang notranslate" translate="no">
   var cur=inTr?(new URLSearchParams(location.search).get('_x_tr_tl')||'en'):SRC;
   function origHost(){return h.slice(0,-S.length).replace(/--/g,'\u0000').replace(/-/g,'.').replace(/\u0000/g,'-');}
   function encHost(x){return x.replace(/-/g,'--').replace(/\./g,'-');}
+  /* translated pages: load the language versions of pictures (tools/image_lang.py) */
+  if(inTr){try{var ks=document.createElement('script');ks.async=true;ks.src='https://'+origHost()+'/sites/default/files/kfd-img-lang.js?h='+Math.floor(Date.now()/36e5);document.head.appendChild(ks);}catch(e){}}
   /* a flag choice lasts for this visit only; every new visit starts from the visitor's country */
   function save(l){try{sessionStorage.setItem('kfd-lang',l);}catch(e){}}
   function saved(){try{return sessionStorage.getItem('kfd-lang');}catch(e){return null;}}

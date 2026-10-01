@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1080px;background:#F5EEE2;font-family:'DejaVu Sans',sans-serif;color:#2a1a1a;position:relative;overflow:hidden}
+.top{background:linear-gradient(100deg,#5e1a24,#8e3640);color:#fff;height:290px;padding:30px 56px;position:relative}
+.tag{display:inline-block;background:#D9A53A;color:#3a2208;font-weight:bold;letter-spacing:3px;font-size:18px;padding:6px 14px;border-radius:4px}
+h1{font-family:"DejaVu Serif",serif;font-size:62px;line-height:1.02;margin:14px 0 12px;letter-spacing:1px}
+.sub{font-size:20px;line-height:1.3;max-width:640px}
+.doc{position:absolute;right:60px;top:26px;width:210px;height:200px;background:#fff;border-radius:8px;transform:rotate(4deg);padding:22px 20px;box-shadow:0 6px 16px rgba(0,0,0,.3)}
+.doc i{display:block;height:13px;background:#111;margin-bottom:17px;border-radius:2px}.doc i:nth-child(odd){background:#d8d2c4;width:80%}
+.stamp{position:absolute;left:44px;top:74px;border:5px solid #D95F3B;color:#D95F3B;font-weight:bold;font-size:30px;padding:2px 12px;transform:rotate(-14deg);background:#ffffffd0;letter-spacing:2px}
+.pill{position:absolute;right:170px;top:232px;background:#D9A53A;color:#3a2208;font-weight:bold;font-size:20px;padding:8px 18px;border-radius:22px}
+.row{display:flex;gap:22px;margin:18px 56px 0}
+.card{background:#fff;border-radius:16px;padding:20px 22px;box-shadow:0 2px 6px rgba(0,0,0,.1);flex:1}
+.lab{font-weight:bold;letter-spacing:2px;font-size:15.5px;color:#27365a;margin-bottom:14px}
+.line{position:relative;height:28px;margin:6px 8px 12px}.line:before{content:"";position:absolute;left:0;right:0;top:12px;height:5px;background:linear-gradient(90deg,#D9A53A,#3E7C78)}
+.dot{position:absolute;top:0;width:28px;height:28px;border-radius:50%;background:#fff;border:4px solid #D9A53A}.dot:after{content:"";position:absolute;inset:4px;border-radius:50%;background:#D9A53A}
+.dot.r{right:0;border-color:#3E7C78}.dot.r:after{background:#3E7C78}
+.mid{position:absolute;left:50%;top:-8px;transform:translateX(-50%);background:#27365a;color:#fff;font-weight:bold;font-size:20px;padding:5px 16px;border-radius:18px;white-space:nowrap}
+.two{display:flex;justify-content:space-between;font-size:15px;line-height:1.3}.two b{font-size:17px;display:block}
+.big{color:#D95F3B;font-weight:bold;font-size:36px;white-space:nowrap}.big small{color:#2a1a1a;font-size:17px}
+.bar{height:26px;border-radius:6px;background:#3E7C78;margin:10px 0 8px;position:relative;overflow:hidden}.bar:after{content:"";position:absolute;right:0;top:0;bottom:0;width:20%;background:repeating-linear-gradient(45deg,#D95F3B,#D95F3B 7px,#f0b9a6 7px,#f0b9a6 12px)}.bar:before{content:"";position:absolute;right:12%;top:0;bottom:0;width:8%;background:#D95F3B;z-index:1}
+.flow{display:flex;align-items:center;gap:10px}.f{flex:1;border-radius:12px;height:108px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:bold;font-size:17.5px;text-align:center;line-height:1.2;color:#fff;padding:6px}
+.ar{color:#6a1f29;font-size:30px;font-weight:bold}
+.notes{display:flex;gap:14px;margin-top:14px}.n{flex:1;font-size:15px;line-height:1.35;padding:10px 14px;background:#f8ebe6;border-left:6px solid #D95F3B}.n.g{background:#e8f0ef;border-color:#3E7C78}
+.tiles{display:flex;gap:16px;margin:22px 56px 0}.t{flex:1;border-radius:14px;color:#fff;padding:18px 16px;height:185px}.t b{display:block;font-size:22px;margin-top:10px;line-height:1.1;margin:6px 0 8px}.t span{font-size:16px;line-height:1.3;display:block}.t svg{width:26px;height:26px}
+.foot{position:absolute;bottom:0;left:0;right:0;height:56px;background:#2a2020;color:#eee;display:flex;align-items:center;justify-content:space-between;padding:0 56px;font-size:15px}.foot b{font-family:'DejaVu Serif',serif;font-size:19px}
+</style></head><body>
+<div class="top"><span class="tag">USA · DRUG PRICES</span><h1>SECRET DRUG<br>CONTRACTS</h1><div class="sub">The text of the "Most Favored Nation" deals with Pfizer and Lilly came to light through a lawsuit</div>
+<div class="doc"><i></i><i></i><i></i><i></i><i></i><i></i><div class="stamp">SECRET</div></div><div class="pill">~120 pages</div></div>
+<div class="row">
+ <div class="card"><div class="lab">WHEN DID THE "DEAL" BECOME REAL?</div><div class="line"><span class="dot"></span><span class="mid">5 MONTHS</span><span class="dot r"></span></div>
+  <div class="two"><div><b>30 September 2025</b>Announced at a ceremony;<br>in fact only a letter of intent</div><div style="text-align:right"><b>23 February 2026</b>Binding contract<br>signed</div></div></div>
+ <div class="card"><div class="lab" style="color:#D95F3B">THE COST OF THE GLP-1 EXCEPTION</div><div class="big">$1–1.7 billion <small><b>first year</b></small></div><div class="bar"></div><div style="display:flex;justify-content:space-between;font-size:14px"><span>Projected Medicaid savings: $8.6 billion</span><b style="color:#D95F3B">12–20% lost</b></div></div>
+</div>
+<div class="row"><div class="card"><div class="lab" style="color:#6a1f29">MECHANISM: PRICE PRESSURE IS EXPORTED ABROAD</div>
+ <div class="flow"><div class="f" style="background:#D9A53A;color:#3a2208">Prices in other<br>countries ↑</div><span class="ar">→</span><div class="f" style="background:#D95F3B">Reference<br>price ↑</div><span class="ar">→</span><div class="f" style="background:#6a1f29">"MFN" price<br>in the US ↑</div><span class="ar">→</span><div class="f" style="background:#27365a">Extra revenue shared<br>with the US<br>government</div></div>
+ <div class="notes"><div class="n"><b>A reward for cutting supply:</b> if Lilly stops selling a drug in a country, that country's low price drops out of the calculation.</div><div class="n g"><b>Switzerland:</b> no reimbursement application was filed for about one third of new drugs (Jan 2025–Jun 2026).</div></div></div></div>
+<div class="tiles">
+ <div class="t" style="background:#3E7C78"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><b>Tariff shield</b><span>Promise of protection from customs duties</span></div>
+ <div class="t" style="background:#27365a"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><b>FOIA exemption</b><span>All "confidential information" closed to the public</span></div>
+ <div class="t" style="background:#6a1f29"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg><b>20 Jan 2029</b><span>End date of the Pfizer contract</span></div>
+ <div class="t" style="background:#D9A53A;color:#3a2208"><svg viewBox="0 0 24 24" fill="none" stroke="#3a2208" stroke-width="2.5"><path d="M12 20V5M6 11l6-6 6 6"/></svg><b>Eliquis +25%</b><span>List price fell, US revenue rose (Q2 2026)</span></div>
+</div>
+<div class="foot"><span>Source: Washington Post (19.09.2026) · Public Citizen FOIA documents</span><b>klinikfarmakoloji.com</b><span>Prepared with AI support</span></div>
+</body></html>

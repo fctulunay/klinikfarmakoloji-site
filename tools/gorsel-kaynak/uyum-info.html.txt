@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1080px;background:#F7F0E3;font-family:Georgia,'DejaVu Serif',serif;color:#2b1a1a;position:relative;overflow:hidden}
+.top{background:#7A1F2B;color:#F7F0E3;padding:34px 50px 26px;text-align:center}
+.kick{font-size:20px;letter-spacing:4px;color:#E9C46A}
+h1{font-size:44px;line-height:1.1;margin:8px 0 6px}
+.sub{font-size:22px;font-style:italic;opacity:.92}
+.sec{font-size:22px;color:#7A1F2B;font-weight:bold;margin:28px 50px 14px;letter-spacing:1px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 50px}
+.c{background:#fff;border-radius:14px;padding:20px 8px;text-align:center;border-top:6px solid var(--k);box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.c svg{width:46px;height:46px}
+.c div{font-size:17px;font-weight:bold;margin-top:4px;line-height:1.15}
+.tr{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 50px}
+.t{background:#7A1F2B0f;border:2px dashed #7A1F2B;border-radius:14px;padding:12px;text-align:center}
+.t b{display:block;font-size:19px;color:#7A1F2B}.t span{font-size:15px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 50px 0}
+.s{background:#264653;color:#fff;border-radius:14px;padding:12px 14px}
+.s:nth-child(2){background:#2A9D8F}.s:nth-child(3){background:#E76F51}
+.s b{font-size:36px;display:block}.s span{font-size:15px;line-height:1.25}
+.msg{margin:26px 50px 0;background:#E9C46A;border-radius:14px;padding:14px 20px;font-size:21px;text-align:center;font-weight:bold;color:#3a1f12}
+.foot{position:absolute;bottom:0;left:0;right:0;background:#7A1F2B;color:#F7F0E3;display:flex;justify-content:space-between;padding:12px 50px;font-size:17px}
+</style></head><body>
+<div class="top"><div class="kick">CLINICAL PHARMACOLOGY</div><h1>THE PRESCRIPTION IS WRITTEN.<br>HAS TREATMENT BEGUN?</h1><div class="sub">Why don't patients take their medicines?</div></div>
+<div class="sec">THE AMA'S EIGHT REASONS</div>
+<div class="grid">
+<div class="c" style="--k:#E76F51"><svg viewBox="0 0 24 24" fill="none" stroke="#E76F51" stroke-width="2"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.5"/></svg><div>Fear of<br>side effects</div></div>
+<div class="c" style="--k:#2A9D8F"><svg viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 8.5c-.7-1-4.5-1.5-5 .7s5 1.8 5 4.3-4.5 2.3-5.5.8M12 6v12"/></svg><div>Cost</div></div>
+<div class="c" style="--k:#264653"><svg viewBox="0 0 24 24" fill="none" stroke="#264653" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 115 .5c0 1.5-2.5 2-2.5 3.5M12 17v.5"/></svg><div>Misunder-<br>standing</div></div>
+<div class="c" style="--k:#8E44AD"><svg viewBox="0 0 24 24" fill="none" stroke="#8E44AD" stroke-width="2"><rect x="3" y="9" width="8" height="5" rx="2.5"/><rect x="13" y="5" width="8" height="5" rx="2.5"/><rect x="11" y="15" width="8" height="5" rx="2.5"/></svg><div>Too many<br>medications</div></div>
+<div class="c" style="--k:#E9C46A"><svg viewBox="0 0 24 24" fill="none" stroke="#C99A1E" stroke-width="2"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg><div>Lack of<br>symptoms</div></div>
+<div class="c" style="--k:#7A1F2B"><svg viewBox="0 0 24 24" fill="none" stroke="#7A1F2B" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 9l6 6M15 9l-6 6"/></svg><div>Mistrust</div></div>
+<div class="c" style="--k:#457B9D"><svg viewBox="0 0 24 24" fill="none" stroke="#457B9D" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg><div>Worry about<br>dependence</div></div>
+<div class="c" style="--k:#6C757D"><svg viewBox="0 0 24 24" fill="none" stroke="#6C757D" stroke-width="2"><path d="M7 16a4 4 0 010-8 5 5 0 019.6-1A3.5 3.5 0 0117 16z"/><path d="M9 19l-1 2M13 19l-1 2M17 19l-1 2"/></svg><div>Depression</div></div>
+</div>
+<div class="sec">THREE MORE REASONS IN TÜRKİYE</div>
+<div class="tr">
+<div class="t"><b>Drug shortages</b><span>The patient wants it, but the pharmacy has none</span></div>
+<div class="t"><b>Name and box confusion</b><span>Same active substance, a different box each month</span></div>
+<div class="t"><b>Medical reports, co-pays</b><span>Administrative gaps in access</span></div>
+</div>
+<div class="stats">
+<div class="s"><b>~50%</b><span>Average long-term adherence in chronic disease (WHO, 2003)</span></div>
+<div class="s"><b>90%</b><span>Share of statin symptoms also seen on placebo (SAMSON)</span></div>
+<div class="s"><b>16.8-86.8%</b><span>Antihypertensive adherence in Türkiye: depends on how it is measured</span></div>
+</div>
+<div class="msg">Non-adherence is not the patient's fault; it is the joint result of<br>the drug, prescriber, pharmacy, reimbursement and supply chain.</div>
+<div class="foot"><span>klinikfarmakoloji.com</span><span>Prof. Dr. F. Cankat Tulunay</span><span>Prepared with AI support</span></div>
+</body></html>
