@@ -32,7 +32,8 @@ GROW=r'''()=>{const p=document.querySelector('.pts'); if(!p) return; const need=
    if(need()>p.clientHeight-6||p.scrollWidth>p.clientWidth+2){ els.forEach((e,j)=>e.style.fontSize=sizes[j]+'px'); break; } } }'''
 def page(d, lang, theme):
     c,a,bg,dd=THEMES[theme]; css=CSS.replace('VAR_BG',bg).replace('VAR_C',c).replace('VAR_A',a).replace('VAR_D',dd)
-    e=lambda s: html.escape(s,quote=False)
+    fx=(lambda s: s.replace('İ','I').replace('ı','i')) if lang in ('zh','ja') else (lambda s: s)  # CJKFIX: CJK fonts break dotted capital I
+    e=lambda s: html.escape(fx(s),quote=False)
     poster=not d.get('stats') and not d.get('pts')
     h=[f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body class="{"poster" if poster else ""}">','<div class="hd">']
     if d.get('k'): h.append(f'<div class="k">{e(d["k"])}</div>')

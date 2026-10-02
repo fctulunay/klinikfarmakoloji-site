@@ -1,0 +1,902 @@
+[
+ {
+  "i": 0,
+  "date": "2026-03-17",
+  "article": "aci-ilac/migraine-vaccines/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-03/screenshot-2026-03-16-at-22.36.48.png",
+  "title": "Migraine “Vaccines”",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 1,
+  "date": "2026-03-16",
+  "article": "aci-ilac/migren-asisi-kandirmacasi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-03/screenshot-2026-03-16-at-12.30.46.png",
+  "title": "MİGREN AŞISI KANDIRMACASI",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2026-03/screenshot-2026-03-16-at-22.36.48.png"
+ },
+ {
+  "i": 2,
+  "date": "2026-03-14",
+  "article": "aci-ilac/turkyede-doktor-olmak/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-03/1c48ca96-ee88-45e9-a158-7eb9a9988b7b.png",
+  "title": "TÜRKYEDE DOKTOR OLMAK?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 3,
+  "date": "2026-03-11",
+  "article": "haber/ozempic-wegovy-nereye-gidiyor/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-03/52e1dea1-0bd6-41b6-8f99-720cc19bc641.png",
+  "title": "Ozempic / Wegovy Nereye Gidiyor?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 4,
+  "date": "2026-03-07",
+  "article": "aci-ilac/gebelerde-antidepressan-kullanimi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-03/screenshot-2026-03-07-at-16.44.47.png",
+  "title": "GEBELERDE ANTİDEPRESSAN KULLANIMI",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 5,
+  "date": "2026-02-27",
+  "article": "aci-ilac/etkisiz-etkisi-supheli-ilaclar-nasil-kandiriliyoruz/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-02/screenshot-2026-02-27-at-14.11.16.png",
+  "title": "ETKİSİZ-ETKİSİ ŞÜPHELİ İLAÇLAR: NASIL KANDIRILIYORUZ??",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 6,
+  "date": "2026-02-23",
+  "article": "aci-ilac/umut-tacirlerinin-faydasiz-ilaci/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-02/screenshot-2026-02-23-at-11.12.10.png",
+  "title": "UMUT TACİRLERİNİN FAYDASIZ İLACI!",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 7,
+  "date": "2026-02-16",
+  "article": "aci-ilac/aspirin-kanser-iliskisi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-02/screenshot-2026-02-16-at-08.29.29.png",
+  "title": "ASPİRİN-KANSER İLİŞKİSİ",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 8,
+  "date": "2026-02-14",
+  "article": "haber/hyaluronic-acid-osteoartritte-etkili-mi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-02/screenshot-2026-02-13-at-12.41.40.png",
+  "title": "Hyaluronic acid: osteoartritte etkili mi?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 9,
+  "date": "2026-01-22",
+  "article": "bilimsel-yazilar/headache-diagnostic-form/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-22-at-12.39.35.png",
+  "title": "HEADACHE DIAGNOSTIC FORM",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 10,
+  "date": "2026-01-22",
+  "article": "aci-ilac/diagnosis-and-treatment-migraine-attacks/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-22-at-16.00.07.png",
+  "title": "DIAGNOSIS AND TREATMENT OF MIGRAINE ATTACKS",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 11,
+  "date": "2026-01-22",
+  "article": "aci-ilac/akilci-ilac-kullanimi-ve-turkiye-0/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-16-at-13.10.40.png",
+  "title": "AKILCI İLAÇ KULLANIMI VE TÜRKİYE",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 12,
+  "date": "2026-01-20",
+  "article": "aci-ilac/migren-nobetlerinde-tani-ve-tedavi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-20-at-13.07.51.png",
+  "title": "MİGREN NÖBETLERİNDE TANI VE TEDAVİ",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-22-at-16.00.07.png"
+ },
+ {
+  "i": 13,
+  "date": "2026-01-19",
+  "article": "bilimsel-yazilar/bas-agrisi-tani-formu/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-19-at-12.28.34.png",
+  "title": "BAŞ AĞRISI TANI FORMU",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-22-at-12.39.35.png"
+ },
+ {
+  "i": 14,
+  "date": "2026-01-17",
+  "article": "haber/ilac-patentlerinde-buyuk-kavga/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-16-at-21.36.00.png",
+  "title": "İLAÇ PATENTLERİNDE BÜYÜK KAVGA",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 15,
+  "date": "2026-01-15",
+  "article": "aci-ilac/akilci-ilac-kullanimi-icin-neler-yaptim/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-15-at-14.59.52.png",
+  "title": "AKILCI İLAÇ KULLANIMI İÇİN NELER YAPTIM",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 16,
+  "date": "2026-01-14",
+  "article": "aci-ilac/orphan-analgesic-metamizol-novalgin/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-14-at-08.42.57.png",
+  "title": "ORPHAN ANALGESIC: METAMIZOL (NOVALGIN)",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 17,
+  "date": "2026-01-14",
+  "article": "aci-ilac/metamizol-novalgin-sahipsiz-ilac/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-12-at-10.38.04.png",
+  "title": "METAMİZOL (NOVALGİN): SAHİPSİZ İLAÇ",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-14-at-08.42.57.png"
+ },
+ {
+  "i": 18,
+  "date": "2026-01-13",
+  "article": "aci-ilac/sacta-kokain-bulunmasi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-13-at-12.37.55.png",
+  "title": "SAÇTA KOKAİN BULUNMASI?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 19,
+  "date": "2026-01-09",
+  "article": "aci-ilac/agri-tedavisinde-yeni-kesif-journavx/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-09-at-11.34.19.png",
+  "title": "AĞRI TEDAVİSİNDE YENİ KEŞİF: JOURNAVX",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 20,
+  "date": "2026-01-08",
+  "article": "sektoru-taniyalim/iranin-sma-ilaci/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-08-at-11.32.14.png",
+  "title": "İRANIN SMA İLACI",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 21,
+  "date": "2026-01-07",
+  "article": "aci-ilac/what-quality-medicines/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-07-at-11.42.21.png",
+  "title": "WHAT IS QUALITY IN MEDICINES?",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 22,
+  "date": "2026-01-07",
+  "article": "aci-ilac/ilacta-kalite/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-04-at-13.37.40.png",
+  "title": "İLAÇTA KALİTE!",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-07-at-11.42.21.png"
+ },
+ {
+  "i": 23,
+  "date": "2026-01-04",
+  "article": "aci-ilac/eski-ilacin-yeni-yan-etkileri/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-04-at-01.25.04.png",
+  "title": "ESKİ İLACIN YENİ YAN ETKİLERİ",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 24,
+  "date": "2026-01-01",
+  "article": "haber/hindistan-ilaclari/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2026-01/screenshot-2026-01-01-at-14.51.29.png",
+  "title": "HİNDİSTAN İLAÇLARI",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 25,
+  "date": "2025-12-28",
+  "article": "aci-ilac/tipta-kokain-kullanimi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-12/screenshot-2025-12-28-at-12.22.29.png",
+  "title": "TIPTA KOKAİN KULLANIMI",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 26,
+  "date": "2025-12-24",
+  "article": "aci-ilac/kokain-testleri-ne-kadar-dogru/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-12/screenshot-2025-12-24-at-11.38.09.png",
+  "title": "KOKAİN TESTLERİ NE KADAR DOĞRU?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 27,
+  "date": "2025-12-12",
+  "article": "aci-ilac/dont-kill-seniors-medications/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-12/screenshot-2025-12-12-at-13.35.08.png",
+  "title": "DON’T KILL SENIORS WITH MEDICATIONS!",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 28,
+  "date": "2025-12-11",
+  "article": "aci-ilac/yaslilari-ilacla-oldurmeyin/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-12/screenshot-2025-12-09-at-13.47.33.png",
+  "title": "YAŞLILARI İLAÇLA ÖLDÜRMEYİN!",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-12/screenshot-2025-12-12-at-13.35.08.png"
+ },
+ {
+  "i": 29,
+  "date": "2025-12-09",
+  "article": "aci-ilac/cancer-fraudsters/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-12/screenshot-2025-12-09-at-13.51.54.png",
+  "title": "CANCER FRAUDSTERS!",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 30,
+  "date": "2025-12-08",
+  "article": "aci-ilac/bitkilerle-mi-bitkisel-ilaclarla-mi-tedavi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-12/screenshot-2025-12-07-at-13.37.27.png",
+  "title": "BİTKİLERLE Mİ, BİTKİSEL İLAÇLARLA MI TEDAVİ?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 31,
+  "date": "2025-12-05",
+  "article": "haber/fda-hastalarin-sagligi-ile-mi-oynuyor/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-12/screenshot-2025-12-05-at-11.38.01.png",
+  "title": "FDA HASTALARIN SAĞLIĞI İLE Mİ OYNUYOR?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 32,
+  "date": "2025-11-30",
+  "article": "aci-ilac/kanser-ile-aldatanlar/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-12/screenshot-2025-11-30-at-16.49.18.png",
+  "title": "KANSER İLE ALDATANLAR!",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-12/screenshot-2025-12-09-at-13.51.54.png"
+ },
+ {
+  "i": 33,
+  "date": "2025-11-29",
+  "article": "haber/covid-asisi-olduruyor-mu/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-11/screenshot-2025-11-29-at-12.23.35.png",
+  "title": "COVİD AŞISI ÖLDÜRÜYOR MU?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 34,
+  "date": "2025-11-27",
+  "article": "aci-ilac/kanser-tedavisinde-sahtekarlik/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-11/screenshot-2025-11-26-at-13.41.16.png",
+  "title": "KANSER TEDAVİSİNDE SAHTEKARLIK!!!",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 35,
+  "date": "2025-11-22",
+  "article": "aci-ilac/zayiflamayi-mi-korlugu-mu-tercih-edersiniz/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-11/screenshot-2025-11-22-at-12.35.41.png",
+  "title": "ZAYIFLAMAYI MI, KÖRLÜĞÜ MÜ TERCİH EDERSİNİZ?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 36,
+  "date": "2025-11-20",
+  "article": "bilimsel-yazilar/parasetamol-zararli-mi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-11/screenshot-2025-11-20-at-14.11.06.png",
+  "title": "PARASETAMOL ZARARLI MI?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 37,
+  "date": "2025-11-17",
+  "article": "aci-ilac/ilac-fiyatlari-ar-ge-ve-degere-dayali-fiyatlandirma/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-11/screenshot-2025-11-17-at-00.14.28.png",
+  "title": "İLAÇ FİYATLARI: AR-GE VE DEĞERE DAYALI FİYATLANDIRMA",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-11/screenshot-2025-11-17-at-00.14.28_0.png"
+ },
+ {
+  "i": 38,
+  "date": "2025-11-17",
+  "article": "aci-ilac/drug-costs-rd-and-value-based-pricing/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-11/screenshot-2025-11-17-at-00.14.28_0.png",
+  "title": "DRUG COSTS: R&amp;D AND VALUE-BASED PRICING",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 39,
+  "date": "2025-10-26",
+  "article": "aci-ilac/ilac-yolsuzlugu/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-26-at-21.50.36.png",
+  "title": "İLAÇ YOLSUZLUĞU",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-26-at-21.50.36_0.png"
+ },
+ {
+  "i": 40,
+  "date": "2025-10-26",
+  "article": "aci-ilac/fda-and-industry-influence/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-26-at-21.50.36_0.png",
+  "title": "FDA AND INDUSTRY INFLUENCE",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 41,
+  "date": "2025-10-16",
+  "article": "haber/zayiflama-ilaclarinin-yan-etkileri/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-16-at-12.23.57.png",
+  "title": "ZAYIFLAMA İLAÇLARININ YAN ETKİLERİ",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 42,
+  "date": "2025-10-13",
+  "article": "aci-ilac/ilacta-fayda-zarar/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-13-at-14.06.59.png",
+  "title": "İLAÇTA FAYDA-ZARAR",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 43,
+  "date": "2025-10-11",
+  "article": "haber/sma-hastalarina-mujde/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-11-at-11.22.42.png",
+  "title": "SMA HASTALARINA MÜJDE!",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 44,
+  "date": "2025-10-06",
+  "article": "haber/kurtaj-hapi-tartismasi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-06-at-13.42.53.png",
+  "title": "KÜRTAJ HAPI TARTIŞMASI",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 45,
+  "date": "2025-10-02",
+  "article": "aci-ilac/pharmacoeconomy101/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-02-at-14.05.20_0.png",
+  "title": "PHARMACOECONOMY:101",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 46,
+  "date": "2025-10-02",
+  "article": "aci-ilac/farmakoekonomi-101/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-02-at-14.05.20.png",
+  "title": "FARMAKOEKONOMİ: 101",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-02-at-14.05.20_0.png"
+ },
+ {
+  "i": 47,
+  "date": "2025-10-01",
+  "article": "aci-ilac/tani-ve-tedavi-rehberleri-ne-ise-yarar/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-01-at-11.18.07.png",
+  "title": "TANI VE TEDAVİ REHBERLERİ NE İŞE YARAR?",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-01-at-11.18.07_0.png"
+ },
+ {
+  "i": 48,
+  "date": "2025-10-01",
+  "article": "aci-ilac/diagnosis-and-treatment-guidelines-rational-use-medicines/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-10/screenshot-2025-10-01-at-11.18.07_0.png",
+  "title": "DIAGNOSIS AND TREATMENT GUIDELINES FOR THE RATIONAL USE OF MEDICINES",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 49,
+  "date": "2025-09-30",
+  "article": "bilimsel-yazilar/yuksek-ilac-fiyatlari-ve-ilaca-erisim-guclugu/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-30-at-13.44.38.png",
+  "title": "YÜKSEK İLAÇ FİYATLARI VE İLACA ERİŞİM GÜÇLÜĞÜ",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 50,
+  "date": "2025-09-25",
+  "article": "haber/antidepressanlarin-yan-etkileri/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-25-at-15.45.13.png",
+  "title": "ANTİDEPRESSANLARIN YAN ETKİLERİ",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 51,
+  "date": "2025-09-25",
+  "article": "bilimsel-yazilar/psikiyatrik-ilaclar-okul-vahsetleri-siddet-olaylari/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-25-at-17.43.20.png",
+  "title": "PSİKİYATRİK İLAÇLAR: OKUL VAHŞETLERİ, ŞİDDET OLAYLARI",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 52,
+  "date": "2025-09-24",
+  "article": "aci-ilac/parasetamol-faydali-mi-zararli-mi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-24-at-13.29.40.png",
+  "title": "PARASETAMOL: FAYDALI MI, ZARARLI MI?",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-24-at-13.29.40_0.png"
+ },
+ {
+  "i": 53,
+  "date": "2025-09-24",
+  "article": "aci-ilac/paracetamol-useful-or-harmful/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-24-at-13.29.40_0.png",
+  "title": "Paracetamol: Useful or Harmful?",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 54,
+  "date": "2025-09-21",
+  "article": "haber/kacinilmasi-gereken-ilaclar/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-21-at-12.38.48.png",
+  "title": "KAÇINILMASI GEREKEN İLAÇLAR",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 55,
+  "date": "2025-09-20",
+  "article": "aci-ilac/kanser-ilaclari-ne-kadar-etkili/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-21-at-00.22.34.png",
+  "title": "KANSER İLAÇLARI NE KADAR ETKİLİ?",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-21-at-00.22.34_0.png"
+ },
+ {
+  "i": 56,
+  "date": "2025-09-20",
+  "article": "aci-ilac/how-effective-are-cancer-drugs/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-21-at-00.22.34_0.png",
+  "title": "How effective are cancer drugs?",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 57,
+  "date": "2025-09-14",
+  "article": "aci-ilac/parasetamol-ve-otizim/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-14-at-15.40.51.png",
+  "title": "PARASETAMOL VE OTİZİM",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-14-at-15.40.51_0.png"
+ },
+ {
+  "i": 58,
+  "date": "2025-09-14",
+  "article": "aci-ilac/paracetamol-use-and-autism/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-14-at-15.40.51_0.png",
+  "title": "Paracetamol Use and Autism",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 59,
+  "date": "2025-09-12",
+  "article": "konuk-yazar/agri-kesiciler-fayda-ve-zararlari/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-12-at-14.59.31.png",
+  "title": "AĞRI KESİCİLER: FAYDA VE ZARARLARI",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 60,
+  "date": "2025-09-12",
+  "article": "haber/covid-asisi-faydali-mi-zararli-mi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-11-at-18.07.29.png",
+  "title": "COVİD AŞISI FAYDALI MI, ZARARLI MI?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 61,
+  "date": "2025-09-03",
+  "article": "bilimsel-yazilar/yaslilarda-ilac-kullanimi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-03-at-12.44.15.png",
+  "title": "YAŞLILARDA İLAÇ KULLANIMI",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 62,
+  "date": "2025-09-02",
+  "article": "aci-ilac/melatonin-hidroksizin-kombinasyonu/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-09/screenshot-2025-09-02-at-13.17.23_0.png",
+  "title": "MELATONİN-HİDROKSİZİN KOMBİNASYONU",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 63,
+  "date": "2025-08-19",
+  "article": "haber/kennedy-jr-asilari-yasaklamak-istiyor/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-08/screenshot-2025-08-19-at-15.06.47.png",
+  "title": "KENNEDY JR, AŞILARI YASAKLAMAK İSTİYOR!",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 64,
+  "date": "2025-08-16",
+  "article": "aci-ilac/what-bioequivalence/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-08/screenshot-2025-08-16-at-16.31.52_0.png",
+  "title": "WHAT IS BIOEQUIVALENCE?",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 65,
+  "date": "2025-08-16",
+  "article": "aci-ilac/biyoesdegerlik-nedir/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-08/screenshot-2025-08-16-at-16.31.52.png",
+  "title": "BİYOEŞDEĞERLİK NEDİR?",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-08/screenshot-2025-08-16-at-16.31.52_0.png"
+ },
+ {
+  "i": 66,
+  "date": "2025-08-10",
+  "article": "haber/abd-covid-asisi-arastirmalarini-durdurdu/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-08/screenshot-2025-08-10-at-17.39.56.png",
+  "title": "ABD COVID AŞISI ARAŞTIRMALARINI DURDURDU",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 67,
+  "date": "2025-08-07",
+  "article": "haber/baskan-trumpin-ilac-firmalarina-mektubu/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-08/screenshot-2025-08-08-at-00.44.32.png",
+  "title": "BAŞKAN TRUMP&#039;IN İLAÇ FİRMALARINA MEKTUBU",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 68,
+  "date": "2025-08-07",
+  "article": "aci-ilac/sgk-her-ilaci-odemeli-mi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-08/screenshot-2025-08-07-at-14.48.49.png",
+  "title": "SGK HER İLACI ÖDEMELİ Mİ?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 69,
+  "date": "2025-08-06",
+  "article": "haber/ozempic-patentini-katbetti/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-08/screenshot-2025-08-06-at-14.56.28.png",
+  "title": "OZEMPİC PATENTİNİ KATBETTİ!",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 70,
+  "date": "2025-07-24",
+  "article": "aci-ilac/yaslanma-onlenebilir-mi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-24-at-14.29.41.png",
+  "title": "YAŞLANMA ÖNLENEBİLİR Mİ?",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-24-at-14.29.41_0.png"
+ },
+ {
+  "i": 71,
+  "date": "2025-07-24",
+  "article": "aci-ilac/can-aging-be-prevented/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-24-at-14.29.41_0.png",
+  "title": "CAN AGING BE PREVENTED?",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 72,
+  "date": "2025-07-22",
+  "article": "aci-ilac/who-will-protect-desperate-and-vulnerable-patients/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-21-at-21.34.53_0.png",
+  "title": "WHO WILL PROTECT DESPERATE AND VULNERABLE PATIENTS?",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 73,
+  "date": "2025-07-22",
+  "article": "aci-ilac/caresiz-ve-savunmasiz-hastalari-somurenlerlerden-kim-koruyacak/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-21-at-21.34.53.png",
+  "title": "ÇARESİZ VE SAVUNMASIZ HASTALARI SÖMÜRENLERLERDEN  KİM KORUYACAK?",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-21-at-21.34.53_0.png"
+ },
+ {
+  "i": 74,
+  "date": "2025-07-19",
+  "article": "aci-ilac/milli-ilac-milli-takim/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-19-at-17.18.12.png",
+  "title": "MİLLİ İLAÇ MİLLİ TAKIM",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 75,
+  "date": "2025-07-16",
+  "article": "aci-ilac/scammers-targeting-cancer-patients/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-15-at-17.53.33_0.png",
+  "title": "SCAMMERS TARGETING CANCER PATIENTS",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 76,
+  "date": "2025-07-15",
+  "article": "aci-ilac/kanser-hastalarini-kandiranlar/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-15-at-17.53.33.png",
+  "title": "KANSER HASTALARINI KANDIRANLAR",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-15-at-17.53.33_0.png"
+ },
+ {
+  "i": 77,
+  "date": "2025-07-06",
+  "article": "editorden/gilead-rusvet-verdigi-icin-220-milyon-dolar-ceza-odeyecek/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-06-at-12.10.09.png",
+  "title": "GILEAD RÜŞVET VERDİĞİ İÇİN 220 MİLYON DOLAR CEZA ÖDEYECEK",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 78,
+  "date": "2025-07-03",
+  "article": "aci-ilac/50-sene-once-yazdigim-makalenein-50-sene-sonra-ai-tarafindan-analizi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-03-at-15.55.28.png",
+  "title": "50 SENE ÖNCE YAZDIĞIM MAKALENEİN 50 SENE SONRA AI TARAFINDAN ANALİZİ",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 79,
+  "date": "2025-07-01",
+  "article": "bilimsel-yazilar/c-vitamini-soguk-alginliginda-etkili-mi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-07/screenshot-2025-07-01-at-13.19.31.png",
+  "title": "C VİTAMİNİ SOĞUK ALGINLIĞINDA ETKİLİ Mİ?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 80,
+  "date": "2025-06-29",
+  "article": "aci-ilac/ne-degisti-0/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-06/screenshot-2025-06-29-at-12.53.12.png",
+  "title": "NE DEĞİŞTİ??????",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 81,
+  "date": "2025-06-28",
+  "article": "bilimsel-yazilar/statinler-turleri-kullanimlari-yan-etkileri-ve-alternatifleri/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-06/screenshot-2025-06-28-at-15.21.09.png",
+  "title": "Statinler: Türleri, Kullanımları, Yan Etkileri ve Alternatifleri",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 82,
+  "date": "2025-06-17",
+  "article": "haber/abd-de-ilac-reklamlari-yasaklanacak-mi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-06/screenshot-2025-06-17-at-08.19.58.png",
+  "title": "ABD DE İLAÇ REKLAMLARI YASAKLANACAK MI?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 83,
+  "date": "2025-06-10",
+  "article": "bilimsel-yazilar/farmakogenetik-kisiye-ozel-ilac-tedavisi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-06/screenshot-2025-06-10-at-11.08.39.png",
+  "title": "FARMAKOGENETİK: KİŞİYE ÖZEL İLAÇ TEDAVİSİ",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 84,
+  "date": "2025-06-03",
+  "article": "haber/zayiflama-ilaclari-yan-etki-ve-maliyeti/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-06/screenshot-2025-06-03-at-10.54.38.png",
+  "title": "ZAYIFLAMA İLAÇLARI YAN ETKİ VE MALİYETİ",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 85,
+  "date": "2025-05-19",
+  "article": "aci-ilac/kac-cesit-tip-var-sarlatan-tibbi-nedir/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-05/screenshot-2025-05-19-at-19.15.52.png",
+  "title": "KAÇ ÇEŞİT TIP VAR? ŞARLATAN TIBBI NEDİR?",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-05/screenshot-2025-05-19-at-19.15.52_0.png"
+ },
+ {
+  "i": 86,
+  "date": "2025-05-19",
+  "article": "aci-ilac/how-many-types-medicine-exist-what-quack-medicine/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-05/screenshot-2025-05-19-at-19.15.52_0.png",
+  "title": "HOW MANY TYPES OF MEDICINE EXIST? WHAT IS QUACK MEDICINE?",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 87,
+  "date": "2025-05-15",
+  "article": "bilimsel-yazilar/amerikada-ilac-fiyatlari-neden-yuksek/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-05/screenshot-2025-05-15-at-15.43.30.png",
+  "title": "AMERİKADA İLAÇ FİYATLARI NEDEN YÜKSEK?",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 88,
+  "date": "2025-05-14",
+  "article": "haber/prostat-ve-kellik-ilaci-filgastrin-ve-intihar-dusuncesi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-05/screenshot-2025-05-14-at-17.04.15.png",
+  "title": "PROSTAT VE KELLİK İLACI &#039;&#039;FİLGASTRİN&#039;&#039; VE İNTİHAR DÜŞÜNCESİ",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 89,
+  "date": "2025-05-14",
+  "article": "haber/baskan-trumpin-ilac-kararnamesi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-05/screenshot-2025-05-14-at-20.51.25.png",
+  "title": "BAŞKAN TRUMP&#039;IN İLAÇ KARARNAMESİ",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 90,
+  "date": "2025-05-14",
+  "article": "aci-ilac/gas-station-heroine-tianeptine/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-05/screenshot-2025-05-14-at-12.29.55_0.png",
+  "title": "GAS STATION HEROINE: TIANEPTINE",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 91,
+  "date": "2025-05-14",
+  "article": "aci-ilac/benzinci-eroini-tianeptin/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-05/screenshot-2025-05-14-at-12.29.55.png",
+  "title": "BENZİNCİ EROİNİ: TİANEPTİN",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-05/screenshot-2025-05-14-at-12.29.55_0.png"
+ },
+ {
+  "i": 92,
+  "date": "2025-04-27",
+  "article": "aci-ilac/zayiflama-ilaclari-ve-maliyetleri/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-04/screenshot-2025-04-27-at-20.12.22.png",
+  "title": "ZAYIFLAMA İLAÇLARI VE MALİYETLERİ",
+  "english_article": false,
+  "english_twin_image": "sites/default/files/yazi-gorselleri/2025-04/screenshot-2025-04-27-at-20.12.22_1.png"
+ },
+ {
+  "i": 93,
+  "date": "2025-04-27",
+  "article": "aci-ilac/weight-loss-medications-and-their-costs/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-04/screenshot-2025-04-27-at-20.12.22_1.png",
+  "title": "WEIGHT LOSS MEDICATIONS AND THEIR COSTS",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 94,
+  "date": "2025-04-24",
+  "article": "aci-ilac/kanser-atesi-tanisinda-naproksen/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-04/screenshot-2025-04-25-at-00.53.53.png",
+  "title": "KANSER ATEŞİ TANISINDA NAPROKSEN",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 95,
+  "date": "2025-04-22",
+  "article": "haber/naltrekson-kanser-tedavisinde-etkili/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-04/screenshot-2025-04-22-at-09.20.20.png",
+  "title": "NALTREKSON KANSER TEDAVİSİNDE ETKİLİ",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 96,
+  "date": "2025-04-16",
+  "article": "haber/abd-ilacta-gumruk-vergileri-ve-turkiyenin-durumu/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-04/screenshot-2025-04-15-at-19.35.03.png",
+  "title": "ABD İLAÇTA GÜMRÜK VERGİLERİ VE TÜRKİYENİN DURUMU",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 97,
+  "date": "2025-04-15",
+  "article": "aci-ilac/arateus-capodociamigraine-diabetes-epilepsia-psychiatry-slayt-set/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-04/screenshot-2025-04-15-at-13.05.52.png",
+  "title": "Arateus of the Capodocia:Migraine, diabetes, epilepsia, psychiatry (slayt set)",
+  "english_article": true,
+  "english_twin_image": null
+ },
+ {
+  "i": 98,
+  "date": "2025-04-13",
+  "article": "aci-ilac/zombi-klinik-arastirmalar-ve-sahte-ilac-arastirmalari/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-04/screenshot-2025-04-12-at-16.30.48.png",
+  "title": "ZOMBİ KLİNİK ARAŞTIRMALAR VE SAHTE İLAÇ ARAŞTIRMALARI",
+  "english_article": false,
+  "english_twin_image": null
+ },
+ {
+  "i": 99,
+  "date": "2025-04-09",
+  "article": "haber/migren-nobetinde-ilacsiz-tedavi/index.html",
+  "image": "sites/default/files/yazi-gorselleri/2025-04/screen-shot-2025-04-09-at-8.53.45-am.png",
+  "title": "MİGREN NÖBETİNDE İLAÇSIZ TEDAVİ",
+  "english_article": false,
+  "english_twin_image": null
+ }
+]
