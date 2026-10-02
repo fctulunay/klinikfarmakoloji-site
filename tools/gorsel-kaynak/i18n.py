@@ -70,4 +70,4 @@ def main():
                 if r['miss'] or left: print(tpl, lang, 'MISSING:', r['miss'], 'OVERFLOW:', left)
             pg.close()
         b.close()
-main()
+if __name__=="__main__": main()
