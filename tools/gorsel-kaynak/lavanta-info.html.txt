@@ -1,0 +1,109 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1080px;font-family:Inter,sans-serif;background:#fff;color:#1d2433;position:relative;overflow:hidden}
+.hd{height:186px;background:linear-gradient(120deg,#1b1147 0%,#3b1f7a 55%,#6b3fb3 100%);position:relative;color:#fff;text-align:center;padding-top:16px}
+.hd .k{font-size:21px;font-weight:700;letter-spacing:1px}
+.hd h1{font-size:47px;font-weight:900;letter-spacing:.5px;margin-top:2px}
+.hd h1 b{color:#ffc93c}
+.rib{display:inline-block;margin-top:7px;background:#17b8a6;color:#fff;font-weight:800;font-size:19px;padding:7px 26px;transform:skew(-12deg);border-radius:4px}
+.rib span{display:inline-block;transform:skew(12deg)}
+.dt{font-size:14px;margin-top:8px;letter-spacing:2px;color:#d9ccff}
+.hd svg.l{position:absolute;left:18px;top:8px}.hd svg.r{position:absolute;right:20px;top:14px}
+.g{position:absolute;top:196px;left:14px;right:14px;bottom:58px;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:296px 270px 1fr;gap:11px}
+.p{border:2.5px solid var(--c);border-radius:14px;padding:11px 13px;background:var(--b);position:relative}
+.t{display:flex;align-items:center;gap:9px;font-weight:900;font-size:19px;color:var(--c);margin-bottom:8px}
+.ic{width:38px;height:38px;border-radius:50%;background:var(--c);display:flex;align-items:center;justify-content:center;flex:none}
+.ic svg{width:23px;height:23px;fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+li{list-style:none;display:flex;gap:8px;align-items:flex-start;font-size:14.5px;line-height:1.25;margin-bottom:7px;font-weight:500}
+.d{width:19px;height:19px;border-radius:50%;background:var(--c);flex:none;display:flex;align-items:center;justify-content:center;margin-top:0}
+.d svg{width:12px;height:12px;stroke:#fff;stroke-width:3.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.d.x{background:#9aa0ab}.d.w{background:#e2572b}
+.big{font-size:60px;font-weight:900;color:var(--c);line-height:1}
+.sm{font-size:13px;color:#4a5263;line-height:1.3}
+.bars{display:flex;align-items:flex-end;justify-content:space-around;height:150px;border-bottom:2px solid #333;margin:0 6px}
+.bar{width:74px;border-radius:7px 7px 0 0;position:relative}
+.bar i{position:absolute;top:-25px;left:0;right:0;text-align:center;font-style:normal;font-weight:900;font-size:19px}
+.bl{display:flex;justify-content:space-around;font-size:12.5px;font-weight:700;text-align:center;margin-top:4px}
+.bl div{width:96px}
+.dots{display:grid;grid-template-columns:repeat(20,1fr);gap:3.5px;margin:4px 0 8px}
+.dots b{height:12px;border-radius:50%}
+.lg{font-size:13.5px;font-weight:600;display:flex;align-items:center;gap:7px;margin-bottom:5px}
+.lg ins{width:13px;height:13px;border-radius:50%;flex:none}
+.row{display:flex;gap:10px}.col{flex:1}
+.h2{font-size:12.5px;font-weight:900;letter-spacing:.5px;margin-bottom:5px}
+.pill{display:flex;align-items:center;gap:10px;background:#fff;border-radius:10px;padding:6px 10px;margin-bottom:6px;border:1.5px solid #e8dcae}
+.pill b{font-size:27px;font-weight:900;color:var(--c);width:58px;text-align:center}
+.pill span{font-size:13px;font-weight:600;line-height:1.2}
+.ft{position:absolute;bottom:0;left:0;right:0;height:50px;background:#1b1147;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+.ft i{font-size:15.5px}.ft b{color:#ffc93c;font-size:16px}.ft small{font-size:10.5px;color:#cbbff0;display:block;text-align:right}
+.r3 li{font-size:16.5px;margin-bottom:12px}.r3 .t{font-size:21px;margin-bottom:13px}.t{font-size:17px}.r3 .t{font-size:19px;margin-bottom:10px}.r3 li{font-size:15.5px;margin-bottom:10px}li{font-size:14px}.ft i{font-size:13.5px;max-width:690px;line-height:1.25}.h2{font-size:12px}.hd h1{font-size:37px;margin:6px 150px 0;line-height:1.1}.hd .k{font-size:18px}.rib{font-size:16.5px;margin-top:8px}.dt{margin-top:6px;font-size:13px}.sm{font-size:12px}.lg{font-size:12.5px;margin-bottom:4px}li{font-size:13.5px;margin-bottom:6px}.dots{margin-bottom:6px}.pill span{font-size:12.5px}</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="ck" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+<symbol id="xx" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="ex" viewBox="0 0 24 24"><path d="M12 5v9M12 18.5v.5"/></symbol>
+</defs></svg>
+<div class="hd">
+<svg class="l" width="120" height="170" viewBox="0 0 120 170"><g stroke="#8fd19e" stroke-width="3" fill="none" stroke-linecap="round"><path d="M40 168C42 120 38 80 30 30"/><path d="M62 168C64 125 70 90 84 44"/><path d="M41 130c-12-8-20-10-30-9M63 135c12-9 22-12 34-10"/></g>
+<g fill="#c9a6ff"><ellipse cx="30" cy="26" rx="7" ry="10"/><ellipse cx="22" cy="42" rx="7" ry="9"/><ellipse cx="39" cy="44" rx="7" ry="9"/><ellipse cx="25" cy="60" rx="7" ry="9"/><ellipse cx="42" cy="63" rx="7" ry="9"/><ellipse cx="28" cy="79" rx="6.5" ry="8.5"/><ellipse cx="44" cy="83" rx="6.5" ry="8.5"/></g>
+<g fill="#e3ccff"><ellipse cx="86" cy="40" rx="6.5" ry="9"/><ellipse cx="75" cy="55" rx="6.5" ry="8.5"/><ellipse cx="91" cy="58" rx="6.5" ry="8.5"/><ellipse cx="72" cy="73" rx="6" ry="8"/><ellipse cx="87" cy="77" rx="6" ry="8"/><ellipse cx="70" cy="92" rx="6" ry="8"/></g></svg>
+<svg class="r" width="150" height="160" viewBox="0 0 150 160"><rect x="38" y="6" width="74" height="26" rx="5" fill="#e9e6f5"/><rect x="28" y="30" width="94" height="122" rx="14" fill="#fff"/><rect x="28" y="62" width="94" height="58" fill="#7b4fc9"/><text x="75" y="86" text-anchor="middle" font-family="Inter" font-weight="900" font-size="15" fill="#fff">LAVENDER</text><text x="75" y="103" text-anchor="middle" font-family="Inter" font-weight="700" font-size="11" fill="#e8dcff">oil 80 mg</text><text x="75" y="138" text-anchor="middle" font-family="Inter" font-size="10" fill="#555">soft capsule</text><ellipse cx="128" cy="144" rx="19" ry="11" fill="#ffc93c" transform="rotate(-20 128 144)"/><ellipse cx="123" cy="141" rx="6" ry="3" fill="#fff3c4" transform="rotate(-20 123 141)"/></svg>
+<div class="k">DOES LAVENDER OIL IMPROVE DEPRESSION?</div>
+<h1>LAVENDER OIL and <b>DEPRESSION</b></h1>
+<div class="rib"><span>STATISTICALLY SIGNIFICANT, CLINICALLY MEANINGLESS</span></div>
+<div class="dt">2 OCTOBER 2026</div>
+</div>
+<div class="g">
+<div class="p" style="--c:#6a3fb5;--b:#f6f1ff"><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4h6v3H9zM9 11h6M9 15h6"/></svg></div>WHAT WAS THE TRIAL?</div><ul>
+<li><div class="d"><svg><use href="#ck"/></svg></div>498 adults; mild or moderate major depression</li>
+<li><div class="d"><svg><use href="#ck"/></svg></div>8 weeks; 53 sites in Germany and Poland</li>
+<li><div class="d"><svg><use href="#ck"/></svg></div>Silexan 80 mg capsule, sertraline 50 mg or placebo</li>
+<li><div class="d"><svg><use href="#ck"/></svg></div>A standardised oral capsule; not aromatherapy</li>
+<li><div class="d"><svg><use href="#ck"/></svg></div>The 2026 paper is not a new trial; the same data in more detail</li></ul></div>
+
+<div class="p" style="--c:#0f9d8c;--b:#eefbf8"><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div>HOW FAR DID THE SCORE FALL?</div>
+<div style="height:30px"></div>
+<div class="bars"><div class="bar" style="height:100px;background:#9aa0ab"><i>10.0</i></div><div class="bar" style="height:121px;background:#7b4fc9"><i>12.1</i></div><div class="bar" style="height:126px;background:#f08a24"><i>12.6</i></div></div>
+<div class="bl"><div>Placebo</div><div>Lavender oil</div><div>Sertraline</div></div>
+<div class="sm" style="text-align:center;margin-top:5px">Fall in MADRS depression score (week 8)</div></div>
+
+<div class="p" style="--c:#1e5bd8;--b:#eef4ff"><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>WHAT LAVENDER ADDS</div>
+<div style="display:flex;align-items:baseline;gap:8px"><div class="big">2.17</div><div style="font-weight:800;font-size:17px;color:#1e5bd8">points</div></div>
+<div class="sm" style="margin:3px 0 8px;font-weight:600">Difference from placebo on a 60-point scale</div>
+<div class="pill" style="border-color:#c9d9f7"><b>5</b><span>points: the smallest change a patient can notice</span></div>
+<div class="pill" style="border-color:#c9d9f7"><b>8</b><span>points: the smallest change a clinician can notice</span></div></div>
+
+<div class="p" style="--c:#e07b12;--b:#fff6ea"><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-4 3-6 6-6s6 2 6 6M15 14.5c3 0 6 1.5 6 5.5"/></svg></div>WHAT HAPPENS IN 100 PATIENTS?</div>
+<div class="dots" id="dots"></div>
+<div class="lg"><ins style="background:#9aa0ab"></ins>42 patients: would have improved on placebo too</div>
+<div class="lg"><ins style="background:#7b4fc9"></ins>12 patients: improved because of lavender oil</div>
+<div class="lg"><ins style="background:#f3cfa0"></ins>46 patients: did not improve enough</div>
+<div class="sm" style="font-weight:700;color:#b85f06;margin-top:5px">9 patients are treated, 1 patient benefits.</div></div>
+
+<div class="p" style="--c:#d13a57;--b:#fff1f4"><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 017-2.5A4 4 0 0119 10c0 5.500-7 10-7 10z"/><path d="M4 13h4l2-3 3 5 2-2h5"/></svg></div>WHICH SYMPTOMS?</div>
+<div class="row"><div class="col"><div class="h2" style="color:#0f9d8c">IMPROVED (small difference)</div><ul>
+<li><div class="d" style="background:#0f9d8c"><svg><use href="#ck"/></svg></div>Fatigue</li><li><div class="d" style="background:#0f9d8c"><svg><use href="#ck"/></svg></div>Sadness</li><li><div class="d" style="background:#0f9d8c"><svg><use href="#ck"/></svg></div>Concentration</li><li><div class="d" style="background:#0f9d8c"><svg><use href="#ck"/></svg></div>Appetite (borderline)</li></ul></div>
+<div class="col"><div class="h2" style="color:#6b7280">NOT IMPROVED</div><ul>
+<li><div class="d x"><svg><use href="#xx"/></svg></div>Sleep</li><li><div class="d x"><svg><use href="#xx"/></svg></div>Inner tension</li><li><div class="d x"><svg><use href="#xx"/></svg></div>Inability to feel</li><li><div class="d x"><svg><use href="#xx"/></svg></div>Pessimistic thoughts</li></ul></div></div>
+<div class="sm" style="font-weight:600">Largest difference: 0.40 points on an item scored 0 to 6.</div></div>
+
+<div class="p" style="--c:#c79a00;--b:#fffbe8"><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12.500h5"/></svg></div>WHAT DO PATIENTS SAY?</div><ul>
+<li><div class="d x"><svg><use href="#xx"/></svg></div>No significant difference on the patients' own depression scales (BDI-II, PHQ-9)</li>
+<li><div class="d" style="background:#0f9d8c"><svg><use href="#ck"/></svg></div>A difference in favour of lavender oil on the daily functioning scale</li>
+<li><div class="d w"><svg><use href="#ex"/></svg></div>Most common side effect: belching (16.5%)</li>
+<li><div class="d w"><svg><use href="#ex"/></svg></div>About 83% of the improvement is also seen with placebo</li></ul></div>
+
+<div class="p r3" style="--c:#d1432b;--b:#fff3ef;grid-column:span 2"><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></div>WHAT YOU SHOULD KNOW</div>
+<div class="row"><ul class="col">
+<li><div class="d w"><svg><use href="#ex"/></svg></div>Equivalence with sertraline was not tested; sertraline's difference is also small (2.59 points)</li>
+<li><div class="d w"><svg><use href="#ex"/></svg></div>One trial; no independent replication</li>
+<li><div class="d w"><svg><use href="#ex"/></svg></div>The trial was funded by the manufacturer</li></ul><ul class="col">
+<li><div class="d w"><svg><use href="#ex"/></svg></div>Patients with severe depression or suicidal thoughts were excluded</li>
+<li><div class="d w"><svg><use href="#ex"/></svg></div>The licensed indication is not depression</li>
+<li><div class="d w"><svg><use href="#ex"/></svg></div>Aromatherapy oils are not for drinking; do not stop prescribed medicine</li></ul></div></div>
+
+<div class="p r3" style="--c:#14365f;--b:#eef3f9"><div class="t"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 21c0-4.500 3-7 7-7s7 2.500 7 7"/></svg></div>CLINICAL PHARMACOLOGY VIEW</div>
+<div style="font-size:15.5px;line-height:1.35;font-weight:500">The difference is real but small: below what either a clinician or a patient can notice.</div><div style="font-size:15.5px;line-height:1.35;font-weight:800;color:#14365f;margin-top:14px;padding-right:62px">The data are not a deception; calling it a "strong antidepressant" is an overstatement.</div><svg style="position:absolute;right:12px;bottom:10px" width="58" height="58" viewBox="0 0 60 60"><circle cx="30" cy="30" r="27" fill="none" stroke="#14365f" stroke-width="5"/><circle cx="30" cy="30" r="16" fill="none" stroke="#d1432b" stroke-width="5"/><circle cx="30" cy="30" r="6" fill="#14365f"/></svg></div>
+</div>
+<div class="ft"><i>"Statistical significance is a calculation; what matters is that the patient feels the difference."</i><div><b>klinikfarmakoloji.com</b><small>Source: Kasper 2025; Möller 2026 · Prepared with AI support</small></div></div>
+<script>let h="";for(let i=0;i<100;i++)h+=`<b style="background:${i<42?"#9aa0ab":i<54?"#7b4fc9":"#f3cfa0"}"></b>`;dots.innerHTML=h</script>
+</body></html>

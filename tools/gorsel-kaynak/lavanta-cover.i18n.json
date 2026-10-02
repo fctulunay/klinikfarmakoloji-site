@@ -1,0 +1,58 @@
+{
+ "en": {
+  "BITTER MEDICINE": "BITTER MEDICINE",
+  "LAVENDER OIL and <b>DEPRESSION</b>": "LAVENDER OIL and <b>DEPRESSION</b>",
+  "Statistically significant, clinically meaningless": "Statistically significant, clinically meaningless",
+  "points": "points",
+  "Difference from placebo on a 60-point depression scale": "Difference from placebo on a 60-point depression scale",
+  "klinikfarmakoloji.com": "klinikfarmakoloji.com"
+ },
+ "de": {
+  "BITTER MEDICINE": "BITTERE MEDIZIN",
+  "LAVENDER OIL and <b>DEPRESSION</b>": "LAVENDELÖL und <b>DEPRESSION</b>",
+  "Statistically significant, clinically meaningless": "Statistisch signifikant, klinisch bedeutungslos",
+  "points": "Punkte",
+  "Difference from placebo on a 60-point depression scale": "Unterschied zu Placebo auf einer Depressionsskala mit 60 Punkten",
+  "klinikfarmakoloji.com": "klinikfarmakoloji.com"
+ },
+ "es": {
+  "BITTER MEDICINE": "MEDICINA AMARGA",
+  "LAVENDER OIL and <b>DEPRESSION</b>": "ACEITE DE LAVANDA y <b>DEPRESIÓN</b>",
+  "Statistically significant, clinically meaningless": "Estadísticamente significativo, clínicamente irrelevante",
+  "points": "puntos",
+  "Difference from placebo on a 60-point depression scale": "Diferencia frente a placebo en una escala de depresión de 60 puntos",
+  "klinikfarmakoloji.com": "klinikfarmakoloji.com"
+ },
+ "ru": {
+  "BITTER MEDICINE": "ГОРЬКОЕ ЛЕКАРСТВО",
+  "LAVENDER OIL and <b>DEPRESSION</b>": "ЛАВАНДОВОЕ МАСЛО и <b>ДЕПРЕССИЯ</b>",
+  "Statistically significant, clinically meaningless": "Статистически значимо, клинически незначимо",
+  "points": "балла",
+  "Difference from placebo on a 60-point depression scale": "Разница с плацебо по 60-балльной шкале депрессии",
+  "klinikfarmakoloji.com": "klinikfarmakoloji.com"
+ },
+ "zh": {
+  "BITTER MEDICINE": "苦药",
+  "LAVENDER OIL and <b>DEPRESSION</b>": "薰衣草精油与<b>抑郁症</b>",
+  "Statistically significant, clinically meaningless": "统计学上显著，临床上无意义",
+  "points": "分",
+  "Difference from placebo on a 60-point depression scale": "在60分抑郁量表上与安慰剂的差值",
+  "klinikfarmakoloji.com": "klinikfarmakoloji.com"
+ },
+ "hi": {
+  "BITTER MEDICINE": "कड़वी दवा",
+  "LAVENDER OIL and <b>DEPRESSION</b>": "लैवेंडर तेल और <b>अवसाद</b>",
+  "Statistically significant, clinically meaningless": "सांख्यिकीय रूप से सार्थक, चिकित्सकीय रूप से निरर्थक",
+  "points": "अंक",
+  "Difference from placebo on a 60-point depression scale": "60 अंकों के अवसाद पैमाने पर प्लेसीबो से अंतर",
+  "klinikfarmakoloji.com": "klinikfarmakoloji.com"
+ },
+ "ja": {
+  "BITTER MEDICINE": "苦い薬",
+  "LAVENDER OIL and <b>DEPRESSION</b>": "ラベンダーオイルと<b>うつ病</b>",
+  "Statistically significant, clinically meaningless": "統計学的には有意、臨床的には無意味",
+  "points": "点",
+  "Difference from placebo on a 60-point depression scale": "60点満点のうつ病尺度でのプラセボとの差",
+  "klinikfarmakoloji.com": "klinikfarmakoloji.com"
+ }
+}
