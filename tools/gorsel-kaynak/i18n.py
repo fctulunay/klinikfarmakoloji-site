@@ -4,7 +4,7 @@
 import sys, json, os
 from playwright.sync_api import sync_playwright
 HERE = os.path.dirname(os.path.abspath(__file__))
-DEVA = '/home/claude/fonts/node_modules/@fontsource/noto-sans-devanagari/files/noto-sans-devanagari-devanagari-%s-normal.woff2'
+DEVA = HERE + '/fonts/noto-sans-devanagari-devanagari-%s-normal.woff2'
 FONT = {'hi': "@font-face{font-family:KFDDeva;font-weight:400;src:url('file://%s')}@font-face{font-family:KFDDeva;font-weight:700;src:url('file://%s')}*{font-family:KFDDeva,'DejaVu Sans',sans-serif !important}" % (DEVA % '400', DEVA % '700'),
         'zh': "*{font-family:'Noto Sans CJK SC','Noto Sans CJK TC','DejaVu Sans',sans-serif !important}",
         'ja': "*{font-family:'Noto Sans CJK JP','Noto Sans CJK TC','DejaVu Sans',sans-serif !important}"}
