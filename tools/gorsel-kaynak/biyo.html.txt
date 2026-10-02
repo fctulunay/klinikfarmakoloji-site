@@ -1,14 +1,14 @@
 <!doctype html><html><head><meta charset="utf-8"><style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{width:1080px;height:1080px;background:#fbfdff;font-family:'DejaVu Sans Condensed','DejaVu Sans',sans-serif;color:#12264d;position:relative;overflow:hidden}
-h1{text-align:center;font-size:54px;font-weight:bold;padding-top:22px;letter-spacing:.5px}
-.sub{text-align:center;font-size:22px;margin-top:4px;color:#1c3464}
+h1{text-align:center;font-size:54px;font-weight:bold;padding-top:22px;letter-spacing:.5px;white-space:nowrap;margin:0 16px}
+.sub{text-align:center;font-size:22px;margin:4px 16px 0;color:#1c3464;height:30px}
 .side{position:absolute;width:268px;border-radius:14px;padding:16px 18px;background:linear-gradient(180deg,#e9f3fd,#e6f6f3)}
 .side b{font-size:25px;display:block;margin-bottom:4px}.side span{font-size:19px;line-height:1.25;display:block;color:#1c3464}
 .pyr{position:absolute;left:180px;top:128px}
 .pt{fill:#fff;font-weight:bold;text-anchor:middle;font-family:'DejaVu Sans Condensed','DejaVu Sans'}
 .band{position:absolute;left:22px;right:22px;border-radius:12px}
-.tot{top:712px;left:190px;right:190px;background:#eaf2fb;padding:12px 24px;display:flex;align-items:center;gap:20px}.tot b{font-size:34px;display:block}.tot span{font-size:22px}
+.tot{height:78px;top:712px;left:190px;right:190px;background:#eaf2fb;padding:12px 24px;display:flex;align-items:center;gap:20px}.tot b{font-size:34px;display:block}.tot span{font-size:22px}
 .reg{top:798px;background:#dde8fa;display:flex;padding:10px 26px;font-size:19px;align-items:center}.reg div{flex:1;display:flex;align-items:center;gap:16px}.reg b{font-size:24px}
 .flag{width:54px;height:54px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-weight:bold;color:#ffd500;background:#1a3d9a;font-size:15px}
 .tr{top:880px;height:158px;border:2px solid #f0a35a;background:#fff7ee;padding:12px 24px}.tr h2{color:#b01e22;font-size:27px;text-align:center;white-space:nowrap}.tr h2 span{color:#12264d}
@@ -29,11 +29,11 @@ h1{text-align:center;font-size:54px;font-weight:bold;padding-top:22px;letter-spa
  
  <path d="M360 10L500 232H220z" fill="#1f4fb8"/><path d="M212 248h296l98 172H114z" fill="#178a93"/><path d="M106 436h508l92 132H14z" fill="#1c3f7c"/>
  <circle cx="360" cy="92" r="20" fill="#fff"/><text x="360" y="101" text-anchor="middle" font-size="26" font-weight="bold" fill="#1f4fb8">3</text>
- <text class="pt" x="360" y="158" font-size="36">CLINICAL</text><text class="pt" x="360" y="192" font-size="16" font-weight="normal">PK/PD • Immunogenicity •</text><text class="pt" x="360" y="214" font-size="16" font-weight="normal">Efficacy when needed</text>
+ <text data-max="150" class="pt" x="360" y="158" font-size="36">CLINICAL</text><text data-max="190" class="pt" x="360" y="192" font-size="16" font-weight="normal">PK/PD • Immunogenicity •</text><text data-max="215" class="pt" x="360" y="214" font-size="16" font-weight="normal">Efficacy when needed</text>
  <circle cx="360" cy="286" r="20" fill="#fff"/><text x="360" y="295" text-anchor="middle" font-size="26" font-weight="bold" fill="#178a93">2</text>
- <text class="pt" x="360" y="350" font-size="38">NON-CLINICAL</text><text class="pt" x="360" y="382" font-size="17" font-weight="normal">In vitro function •</text><text class="pt" x="360" y="404" font-size="17" font-weight="normal">Limited animal data when needed</text>
+ <text data-max="300" class="pt" x="360" y="350" font-size="38">NON-CLINICAL</text><text data-max="330" class="pt" x="360" y="382" font-size="17" font-weight="normal">In vitro function •</text><text data-max="370" class="pt" x="360" y="404" font-size="17" font-weight="normal">Limited animal data when needed</text>
  <circle cx="360" cy="472" r="20" fill="#fff"/><text x="360" y="481" text-anchor="middle" font-size="26" font-weight="bold" fill="#1c3f7c">1</text>
- <text class="pt" x="360" y="528" font-size="36">ANALYTICAL AND QUALITY</text><text class="pt" x="360" y="556" font-size="17" font-weight="normal">Structure • Purity • Glycosylation • Biological activity</text>
+ <text data-max="520" class="pt" x="360" y="528" font-size="36">ANALYTICAL AND QUALITY</text><text data-max="600" class="pt" x="360" y="556" font-size="17" font-weight="normal">Structure • Purity • Glycosylation • Biological activity</text>
 </svg>
 <div class="band tot"><svg width="80" height="64" viewBox="0 0 80 64"><path d="M40 4l34 14-34 14L6 18z" fill="#2f6fe0"/><path d="M40 24l34 14-34 14L6 38z" fill="#1fa39a"/><path d="M40 40l34 12-34 10L6 52z" fill="#1c3f7c"/></svg><div style="border-left:3px solid #12264d;padding-left:18px"><b>TOTALITY OF EVIDENCE</b><span>The strongest evidence is at the base.</span></div></div>
 <div class="band reg"><div><span class="flag">★★★</span><span><b>EMA:</b> Biosimilars are interchangeable in principle</span></div><div><span class="flag" style="background:#b22234;color:#fff">US</span><span><b>FDA:</b> A separate "interchangeable" category</span></div></div>

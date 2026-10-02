@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1080px;background:radial-gradient(ellipse at 50% 35%,#12305c 0%,#0a1a36 55%,#070f22 100%);font-family:'DejaVu Sans Condensed','DejaVu Sans',sans-serif;color:#fff;position:relative;overflow:hidden}
+h1{text-align:center;font-size:84px;font-weight:bold;letter-spacing:2px;line-height:1;padding-top:34px;text-shadow:0 0 18px #4fc3ff80}
+h1 span{display:block;color:#5ec8ff;font-size:56px;margin-top:6px;text-shadow:0 0 22px #2aa8ff}
+.sub{text-align:center;font-size:24px;margin-top:22px;color:#dbe9ff}.sub b{color:#fff}
+.mid{position:relative;height:345px;margin-top:8px}
+.circle{position:absolute;left:50%;top:18px;transform:translateX(-50%);width:300px;height:300px;border-radius:50%;border:3px solid #5ec8ff;box-shadow:0 0 30px #2aa8ff90,inset 0 0 40px #2aa8ff40;background:#0c2247;text-align:center;padding-top:34px}
+.ppl{display:flex;justify-content:center;gap:5px;margin-bottom:10px}.ppl i{width:13px;height:34px;border-radius:7px;background:#c9d6ea;position:relative;margin-top:14px}.ppl i:before{content:"";position:absolute;top:-14px;left:1px;width:11px;height:11px;border-radius:50%;background:inherit}.ppl i.o{background:#ff9a3c}
+.circle .a{font-size:21px;font-weight:bold;letter-spacing:1px}.circle .n{font-size:42px;font-weight:bold;line-height:1.15;white-space:nowrap}.circle .d{font-size:16px;line-height:1.3;margin-top:8px;padding:0 30px;color:#dbe9ff}.circle .d b{color:#fff}
+.pen{position:absolute;width:44px;border-radius:10px 10px 16px 16px;transform:rotate(-8deg)}.pen:before{content:"";position:absolute;top:-22px;left:5px;right:5px;height:26px;border-radius:6px;background:var(--c)}.pen:after{content:"";position:absolute;top:70px;left:12px;width:20px;height:34px;border:3px solid #55606e;border-radius:5px;background:#dfe6ee}
+.cell{position:absolute;border-radius:50%;border:2px solid #7fd4ff;background:radial-gradient(circle at 40% 40%,#9fe0ff 0 16%,#2b7fd0 17% 45%,#143a78 100%);box-shadow:0 0 18px #2aa8ff80}
+.cell.o{border-color:#ffb27a;background:radial-gradient(circle at 40% 40%,#ffd0a0 0 16%,#f0762c 17% 50%,#7a2a10 100%);box-shadow:0 0 18px #ff7a2a90}
+.cap{position:absolute;font-size:14px;color:#cfe0f5}.date{position:absolute;right:30px;top:292px;font-size:15px;letter-spacing:3px;text-align:right;color:#b9cbe6;line-height:1.5}
+.cards{display:flex;gap:16px;margin:10px 28px 0}.card{flex:1;border:2px solid #3f9be0;border-radius:14px;background:#0e2850b0;padding:16px 16px 14px 20px;box-shadow:0 0 12px #2aa8ff40}
+.card b{font-size:32px;display:block;letter-spacing:1px}.card span{font-size:18px;line-height:1.3;display:block;color:#e2ecfb}
+.wide{margin:14px 28px 0;border:2px solid #3f9be0;border-radius:14px;background:#0e2850b0;padding:14px 22px}.wide b{font-size:30px;display:block}.wide span{font-size:19px;color:#e2ecfb}
+.warn{margin:14px 28px 0;border:2px solid #ff5a4f;border-radius:14px;background:linear-gradient(90deg,#4a1016,#2a0c14);box-shadow:0 0 22px #ff3b3070;padding:16px 22px;text-align:center}.warn b{display:block;color:#ff6b5e;font-size:30px;letter-spacing:1px}.warn span{font-size:21px;font-weight:bold}
+.next{margin:14px 120px 0;border:1px solid #3f6fa8;border-radius:10px;background:#0e2850;padding:12px 22px;font-size:20px;color:#dbe9ff;text-align:center}.next b{color:#fff}
+.foot{position:absolute;bottom:14px;left:28px;right:28px;display:flex;justify-content:space-between;font-size:14px;color:#b9cbe6;letter-spacing:1px}.foot i{font-family:'DejaVu Serif',serif;font-size:17px;letter-spacing:0}
+</style></head><body>
+<h1>GLP-1 DRUGS<span>AND SUDDEN VISION LOSS</span></h1>
+<div class="sub"><b>NAION risk:</b> There is a safety signal; causality is not yet proven</div>
+<div class="mid">
+ <div class="pen" style="left:70px;top:60px;height:230px;background:#e9eef4;--c:#2f6fd6"></div>
+ <div class="pen" style="left:150px;top:90px;height:205px;background:#1f7a72;--c:#18635c;transform:rotate(-3deg)"></div>
+ <div class="pen" style="left:222px;top:120px;height:180px;background:#b8a3d6;--c:#6d58a8;transform:rotate(2deg)"></div>
+ <div class="circle"><div class="ppl"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="o"></i></div><div class="a">ABOUT</div><div class="n">1 IN 10,000</div><div class="d" style="border-top:1px solid #5ec8ff;margin:10px 40px 0;padding:8px 0 0;font-size:20px"><b>EMA:</b> Very rare</div></div>
+ <svg style="position:absolute;left:740px;top:20px" width="320" height="230" viewBox="0 0 320 230"><path d="M10 115Q160 -30 310 115Q160 260 10 115z" fill="#e8eef6" stroke="#7fd4ff" stroke-width="3"/><circle cx="160" cy="115" r="72" fill="#3a6f9a"/><circle cx="160" cy="115" r="72" fill="none" stroke="#b9772e" stroke-width="14" opacity=".6"/><circle cx="160" cy="115" r="34" fill="#061224"/><circle cx="140" cy="94" r="12" fill="#fff" opacity=".8"/></svg>
+ <div class="cap" style="left:716px;top:262px">Optic nerve (NAION)</div>
+</div>
+<div class="cards">
+ <div class="card"><b>EMA</b><span>NAION warning added to semaglutide product information</span></div>
+ <div class="card"><b>TGA</b><span>Possible-risk warning added to product information</span></div>
+ <div class="card"><b>FDA</b><span>Review ongoing<br>No label change</span></div>
+</div>
+<div class="wide"><b>THE EVIDENCE IS MIXED</b><span>Some studies report a small association; others find none.</span></div>
+<div class="warn"><b>SUDDEN + PAINLESS + ONE-SIDED VISION LOSS</b><span>See an eye doctor immediately.</span></div>
+<div class="next">Do not stop your medicine without consulting your doctor.</div>
+<div class="foot"><span></span><i>Prof. Dr. F. Cankat Tulunay</i><span></span></div>
+</body></html>

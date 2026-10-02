@@ -1,0 +1,38 @@
+{
+ "de": {
+  "BITTER MEDICINE": "BITTERE MEDIZIN",
+  "THE PRESCRIPTION IS WRITTEN. HAS TREATMENT BEGUN?": "DAS REZEPT IST AUSGESTELLT. HAT DIE BEHANDLUNG BEGONNEN?",
+  "Why don't patients take their medicines?<br>Adherence, e-leaflets and legal liability": "Warum nehmen Patienten ihre Medikamente nicht ein?<br>Adhärenz, E-Beipackzettel und rechtliche Haftung",
+  "Rx": "Rx"
+ },
+ "es": {
+  "BITTER MEDICINE": "MEDICINA AMARGA",
+  "THE PRESCRIPTION IS WRITTEN. HAS TREATMENT BEGUN?": "LA RECETA ESTÁ ESCRITA. ¿HA COMENZADO EL TRATAMIENTO?",
+  "Why don't patients take their medicines?<br>Adherence, e-leaflets and legal liability": "¿Por qué los pacientes no toman sus medicamentos?<br>Adherencia, prospecto electrónico y responsabilidad legal",
+  "Rx": "Rx"
+ },
+ "ru": {
+  "BITTER MEDICINE": "ГОРЬКОЕ ЛЕКАРСТВО",
+  "THE PRESCRIPTION IS WRITTEN. HAS TREATMENT BEGUN?": "РЕЦЕПТ ВЫПИСАН. НАЧАЛОСЬ ЛИ ЛЕЧЕНИЕ?",
+  "Why don't patients take their medicines?<br>Adherence, e-leaflets and legal liability": "Почему пациенты не принимают лекарства?<br>Приверженность, электронная инструкция и юридическая ответственность",
+  "Rx": "Rx"
+ },
+ "zh": {
+  "BITTER MEDICINE": "苦口良药",
+  "THE PRESCRIPTION IS WRITTEN. HAS TREATMENT BEGUN?": "处方开了，治疗开始了吗？",
+  "Why don't patients take their medicines?<br>Adherence, e-leaflets and legal liability": "患者为什么不按医嘱服药？<br>依从性、电子说明书与法律责任",
+  "Rx": "Rx"
+ },
+ "hi": {
+  "BITTER MEDICINE": "कड़वी दवा",
+  "THE PRESCRIPTION IS WRITTEN. HAS TREATMENT BEGUN?": "पर्चा लिख दिया गया। क्या इलाज शुरू हुआ?",
+  "Why don't patients take their medicines?<br>Adherence, e-leaflets and legal liability": "मरीज़ अपनी दवाएँ क्यों नहीं लेते?<br>अनुपालन, ई-पत्रक और कानूनी ज़िम्मेदारी",
+  "Rx": "Rx"
+ },
+ "ja": {
+  "BITTER MEDICINE": "苦い薬",
+  "THE PRESCRIPTION IS WRITTEN. HAS TREATMENT BEGUN?": "処方箋は書かれた。治療は始まったのか？",
+  "Why don't patients take their medicines?<br>Adherence, e-leaflets and legal liability": "患者はなぜ薬を飲まないのか<br>アドヒアランス、電子添付文書、法的責任",
+  "Rx": "Rx"
+ }
+}
