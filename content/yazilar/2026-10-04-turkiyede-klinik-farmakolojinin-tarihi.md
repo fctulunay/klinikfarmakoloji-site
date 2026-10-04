@@ -44,7 +44,7 @@ ozet: "Türkiye'de klinik farmakolojinin kurucusu Akil Muhtar Özden'den, çağd
 <p>7. Türk kobaylar öldü mü? NTV, 15 Kasım 2011.</p>
 <p>8. Footprints of Clinical Pharmacology in Turkey: Past, Present, and Future. Clinical Therapeutics, 2020.</p>
 <p>9. Namal A, Erdem M. Erdem Etiği Perspektifinden Ord. Prof. Dr. Akil Muhtar Özden'in (1877-1949) Hayatına Bir Bakış. Lokman Hekim Dergisi 2026;16(2):435-446.</p>
-<p>10. Türk Farmakoloji Derneği. Yönetim Kurulları: IX. Dönem (27 Aralık 1975-11 Ocak 1977) ve X. Dönem (11 Ocak 1977-24 Aralık 1977). tfd.org.tr</p>
+<p>10. Türk Farmakoloji Derneği. Türk Farmakoloji Derneği Yönetim Kurulları: IX. Dönem (27 Aralık 1975-11 Ocak 1977) ve X. Dönem (11 Ocak 1977-24 Aralık 1977). https://www.tfd.org.tr/images/kategori/evraklar/Turk-Farmakoloji-Derne%C4%9Fi-Secilmi%C5%9F-Yonetim-Kurullar%C4%B1.pdf</p>
 <p style="text-align:center"><img src="/sites/default/files/yazi-gorselleri/cms/kfd-logo.png" alt="Klinik Farmakoloji Derneği logosu" width="158" height="217" style="display:inline-block"><br><em>Klinik Farmakoloji Derneği'nin logosu</em></p>
 <hr>
 <p style="text-align:center"><em>A. Ü. Tıp Fakültesi Farmakoloji Enstitüsü</em></p>
