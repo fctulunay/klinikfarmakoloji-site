@@ -1,0 +1,404 @@
+{
+ "langs": [
+  "tr",
+  "en",
+  "de",
+  "es",
+  "ru",
+  "zh",
+  "hi",
+  "ja"
+ ],
+ "strings": {
+  "kick": [
+   "SEKTÖRÜ TANIYALIM",
+   "GET TO KNOW THE INDUSTRY",
+   "DIE BRANCHE KENNENLERNEN",
+   "CONOZCAMOS EL SECTOR",
+   "ЗНАКОМИМСЯ С ОТРАСЛЬЮ",
+   "了解行业",
+   "उद्योग को जानें",
+   "業界を知る"
+  ],
+  "title": [
+   "BİR TÜP KAN 50 CİNS KANSERİ YAKALAR MI?",
+   "CAN ONE TUBE OF BLOOD CATCH 50 TYPES OF CANCER?",
+   "ERKENNT EIN RÖHRCHEN BLUT 50 KREBSARTEN?",
+   "¿UN TUBO DE SANGRE DETECTA 50 TIPOS DE CÁNCER?",
+   "ОДНА ПРОБИРКА КРОВИ ВЫЯВИТ 50 ВИДОВ РАКА?",
+   "一管血能查出50种癌症吗？",
+   "क्या एक ट्यूब खून 50 तरह के कैंसर पकड़ सकता है?",
+   "採血1本で50種類のがんは見つかるのか？"
+  ],
+  "sub": [
+   "Galleri neyi kanıtladı, neyi kanıtlamadı?",
+   "What Galleri proved, and what it did not",
+   "Was Galleri bewiesen hat und was nicht",
+   "Qué demostró Galleri y qué no",
+   "Что Galleri доказал, а что нет",
+   "Galleri 证明了什么，没有证明什么",
+   "Galleri ने क्या साबित किया और क्या नहीं",
+   "Galleriが証明したこと、しなかったこと"
+  ],
+  "p1h": [
+   "EN BÜYÜK ARAŞTIRMA",
+   "THE LARGEST TRIAL",
+   "DIE GRÖSSTE STUDIE",
+   "EL MAYOR ENSAYO",
+   "КРУПНЕЙШЕЕ ИССЛЕДОВАНИЕ",
+   "最大规模的试验",
+   "सबसे बड़ा परीक्षण",
+   "最大規模の試験"
+  ],
+  "p1n": [
+   "142.250",
+   "142,250",
+   "142.250",
+   "142.250",
+   "142 250",
+   "142,250",
+   "142,250",
+   "142,250"
+  ],
+  "p1t": [
+   "kişi, 50-77 yaş, İngiltere. Üç yıl, yılda bir test.",
+   "people aged 50-77 in England. Three years, one test a year.",
+   "Personen, 50-77 Jahre, England. Drei Jahre, ein Test pro Jahr.",
+   "personas de 50-77 años en Inglaterra. Tres años, una prueba al año.",
+   "человек 50-77 лет, Англия. Три года, один тест в год.",
+   "人，50-77岁，英格兰。三年，每年检测一次。",
+   "लोग, 50-77 वर्ष, इंग्लैंड। तीन साल, साल में एक जाँच।",
+   "人、50〜77歳、イングランド。3年間、年1回の検査。"
+  ],
+  "p1s": [
+   "NHS-Galleri, randomize kontrollü",
+   "NHS-Galleri, randomised controlled",
+   "NHS-Galleri, randomisiert kontrolliert",
+   "NHS-Galleri, aleatorizado y controlado",
+   "NHS-Galleri, рандомизированное контролируемое",
+   "NHS-Galleri，随机对照",
+   "NHS-Galleri, यादृच्छिक नियंत्रित",
+   "NHS-Galleri、ランダム化比較"
+  ],
+  "p2h": [
+   "ANA HEDEF: EVRE III + IV",
+   "PRIMARY ENDPOINT: STAGE III + IV",
+   "PRIMÄRER ENDPUNKT: STADIUM III + IV",
+   "OBJETIVO PRIMARIO: ESTADIO III + IV",
+   "ГЛАВНАЯ ЦЕЛЬ: СТАДИИ III + IV",
+   "主要终点：III + IV期",
+   "मुख्य लक्ष्य: चरण III + IV",
+   "主要評価項目：ステージIII + IV"
+  ],
+  "p2n": [
+   "1,03",
+   "1.03",
+   "1,03",
+   "1,03",
+   "1,03",
+   "1.03",
+   "1.03",
+   "1.03"
+  ],
+  "p2t": [
+   "hız oranı (0,92-1,14). Azalma <b>gösterilemedi.</b>",
+   "rate ratio (0.92-1.14). <b>No reduction shown.</b>",
+   "Ratenverhältnis (0,92-1,14). <b>Kein Rückgang belegt.</b>",
+   "razón de tasas (0,92-1,14). <b>No se demostró reducción.</b>",
+   "отношение частот (0,92-1,14). <b>Снижение не показано.</b>",
+   "率比 (0.92-1.14)。<b>未显示减少。</b>",
+   "दर अनुपात (0.92-1.14)। <b>कमी साबित नहीं हुई।</b>",
+   "率比 (0.92-1.14)。<b>減少は示されなかった。</b>"
+  ],
+  "p2s": [
+   "p = 0,63",
+   "p = 0.63",
+   "p = 0,63",
+   "p = 0,63",
+   "p = 0,63",
+   "p = 0.63",
+   "p = 0.63",
+   "p = 0.63"
+  ],
+  "p3h": [
+   "İKİNCİL: YALNIZ EVRE IV",
+   "SECONDARY: STAGE IV ONLY",
+   "SEKUNDÄR: NUR STADIUM IV",
+   "SECUNDARIO: SOLO ESTADIO IV",
+   "ВТОРИЧНАЯ: ТОЛЬКО IV СТАДИЯ",
+   "次要终点：仅IV期",
+   "द्वितीयक: केवल चरण IV",
+   "副次評価項目：ステージIVのみ"
+  ],
+  "p3n": [
+   "0,86",
+   "0.86",
+   "0,86",
+   "0,86",
+   "0,86",
+   "0.86",
+   "0.86",
+   "0.86"
+  ],
+  "p3t": [
+   "hız oranı (0,744-0,998). Yaklaşık %14 azalma.",
+   "rate ratio (0.744-0.998). About 14% fewer.",
+   "Ratenverhältnis (0,744-0,998). Etwa 14 % weniger.",
+   "razón de tasas (0,744-0,998). Cerca de un 14 % menos.",
+   "отношение частот (0,744-0,998). Примерно на 14 % меньше.",
+   "率比 (0.744-0.998)。约减少14%。",
+   "दर अनुपात (0.744-0.998)। लगभग 14% कम।",
+   "率比 (0.744-0.998)。約14%減少。"
+  ],
+  "p3s": [
+   "nominal anlamlılık",
+   "nominal significance",
+   "nominale Signifikanz",
+   "significación nominal",
+   "номинальная значимость",
+   "名义显著性",
+   "नाममात्र सार्थकता",
+   "名目上の有意性"
+  ],
+  "bh": [
+   "TEST HANGİ EVREYİ YAKALIYOR?",
+   "WHICH STAGES DOES THE TEST CATCH?",
+   "WELCHE STADIEN ERKENNT DER TEST?",
+   "¿QUÉ ESTADIOS DETECTA LA PRUEBA?",
+   "КАКИЕ СТАДИИ ВЫЯВЛЯЕТ ТЕСТ?",
+   "检测能发现哪一期？",
+   "जाँच कौन-सा चरण पकड़ती है?",
+   "検査はどのステージを見つけるか？"
+  ],
+  "st": [
+   "Evre {}",
+   "Stage {}",
+   "Stadium {}",
+   "Estadio {}",
+   "Стадия {}",
+   "{}期",
+   "चरण {}",
+   "ステージ{}"
+  ],
+  "pc": [
+   "%{}",
+   "{}%",
+   "{} %",
+   "{} %",
+   "{} %",
+   "{}%",
+   "{}%",
+   "{}%"
+  ],
+  "bs": [
+   "12 aylık epizot duyarlılığı, NHS-Galleri (FDA özeti)",
+   "12-month episode sensitivity, NHS-Galleri (FDA summary)",
+   "12-Monats-Episodensensitivität, NHS-Galleri (FDA-Zusammenfassung)",
+   "Sensibilidad por episodio a 12 meses, NHS-Galleri (resumen de la FDA)",
+   "12-месячная эпизодная чувствительность, NHS-Galleri (резюме FDA)",
+   "12个月发作敏感度，NHS-Galleri（FDA摘要）",
+   "12 माह की एपिसोड संवेदनशीलता, NHS-Galleri (FDA सारांश)",
+   "12か月エピソード感度、NHS-Galleri（FDA要約）"
+  ],
+  "fh": [
+   "FDA DANIŞMA KURULU, 23.09.2026",
+   "FDA ADVISORY PANEL, 23 SEP 2026",
+   "FDA-BERATUNGSGREMIUM, 23.09.2026",
+   "COMITÉ ASESOR DE LA FDA, 23.09.2026",
+   "КОНСУЛЬТАТИВНЫЙ КОМИТЕТ FDA, 23.09.2026",
+   "FDA咨询委员会，2026年9月23日",
+   "FDA सलाहकार समिति, 23.09.2026",
+   "FDA諮問委員会、2026年9月23日"
+  ],
+  "f1": [
+   "Güvenlilik 10-0",
+   "Safety 10-0",
+   "Sicherheit 10-0",
+   "Seguridad 10-0",
+   "Безопасность 10-0",
+   "安全性 10-0",
+   "सुरक्षा 10-0",
+   "安全性 10-0"
+  ],
+  "f2": [
+   "Etkililik 6-4",
+   "Effectiveness 6-4",
+   "Wirksamkeit 6-4",
+   "Eficacia 6-4",
+   "Эффективность 6-4",
+   "有效性 6-4",
+   "प्रभावशीलता 6-4",
+   "有効性 6-4"
+  ],
+  "f3": [
+   "Yarar-risk 7-2-1",
+   "Benefit-risk 7-2-1",
+   "Nutzen-Risiko 7-2-1",
+   "Beneficio-riesgo 7-2-1",
+   "Польза-риск 7-2-1",
+   "获益-风险 7-2-1",
+   "लाभ-जोखिम 7-2-1",
+   "有益性・リスク 7-2-1"
+  ],
+  "ft": [
+   "Kurul oyu <b>onay değildir;</b> nihai karar FDA'da bekliyor.",
+   "A panel vote <b>is not approval;</b> the FDA's final decision is pending.",
+   "Ein Gremiumsvotum <b>ist keine Zulassung;</b> die Entscheidung der FDA steht aus.",
+   "El voto del comité <b>no es una aprobación;</b> la decisión final de la FDA está pendiente.",
+   "Голосование комитета <b>не является одобрением;</b> окончательное решение FDA ещё не принято.",
+   "委员会投票<b>不等于批准；</b>FDA的最终决定尚未作出。",
+   "समिति का मत <b>मंज़ूरी नहीं है;</b> FDA का अंतिम निर्णय बाकी है।",
+   "委員会の採決は<b>承認ではない。</b>FDAの最終判断は未定。"
+  ],
+  "q1h": [
+   "POZİTİF ≠ TANI",
+   "POSITIVE ≠ DIAGNOSIS",
+   "POSITIV ≠ DIAGNOSE",
+   "POSITIVO ≠ DIAGNÓSTICO",
+   "ПОЛОЖИТЕЛЬНЫЙ ≠ ДИАГНОЗ",
+   "阳性 ≠ 确诊",
+   "पॉज़िटिव ≠ निदान",
+   "陽性 ≠ 診断"
+  ],
+  "q1t": [
+   "1.801 pozitif sonucun 937'sinde kanser doğrulandı.",
+   "Cancer was confirmed in 937 of 1,801 positive results.",
+   "Bei 937 von 1.801 positiven Ergebnissen wurde Krebs bestätigt.",
+   "Se confirmó cáncer en 937 de 1.801 resultados positivos.",
+   "Рак подтверждён в 937 из 1 801 положительного результата.",
+   "1,801例阳性结果中，937例确诊癌症。",
+   "1,801 पॉज़िटिव नतीजों में से 937 में कैंसर की पुष्टि हुई।",
+   "陽性1,801件のうち937件でがんが確認された。"
+  ],
+  "q1s": [
+   "NHS-Galleri, çalışmada kullanılan sürüm",
+   "NHS-Galleri, test version used in the trial",
+   "NHS-Galleri, in der Studie verwendete Version",
+   "NHS-Galleri, versión usada en el ensayo",
+   "NHS-Galleri, версия теста в исследовании",
+   "NHS-Galleri，试验中使用的版本",
+   "NHS-Galleri, परीक्षण में प्रयुक्त संस्करण",
+   "NHS-Galleri、試験で使用された版"
+  ],
+  "q2h": [
+   "YANLIŞ ALARMIN BEDELİ",
+   "THE COST OF A FALSE ALARM",
+   "DER PREIS DES FEHLALARMS",
+   "EL COSTE DE UNA FALSA ALARMA",
+   "ЦЕНА ЛОЖНОЙ ТРЕВОГИ",
+   "误报的代价",
+   "झूठे अलार्म की कीमत",
+   "誤警報の代償"
+  ],
+  "q2n": [
+   "75 gün",
+   "75 days",
+   "75 Tage",
+   "75 días",
+   "75 дней",
+   "75天",
+   "75 दिन",
+   "75日"
+  ],
+  "q2t": [
+   "ortanca çözüm süresi; %47,8'ine en az bir invaziv işlem.",
+   "median time to resolution; 47.8% had at least one invasive procedure.",
+   "mediane Zeit bis zur Klärung; 47,8 % mit mindestens einem invasiven Eingriff.",
+   "mediana hasta la resolución; el 47,8 % tuvo al menos un procedimiento invasivo.",
+   "медиана до выяснения; у 47,8 % хотя бы одна инвазивная процедура.",
+   "明确结论的中位时间；47.8%至少接受一次有创操作。",
+   "स्पष्टता तक का माध्य समय; 47.8% में कम से कम एक इनवेसिव प्रक्रिया।",
+   "確定までの中央値。47.8%が侵襲的処置を1回以上受けた。"
+  ],
+  "q2s": [
+   "PATHFINDER 2, kanser bulunmayanlar",
+   "PATHFINDER 2, people with no cancer found",
+   "PATHFINDER 2, Personen ohne Krebsbefund",
+   "PATHFINDER 2, personas sin cáncer",
+   "PATHFINDER 2, у кого рак не найден",
+   "PATHFINDER 2，未发现癌症者",
+   "PATHFINDER 2, जिनमें कैंसर नहीं मिला",
+   "PATHFINDER 2、がんが見つからなかった人"
+  ],
+  "q3h": [
+   "NEGATİF ≠ \"KANSER YOK\"",
+   "NEGATIVE ≠ \"NO CANCER\"",
+   "NEGATIV ≠ „KEIN KREBS“",
+   "NEGATIVO ≠ «SIN CÁNCER»",
+   "ОТРИЦАТЕЛЬНЫЙ ≠ «РАКА НЕТ»",
+   "阴性 ≠ “没有癌症”",
+   "नेगेटिव ≠ \"कैंसर नहीं\"",
+   "陰性 ≠「がんなし」"
+  ],
+  "q3u": [
+   "meme",
+   "breast",
+   "Brust",
+   "mama",
+   "грудь",
+   "乳腺癌",
+   "स्तन",
+   "乳がん"
+  ],
+  "q3t": [
+   "Prostatta %10,7. Mamografi ve diğer taramaların yerini tutmaz.",
+   "10.7% for prostate. It does not replace mammography or other screening.",
+   "Prostata 10,7 %. Kein Ersatz für Mammografie und andere Vorsorge.",
+   "Próstata: 10,7 %. No sustituye a la mamografía ni a otros cribados.",
+   "Простата: 10,7 %. Не заменяет маммографию и другой скрининг.",
+   "前列腺癌10.7%。不能替代乳腺X线等筛查。",
+   "प्रोस्टेट में 10.7%। मैमोग्राफी और अन्य जाँचों का विकल्प नहीं।",
+   "前立腺がんは10.7%。マンモグラフィ等の検診の代わりにはならない。"
+  ],
+  "q3s": [
+   "Duyarlılık, NHS-Galleri",
+   "Sensitivity, NHS-Galleri",
+   "Sensitivität, NHS-Galleri",
+   "Sensibilidad, NHS-Galleri",
+   "Чувствительность, NHS-Galleri",
+   "敏感度，NHS-Galleri",
+   "संवेदनशीलता, NHS-Galleri",
+   "感度、NHS-Galleri"
+  ],
+  "quote": [
+   "\"Daha erken tanı, daha uzun yaşam demek değildir. Kanıtlanması gereken, ölümlerin azalmasıdır.\"",
+   "\"Earlier diagnosis does not mean a longer life. What must be proven is fewer deaths.\"",
+   "„Frühere Diagnose heißt nicht längeres Leben. Zu belegen ist, dass weniger Menschen sterben.“",
+   "«Un diagnóstico más precoz no significa vivir más. Lo que hay que demostrar es que mueren menos personas.»",
+   "«Более ранний диагноз не означает более долгую жизнь. Доказать нужно снижение смертности.»",
+   "“更早诊断不等于活得更久。需要证明的是死亡减少。”",
+   "\"जल्दी निदान का मतलब लंबा जीवन नहीं है। साबित यह करना है कि मौतें घटती हैं।\"",
+   "「早期診断は長生きを意味しない。証明すべきは死亡の減少である。」"
+  ],
+  "foot": [
+   "Kaynak: NEJM 2026; FDA Yönetici Özeti 2026 · AI desteği alınmıştır",
+   "Source: NEJM 2026; FDA Executive Summary 2026 · Prepared with AI support",
+   "Quelle: NEJM 2026; FDA Executive Summary 2026 · Mit KI-Unterstützung erstellt",
+   "Fuente: NEJM 2026; Resumen ejecutivo de la FDA 2026 · Elaborado con apoyo de IA",
+   "Источник: NEJM 2026; резюме FDA 2026 · Подготовлено с помощью ИИ",
+   "来源：NEJM 2026；FDA执行摘要 2026 · 借助AI辅助完成",
+   "स्रोत: NEJM 2026; FDA कार्यकारी सारांश 2026 · AI की सहायता से तैयार",
+   "出典：NEJM 2026、FDAエグゼクティブサマリー 2026 · AIの支援を受けて作成"
+  ],
+  "cu": [
+   "hız oranı",
+   "rate ratio",
+   "Ratenverhältnis",
+   "razón de tasas",
+   "отношение частот",
+   "率比",
+   "दर अनुपात",
+   "率比"
+  ],
+  "cs": [
+   "Ana hedefte evre III-IV kanser tanıları azalmadı",
+   "Stage III-IV cancer diagnoses did not fall on the primary endpoint",
+   "Im primären Endpunkt kein Rückgang der Diagnosen im Stadium III-IV",
+   "En el objetivo primario no bajaron los diagnósticos en estadio III-IV",
+   "По главной цели диагнозы III-IV стадии не снизились",
+   "主要终点：III-IV期癌症诊断未减少",
+   "मुख्य लक्ष्य पर चरण III-IV के निदान नहीं घटे",
+   "主要評価項目でステージIII-IVの診断は減らなかった"
+  ]
+ }
+}

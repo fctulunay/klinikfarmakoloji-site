@@ -1,0 +1,65 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1080px;background:#f6efe0;font-family:"Liberation Serif","DejaVu Serif",serif;color:#2b1a1a;position:relative;overflow:hidden}
+.hd{background:#5a0f1e;color:#f6efe0;height:168px;padding:20px 40px;position:relative}
+.kick{font-size:19px;letter-spacing:4px;color:#e6b85c;font-weight:bold}
+.hd h1{font-size:38px;line-height:1.05;margin-top:12px}
+.hd p{font-size:25px;font-style:italic;color:#f1dcc0;margin-top:10px}
+.tube{position:absolute;right:44px;top:22px}
+.row{display:flex;gap:16px;padding:0 28px;margin-top:22px}
+.p{flex:1;border-radius:14px;border:3px solid;background:#fffaf0;padding:20px 18px 22px;position:relative}
+.p h3{font-size:17px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.big{font-size:62px;font-weight:bold;line-height:1}
+.t{font-size:19.5px;line-height:1.25;margin-top:5px}
+.s{font-size:14px;color:#6b5a50;margin-top:5px;font-style:italic}
+.ic{position:absolute;right:14px;bottom:12px;opacity:.9}
+.c1{border-color:#8a1c2e}.c1 h3,.c1 .big{color:#8a1c2e}
+.c2{border-color:#c2571a}.c2 h3,.c2 .big{color:#c2571a}
+.c3{border-color:#1f6f6a}.c3 h3,.c3 .big{color:#1f6f6a}
+.c4{border-color:#2f4f86}.c4 h3,.c4 .big{color:#2f4f86}
+.c5{border-color:#7a5a12}.c5 h3,.c5 .big{color:#7a5a12}
+.bar{display:flex;align-items:center;margin-top:13px;font-size:18px}
+.bar b{width:74px}.bar i{display:block;height:24px;border-radius:5px;background:#8a1c2e}
+.bar span{margin-left:8px;font-weight:bold}
+.v{display:flex;align-items:center;margin-top:16px;font-size:18px}
+.v b{width:150px}.d{width:17px;height:17px;border-radius:50%;margin-right:4px;display:inline-block}
+.y{background:#1f6f6a}.n{background:#8a1c2e}.a{background:#b9aa94}
+.q{margin:16px 28px 0;background:#2b1a1a;color:#f6efe0;border-left:10px solid #e6b85c;border-radius:10px;padding:14px 24px;font-size:25px;font-style:italic;line-height:1.25}
+.ft{position:absolute;bottom:0;left:0;right:0;height:50px;background:#5a0f1e;color:#f6efe0;display:flex;justify-content:space-between;align-items:center;padding:0 30px;font-size:17px}
+.ft b{font-size:22px;color:#e6b85c}
+</style></head><body>
+<div class="hd"><div class="kick">SEKTÖRÜ TANIYALIM</div><h1>BİR TÜP KAN 50 CİNS KANSERİ YAKALAR MI?</h1><p>Galleri neyi kanıtladı, neyi kanıtlamadı?</p>
+<svg class="tube" width="120" height="124" viewBox="0 0 120 124"><g transform="rotate(25 60 62)"><rect x="42" y="6" width="36" height="12" rx="3" fill="#e6b85c"/><path d="M46 18h28v74a14 14 0 0 1-28 0z" fill="none" stroke="#f6efe0" stroke-width="4"/><path d="M48 52h24v40a12 12 0 0 1-24 0z" fill="#d43a4f"/></g><circle cx="100" cy="100" r="6" fill="#e6b85c"/></svg></div>
+
+<div class="row">
+<div class="p c4"><h3>En büyük araştırma</h3><div class="big">142.250</div><div class="t">kişi, 50-77 yaş, İngiltere. Üç yıl, yılda bir test.</div><div class="s">NHS-Galleri, randomize kontrollü</div>
+<svg class="ic" width="46" height="46" viewBox="0 0 46 46" fill="#2f4f86"><circle cx="14" cy="13" r="6"/><circle cx="32" cy="13" r="6"/><path d="M3 38c0-9 5-14 11-14s11 5 11 14zM21 38c0-9 5-14 11-14s11 5 11 14z" opacity=".8"/></svg></div>
+<div class="p c1"><h3>Ana hedef: evre III + IV</h3><div class="big">1,03</div><div class="t">hız oranı (0,92-1,14). Azalma <b>gösterilemedi.</b></div><div class="s">p = 0,63</div>
+<svg class="ic" width="44" height="44" viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="none" stroke="#8a1c2e" stroke-width="5"/><path d="M13 13l18 18M31 13L13 31" stroke="#8a1c2e" stroke-width="5" stroke-linecap="round"/></svg></div>
+<div class="p c3"><h3>İkincil: yalnız evre IV</h3><div class="big">0,86</div><div class="t">hız oranı (0,744-0,998). Yaklaşık %14 azalma.</div><div class="s">nominal anlamlılık</div>
+<svg class="ic" width="44" height="44" viewBox="0 0 44 44"><path d="M6 10l12 14 7-7 13 16" fill="none" stroke="#1f6f6a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 21v12H26" fill="none" stroke="#1f6f6a" stroke-width="5" stroke-linecap="round"/></svg></div>
+</div>
+
+<div class="row">
+<div class="p c1" style="flex:1.25"><h3>Test hangi evreyi yakalıyor?</h3>
+<div class="bar"><b>Evre I</b><i style="width:68px"></i><span>%13,6</span></div>
+<div class="bar"><b>Evre II</b><i style="width:172px;background:#b0453a"></i><span>%34,4</span></div>
+<div class="bar"><b>Evre III</b><i style="width:222px;background:#c2571a"></i><span>%44,3</span></div>
+<div class="bar"><b>Evre IV</b><i style="width:300px;background:#7a5a12"></i><span>%60,0</span></div>
+<div class="s">12 aylık epizot duyarlılığı, NHS-Galleri (FDA özeti)</div></div>
+<div class="p c4"><h3>FDA danışma kurulu, 23.09.2026</h3>
+<div class="v"><b>Güvenlilik 10-0</b><span><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i></span></div>
+<div class="v"><b>Etkililik 6-4</b><span><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d n"></i><i class="d n"></i><i class="d n"></i><i class="d n"></i></span></div>
+<div class="v"><b>Yarar-risk 7-2-1</b><span><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d y"></i><i class="d n"></i><i class="d n"></i><i class="d a"></i></span></div>
+<div class="t" style="margin-top:12px">Kurul oyu <b>onay değildir;</b> nihai karar FDA'da bekliyor.</div></div>
+</div>
+
+<div class="row">
+<div class="p c2"><h3>Pozitif ≠ tanı</h3><div class="big">%52</div><div class="t">1.801 pozitif sonucun 937'sinde kanser doğrulandı.</div><div class="s">NHS-Galleri, çalışmada kullanılan sürüm</div></div>
+<div class="p c5"><h3>Yanlış alarmın bedeli</h3><div class="big">75 gün</div><div class="t">ortanca çözüm süresi; %47,8'ine en az bir invaziv işlem.</div><div class="s">PATHFINDER 2, kanser bulunmayanlar</div></div>
+<div class="p c3"><h3>Negatif ≠ "kanser yok"</h3><div class="big">%19 <span style="font-size:30px">meme</span></div><div class="t">Prostatta %10,7. Mamografi ve diğer taramaların yerini tutmaz.</div><div class="s">Duyarlılık, NHS-Galleri</div></div>
+</div>
+
+<div class="q">"Daha erken tanı, daha uzun yaşam demek değildir. Kanıtlanması gereken, ölümlerin azalmasıdır."</div>
+<div class="ft"><b>klinikfarmakoloji.com</b><span>Kaynak: NEJM 2026; FDA Yönetici Özeti 2026 · AI desteği alınmıştır</span></div>
+</body></html>

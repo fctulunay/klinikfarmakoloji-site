@@ -1,0 +1,89 @@
+import json,os
+L=['tr','en','de','es','ru','zh','hi','ja']
+S={
+'kick':['SEKTÖRÜ TANIYALIM','GET TO KNOW THE INDUSTRY','DIE BRANCHE KENNENLERNEN','CONOZCAMOS EL SECTOR','ЗНАКОМИМСЯ С ОТРАСЛЬЮ','了解行业','उद्योग को जानें','業界を知る'],
+'title':['BİR TÜP KAN 50 CİNS KANSERİ YAKALAR MI?','CAN ONE TUBE OF BLOOD CATCH 50 TYPES OF CANCER?','ERKENNT EIN RÖHRCHEN BLUT 50 KREBSARTEN?','¿UN TUBO DE SANGRE DETECTA 50 TIPOS DE CÁNCER?','ОДНА ПРОБИРКА КРОВИ ВЫЯВИТ 50 ВИДОВ РАКА?','一管血能查出50种癌症吗？','क्या एक ट्यूब खून 50 तरह के कैंसर पकड़ सकता है?','採血1本で50種類のがんは見つかるのか？'],
+'sub':['Galleri neyi kanıtladı, neyi kanıtlamadı?','What Galleri proved, and what it did not','Was Galleri bewiesen hat und was nicht','Qué demostró Galleri y qué no','Что Galleri доказал, а что нет','Galleri 证明了什么，没有证明什么','Galleri ने क्या साबित किया और क्या नहीं','Galleriが証明したこと、しなかったこと'],
+'p1h':['EN BÜYÜK ARAŞTIRMA','THE LARGEST TRIAL','DIE GRÖSSTE STUDIE','EL MAYOR ENSAYO','КРУПНЕЙШЕЕ ИССЛЕДОВАНИЕ','最大规模的试验','सबसे बड़ा परीक्षण','最大規模の試験'],
+'p1n':['142.250','142,250','142.250','142.250','142 250','142,250','142,250','142,250'],
+'p1t':['kişi, 50-77 yaş, İngiltere. Üç yıl, yılda bir test.','people aged 50-77 in England. Three years, one test a year.','Personen, 50-77 Jahre, England. Drei Jahre, ein Test pro Jahr.','personas de 50-77 años en Inglaterra. Tres años, una prueba al año.','человек 50-77 лет, Англия. Три года, один тест в год.','人，50-77岁，英格兰。三年，每年检测一次。','लोग, 50-77 वर्ष, इंग्लैंड। तीन साल, साल में एक जाँच।','人、50〜77歳、イングランド。3年間、年1回の検査。'],
+'p1s':['NHS-Galleri, randomize kontrollü','NHS-Galleri, randomised controlled','NHS-Galleri, randomisiert kontrolliert','NHS-Galleri, aleatorizado y controlado','NHS-Galleri, рандомизированное контролируемое','NHS-Galleri，随机对照','NHS-Galleri, यादृच्छिक नियंत्रित','NHS-Galleri、ランダム化比較'],
+'p2h':['ANA HEDEF: EVRE III + IV','PRIMARY ENDPOINT: STAGE III + IV','PRIMÄRER ENDPUNKT: STADIUM III + IV','OBJETIVO PRIMARIO: ESTADIO III + IV','ГЛАВНАЯ ЦЕЛЬ: СТАДИИ III + IV','主要终点：III + IV期','मुख्य लक्ष्य: चरण III + IV','主要評価項目：ステージIII + IV'],
+'p2n':['1,03','1.03','1,03','1,03','1,03','1.03','1.03','1.03'],
+'p2t':['hız oranı (0,92-1,14). Azalma <b>gösterilemedi.</b>','rate ratio (0.92-1.14). <b>No reduction shown.</b>','Ratenverhältnis (0,92-1,14). <b>Kein Rückgang belegt.</b>','razón de tasas (0,92-1,14). <b>No se demostró reducción.</b>','отношение частот (0,92-1,14). <b>Снижение не показано.</b>','率比 (0.92-1.14)。<b>未显示减少。</b>','दर अनुपात (0.92-1.14)। <b>कमी साबित नहीं हुई।</b>','率比 (0.92-1.14)。<b>減少は示されなかった。</b>'],
+'p2s':['p = 0,63','p = 0.63','p = 0,63','p = 0,63','p = 0,63','p = 0.63','p = 0.63','p = 0.63'],
+'p3h':['İKİNCİL: YALNIZ EVRE IV','SECONDARY: STAGE IV ONLY','SEKUNDÄR: NUR STADIUM IV','SECUNDARIO: SOLO ESTADIO IV','ВТОРИЧНАЯ: ТОЛЬКО IV СТАДИЯ','次要终点：仅IV期','द्वितीयक: केवल चरण IV','副次評価項目：ステージIVのみ'],
+'p3n':['0,86','0.86','0,86','0,86','0,86','0.86','0.86','0.86'],
+'p3t':['hız oranı (0,744-0,998). Yaklaşık %14 azalma.','rate ratio (0.744-0.998). About 14% fewer.','Ratenverhältnis (0,744-0,998). Etwa 14 % weniger.','razón de tasas (0,744-0,998). Cerca de un 14 % menos.','отношение частот (0,744-0,998). Примерно на 14 % меньше.','率比 (0.744-0.998)。约减少14%。','दर अनुपात (0.744-0.998)। लगभग 14% कम।','率比 (0.744-0.998)。約14%減少。'],
+'p3s':['nominal anlamlılık','nominal significance','nominale Signifikanz','significación nominal','номинальная значимость','名义显著性','नाममात्र सार्थकता','名目上の有意性'],
+'bh':['TEST HANGİ EVREYİ YAKALIYOR?','WHICH STAGES DOES THE TEST CATCH?','WELCHE STADIEN ERKENNT DER TEST?','¿QUÉ ESTADIOS DETECTA LA PRUEBA?','КАКИЕ СТАДИИ ВЫЯВЛЯЕТ ТЕСТ?','检测能发现哪一期？','जाँच कौन-सा चरण पकड़ती है?','検査はどのステージを見つけるか？'],
+'st':['Evre {}','Stage {}','Stadium {}','Estadio {}','Стадия {}','{}期','चरण {}','ステージ{}'],
+'pc':['%{}','{}%','{} %','{} %','{} %','{}%','{}%','{}%'],
+'bs':['12 aylık epizot duyarlılığı, NHS-Galleri (FDA özeti)','12-month episode sensitivity, NHS-Galleri (FDA summary)','12-Monats-Episodensensitivität, NHS-Galleri (FDA-Zusammenfassung)','Sensibilidad por episodio a 12 meses, NHS-Galleri (resumen de la FDA)','12-месячная эпизодная чувствительность, NHS-Galleri (резюме FDA)','12个月发作敏感度，NHS-Galleri（FDA摘要）','12 माह की एपिसोड संवेदनशीलता, NHS-Galleri (FDA सारांश)','12か月エピソード感度、NHS-Galleri（FDA要約）'],
+'fh':['FDA DANIŞMA KURULU, 23.09.2026','FDA ADVISORY PANEL, 23 SEP 2026','FDA-BERATUNGSGREMIUM, 23.09.2026','COMITÉ ASESOR DE LA FDA, 23.09.2026','КОНСУЛЬТАТИВНЫЙ КОМИТЕТ FDA, 23.09.2026','FDA咨询委员会，2026年9月23日','FDA सलाहकार समिति, 23.09.2026','FDA諮問委員会、2026年9月23日'],
+'f1':['Güvenlilik 10-0','Safety 10-0','Sicherheit 10-0','Seguridad 10-0','Безопасность 10-0','安全性 10-0','सुरक्षा 10-0','安全性 10-0'],
+'f2':['Etkililik 6-4','Effectiveness 6-4','Wirksamkeit 6-4','Eficacia 6-4','Эффективность 6-4','有效性 6-4','प्रभावशीलता 6-4','有効性 6-4'],
+'f3':['Yarar-risk 7-2-1','Benefit-risk 7-2-1','Nutzen-Risiko 7-2-1','Beneficio-riesgo 7-2-1','Польза-риск 7-2-1','获益-风险 7-2-1','लाभ-जोखिम 7-2-1','有益性・リスク 7-2-1'],
+'ft':["Kurul oyu <b>onay değildir;</b> nihai karar FDA'da bekliyor.","A panel vote <b>is not approval;</b> the FDA's final decision is pending.","Ein Gremiumsvotum <b>ist keine Zulassung;</b> die Entscheidung der FDA steht aus.","El voto del comité <b>no es una aprobación;</b> la decisión final de la FDA está pendiente.","Голосование комитета <b>не является одобрением;</b> окончательное решение FDA ещё не принято.","委员会投票<b>不等于批准；</b>FDA的最终决定尚未作出。","समिति का मत <b>मंज़ूरी नहीं है;</b> FDA का अंतिम निर्णय बाकी है।","委員会の採決は<b>承認ではない。</b>FDAの最終判断は未定。"],
+'q1h':['POZİTİF ≠ TANI','POSITIVE ≠ DIAGNOSIS','POSITIV ≠ DIAGNOSE','POSITIVO ≠ DIAGNÓSTICO','ПОЛОЖИТЕЛЬНЫЙ ≠ ДИАГНОЗ','阳性 ≠ 确诊','पॉज़िटिव ≠ निदान','陽性 ≠ 診断'],
+'q1t':["1.801 pozitif sonucun 937'sinde kanser doğrulandı.",'Cancer was confirmed in 937 of 1,801 positive results.','Bei 937 von 1.801 positiven Ergebnissen wurde Krebs bestätigt.','Se confirmó cáncer en 937 de 1.801 resultados positivos.','Рак подтверждён в 937 из 1 801 положительного результата.','1,801例阳性结果中，937例确诊癌症。','1,801 पॉज़िटिव नतीजों में से 937 में कैंसर की पुष्टि हुई।','陽性1,801件のうち937件でがんが確認された。'],
+'q1s':['NHS-Galleri, çalışmada kullanılan sürüm','NHS-Galleri, test version used in the trial','NHS-Galleri, in der Studie verwendete Version','NHS-Galleri, versión usada en el ensayo','NHS-Galleri, версия теста в исследовании','NHS-Galleri，试验中使用的版本','NHS-Galleri, परीक्षण में प्रयुक्त संस्करण','NHS-Galleri、試験で使用された版'],
+'q2h':['YANLIŞ ALARMIN BEDELİ','THE COST OF A FALSE ALARM','DER PREIS DES FEHLALARMS','EL COSTE DE UNA FALSA ALARMA','ЦЕНА ЛОЖНОЙ ТРЕВОГИ','误报的代价','झूठे अलार्म की कीमत','誤警報の代償'],
+'q2n':['75 gün','75 days','75 Tage','75 días','75 дней','75天','75 दिन','75日'],
+'q2t':["ortanca çözüm süresi; %47,8'ine en az bir invaziv işlem.",'median time to resolution; 47.8% had at least one invasive procedure.','mediane Zeit bis zur Klärung; 47,8 % mit mindestens einem invasiven Eingriff.','mediana hasta la resolución; el 47,8 % tuvo al menos un procedimiento invasivo.','медиана до выяснения; у 47,8 % хотя бы одна инвазивная процедура.','明确结论的中位时间；47.8%至少接受一次有创操作。','स्पष्टता तक का माध्य समय; 47.8% में कम से कम एक इनवेसिव प्रक्रिया।','確定までの中央値。47.8%が侵襲的処置を1回以上受けた。'],
+'q2s':['PATHFINDER 2, kanser bulunmayanlar','PATHFINDER 2, people with no cancer found','PATHFINDER 2, Personen ohne Krebsbefund','PATHFINDER 2, personas sin cáncer','PATHFINDER 2, у кого рак не найден','PATHFINDER 2，未发现癌症者','PATHFINDER 2, जिनमें कैंसर नहीं मिला','PATHFINDER 2、がんが見つからなかった人'],
+'q3h':['NEGATİF ≠ "KANSER YOK"','NEGATIVE ≠ "NO CANCER"','NEGATIV ≠ „KEIN KREBS“','NEGATIVO ≠ «SIN CÁNCER»','ОТРИЦАТЕЛЬНЫЙ ≠ «РАКА НЕТ»','阴性 ≠ “没有癌症”','नेगेटिव ≠ "कैंसर नहीं"','陰性 ≠「がんなし」'],
+'q3u':['meme','breast','Brust','mama','грудь','乳腺癌','स्तन','乳がん'],
+'q3t':['Prostatta %10,7. Mamografi ve diğer taramaların yerini tutmaz.','10.7% for prostate. It does not replace mammography or other screening.','Prostata 10,7 %. Kein Ersatz für Mammografie und andere Vorsorge.','Próstata: 10,7 %. No sustituye a la mamografía ni a otros cribados.','Простата: 10,7 %. Не заменяет маммографию и другой скрининг.','前列腺癌10.7%。不能替代乳腺X线等筛查。','प्रोस्टेट में 10.7%। मैमोग्राफी और अन्य जाँचों का विकल्प नहीं।','前立腺がんは10.7%。マンモグラフィ等の検診の代わりにはならない。'],
+'q3s':['Duyarlılık, NHS-Galleri','Sensitivity, NHS-Galleri','Sensitivität, NHS-Galleri','Sensibilidad, NHS-Galleri','Чувствительность, NHS-Galleri','敏感度，NHS-Galleri','संवेदनशीलता, NHS-Galleri','感度、NHS-Galleri'],
+'quote':['"Daha erken tanı, daha uzun yaşam demek değildir. Kanıtlanması gereken, ölümlerin azalmasıdır."','"Earlier diagnosis does not mean a longer life. What must be proven is fewer deaths."','„Frühere Diagnose heißt nicht längeres Leben. Zu belegen ist, dass weniger Menschen sterben.“','«Un diagnóstico más precoz no significa vivir más. Lo que hay que demostrar es que mueren menos personas.»','«Более ранний диагноз не означает более долгую жизнь. Доказать нужно снижение смертности.»','“更早诊断不等于活得更久。需要证明的是死亡减少。”','"जल्दी निदान का मतलब लंबा जीवन नहीं है। साबित यह करना है कि मौतें घटती हैं।"','「早期診断は長生きを意味しない。証明すべきは死亡の減少である。」'],
+'foot':['Kaynak: NEJM 2026; FDA Yönetici Özeti 2026 · AI desteği alınmıştır','Source: NEJM 2026; FDA Executive Summary 2026 · Prepared with AI support','Quelle: NEJM 2026; FDA Executive Summary 2026 · Mit KI-Unterstützung erstellt','Fuente: NEJM 2026; Resumen ejecutivo de la FDA 2026 · Elaborado con apoyo de IA','Источник: NEJM 2026; резюме FDA 2026 · Подготовлено с помощью ИИ','来源：NEJM 2026；FDA执行摘要 2026 · 借助AI辅助完成','स्रोत: NEJM 2026; FDA कार्यकारी सारांश 2026 · AI की सहायता से तैयार','出典：NEJM 2026、FDAエグゼクティブサマリー 2026 · AIの支援を受けて作成'],
+'cu':['hız oranı','rate ratio','Ratenverhältnis','razón de tasas','отношение частот','率比','दर अनुपात','率比'],
+'cs':['Ana hedefte evre III-IV kanser tanıları azalmadı','Stage III-IV cancer diagnoses did not fall on the primary endpoint','Im primären Endpunkt kein Rückgang der Diagnosen im Stadium III-IV','En el objetivo primario no bajaron los diagnósticos en estadio III-IV','По главной цели диагнозы III-IV стадии не снизились','主要终点：III-IV期癌症诊断未减少','मुख्य लक्ष्य पर चरण III-IV के निदान नहीं घटे','主要評価項目でステージIII-IVの診断は減らなかった'],
+}
+FF={'zh':'"Noto Serif CJK SC"','ja':'"Noto Serif CJK JP"','hi':'"Noto Sans Devanagari"'}
+DEV='/home/claude/klinikfarmakoloji-site/tools/gorsel-kaynak/fonts/noto-sans-devanagari-devanagari-%s-normal.woff2'
+def css(l):
+    c='@font-face{font-family:"Noto Sans Devanagari";font-weight:400;src:url(file://%s)}@font-face{font-family:"Noto Sans Devanagari";font-weight:700;src:url(file://%s)}'%(DEV%'400',DEV%'700') if l=='hi' else ''
+    if l in FF: c+='body{font-family:%s,"Liberation Serif",serif!important}'%FF[l]
+    return c
+TUBE='<g transform="rotate(25 60 62)"><rect x="42" y="6" width="36" height="12" rx="3" fill="#e6b85c"/><path d="M46 18h28v74a14 14 0 0 1-28 0z" fill="none" stroke="#f6efe0" stroke-width="4"/><path d="M48 52h24v40a12 12 0 0 1-24 0z" fill="#d43a4f"/></g>'
+info=open('info.html',encoding='utf-8').read()
+def dots(y,n,a=0): return '<span>'+'<i class="d y"></i>'*y+'<i class="d n"></i>'*n+'<i class="d a"></i>'*a+'</span>'
+def mk_info(i,l):
+    t={k:v[i] for k,v in S.items()}
+    num=lambda x:(x if l in('tr','de','es','ru') else x.replace(',','.'))
+    pc=lambda x:t['pc'].format(num(x))
+    head,_=info.split('<body>')
+    head=head.replace('<html lang="tr">','<html lang="%s">'%l).replace('</style>',css(l)+('.hd h1{font-size:%dpx}'%{'tr':38,'en':30,'de':35,'es':29,'ru':33,'zh':44,'hi':33,'ja':36}[l])+('.p h3{font-size:15px;letter-spacing:.5px}.t{font-size:18px}.bar b{width:112px}.v b{width:215px}.v{font-size:16.5px}.q{font-size:22px}.ft{font-size:15px}.d{width:13px;height:13px;margin-right:3px}.v b{width:200px}'+('.big{font-size:54px}.row{margin-top:17px}.p{padding:16px 16px 18px}.v{margin-top:14px}.bar{margin-top:11px}.q{margin-top:16px;padding:13px 22px;font-size:22px}' if l in('de','es') else '.big{font-size:58px}.row{margin-top:20px}.p{padding:20px 16px 22px}.v{margin-top:17px}.bar{margin-top:14px}.t{font-size:19px}.q{margin-top:20px;padding:16px 22px;font-size:23px}') if l!='tr' else '')+'</style>')
+    bars=''.join('<div class="bar"><b>%s</b><i style="width:%dpx;background:%s"></i><span>%s</span></div>'%(t['st'].format(r),w,c,pc(v)) for r,w,c,v in [('I',68,'#8a1c2e','13,6'),('II',172,'#b0453a','34,4'),('III',222,'#c2571a','44,3'),('IV',300,'#7a5a12','60,0')])
+    b=f'''<body><div class="hd"><div class="kick">{t['kick']}</div><h1>{t['title']}</h1><p>{t['sub']}</p><svg class="tube" width="120" height="124" viewBox="0 0 120 124">{TUBE}<circle cx="100" cy="100" r="6" fill="#e6b85c"/></svg></div>
+<div class="row"><div class="p c4"><h3>{t['p1h']}</h3><div class="big">{t['p1n']}</div><div class="t">{t['p1t']}</div><div class="s">{t['p1s']}</div></div>
+<div class="p c1"><h3>{t['p2h']}</h3><div class="big">{t['p2n']}</div><div class="t">{t['p2t']}</div><div class="s">{t['p2s']}</div></div>
+<div class="p c3"><h3>{t['p3h']}</h3><div class="big">{t['p3n']}</div><div class="t">{t['p3t']}</div><div class="s">{t['p3s']}</div></div></div>
+<div class="row"><div class="p c1" style="flex:1.25"><h3>{t['bh']}</h3>{bars}<div class="s">{t['bs']}</div></div>
+<div class="p c4"><h3>{t['fh']}</h3><div class="v"><b>{t['f1']}</b>{dots(10,0)}</div><div class="v"><b>{t['f2']}</b>{dots(6,4)}</div><div class="v"><b>{t['f3']}</b>{dots(7,2,1)}</div><div class="t" style="margin-top:12px">{t['ft']}</div></div></div>
+<div class="row"><div class="p c2"><h3>{t['q1h']}</h3><div class="big">{pc('52')}</div><div class="t">{t['q1t']}</div><div class="s">{t['q1s']}</div></div>
+<div class="p c5"><h3>{t['q2h']}</h3><div class="big">{t['q2n']}</div><div class="t">{t['q2t']}</div><div class="s">{t['q2s']}</div></div>
+<div class="p c3"><h3>{t['q3h']}</h3><div class="big">{pc('19')} <span style="font-size:28px">{t['q3u']}</span></div><div class="t">{t['q3t']}</div><div class="s">{t['q3s']}</div></div></div>
+<div class="q">{t['quote']}</div><div class="ft"><b>klinikfarmakoloji.com</b><span>{t['foot']}</span></div></body></html>'''
+    return head+b
+def mk_cover(i,l):
+    t={k:v[i] for k,v in S.items()}
+    hs={'tr':74,'en':66,'de':70,'es':66,'ru':64,'zh':84,'hi':66,'ja':70}[l]
+    return f'''<!doctype html><html lang="{l}"><head><meta charset="utf-8"><style>*{{margin:0;padding:0;box-sizing:border-box}}html{{height:800px;overflow:hidden}}
+body{{width:1500px;height:800px;background:linear-gradient(120deg,#3a0a14 0%,#5a0f1e 55%,#8a1c2e 100%);font-family:"Liberation Serif",serif;color:#f6efe0;position:relative;overflow:hidden;display:flex;align-items:center}}
+.l{{padding-left:80px;width:940px;z-index:2}}.k{{color:#e6b85c;letter-spacing:6px;font-size:26px;font-weight:bold;margin-bottom:22px}}
+h1{{font-size:{hs}px;line-height:1.08;font-weight:bold;margin-bottom:30px}}
+.rib{{display:inline-block;background:#e6b85c;color:#3a0a14;font-weight:bold;font-size:32px;line-height:1.2;padding:14px 26px;border-radius:8px;max-width:860px}}
+.r{{position:absolute;right:70px;top:140px;width:430px;height:520px;background:#f6efe0;border-radius:28px;color:#2b1a1a;text-align:center;padding:30px 26px 0;box-shadow:0 18px 50px rgba(0,0,0,.4)}}
+.n{{font-size:140px;font-weight:bold;color:#8a1c2e;line-height:1}}.u{{font-size:32px;font-weight:bold;color:#8a1c2e;margin:4px 0 14px}}.s{{font-size:25px;line-height:1.3;color:#4a3a34}}
+.c{{position:absolute;border-radius:50%;opacity:.08;background:#fff}}.w{{position:absolute;left:80px;bottom:36px;font-size:24px;font-weight:bold;color:#e6b85c}}{css(l)}</style></head><body>
+<div class="c" style="width:700px;height:700px;right:-160px;top:-260px"></div><div class="c" style="width:360px;height:360px;right:470px;bottom:-210px"></div>
+<div class="l"><div class="k">{t['kick']}</div><h1>{t['title']}</h1><div class="rib">{t['sub']}</div></div>
+<div class="r"><svg width="110" height="114" viewBox="0 0 120 124">{TUBE.replace('#f6efe0','#5a0f1e')}</svg><div class="n">{t['p2n']}</div><div class="u">{t['cu']}</div><div class="s">{t['cs']}</div></div>
+<div class="w">klinikfarmakoloji.com</div></body></html>'''
+for i,l in enumerate(L):
+    open(f'i18n/info.{l}.html','w',encoding='utf-8').write(mk_info(i,l))
+    open(f'i18n/cover.{l}.html','w',encoding='utf-8').write(mk_cover(i,l))
+json.dump({'langs':L,'strings':S},open('i18n/strings.json','w',encoding='utf-8'),ensure_ascii=False,indent=1)
