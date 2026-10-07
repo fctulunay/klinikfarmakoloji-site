@@ -1,0 +1,294 @@
+{
+ "langs": [
+  "tr",
+  "en",
+  "de",
+  "es",
+  "ru",
+  "zh",
+  "hi",
+  "ja"
+ ],
+ "strings": {
+  "kick": [
+   "ACI İLAÇ",
+   "BITTER MEDICINE",
+   "BITTERE MEDIZIN",
+   "MEDICINA AMARGA",
+   "ГОРЬКОЕ ЛЕКАРСТВО",
+   "苦药",
+   "कड़वी दवा",
+   "苦い薬"
+  ],
+  "title": [
+   "TÜRKİYE'DE GLP-1 BENZERİ<br>PİYASAYA ÇIKABİLİR Mİ?",
+   "CAN A GLP-1 GENERIC REACH<br>THE MARKET IN TÜRKİYE?",
+   "KOMMT EIN GLP-1-GENERIKUM<br>IN DER TÜRKEI AUF DEN MARKT?",
+   "¿PUEDE UN GENÉRICO DE GLP-1<br>LLEGAR AL MERCADO EN TURQUÍA?",
+   "ВЫЙДЕТ ЛИ ДЖЕНЕРИК ГПП-1<br>НА РЫНОК ТУРЦИИ?",
+   "GLP-1仿制药<br>能在土耳其上市吗？",
+   "क्या तुर्किये में GLP-1 जेनेरिक<br>बाज़ार में आ सकता है?",
+   "トルコでGLP-1後発品は<br>発売できるか？"
+  ],
+  "sub": [
+   "Molekül patenti bitti; ikincil patentler, kalem ve ruhsat süreci bitmedi",
+   "The compound patent has expired; secondary patents, the pen and approval remain",
+   "Das Wirkstoffpatent ist abgelaufen; Sekundärpatente, Pen und Zulassung bleiben",
+   "La patente de la molécula expiró; quedan las secundarias, la pluma y la autorización",
+   "Патент на молекулу истёк; вторичные патенты, ручка и регистрация остаются",
+   "化合物专利已到期；次级专利、注射笔和审批仍是关卡",
+   "अणु पेटेंट समाप्त; द्वितीयक पेटेंट, पेन और अनुमोदन प्रक्रिया बाकी",
+   "物質特許は満了。二次特許、ペン、承認手続きが残る"
+  ],
+  "tl": [
+   "SEMAGLUTİD PATENT TAKVİMİ",
+   "SEMAGLUTIDE PATENT TIMELINE",
+   "SEMAGLUTID-PATENTKALENDER",
+   "CALENDARIO DE PATENTES DE SEMAGLUTIDA",
+   "ПАТЕНТНЫЙ КАЛЕНДАРЬ СЕМАГЛУТИДА",
+   "司美格鲁肽专利时间表",
+   "सेमाग्लूटाइड पेटेंट समयरेखा",
+   "セマグルチド特許の日程"
+  ],
+  "t1": [
+   "Molekül patenti bitti<br>(20 Mart)",
+   "Compound patent expired<br>(20 March)",
+   "Wirkstoffpatent abgelaufen<br>(20. März)",
+   "Expiró la patente<br>de la molécula (20 marzo)",
+   "Патент на молекулу истёк<br>(20 марта)",
+   "化合物专利到期<br>（3月20日）",
+   "अणु पेटेंट समाप्त<br>(20 मार्च)",
+   "物質特許が満了<br>（3月20日）"
+  ],
+  "t2": [
+   "Oral tablet (SNAC) patenti<br>AB'de ek koruma sonu",
+   "Oral tablet (SNAC) patent<br>EU extra protection ends",
+   "Patent Tablette (SNAC)<br>Ende des EU-Zusatzschutzes",
+   "Patente comprimido (SNAC)<br>Fin protección extra UE",
+   "Патент на таблетку (SNAC)<br>Конец доп. охраны в ЕС",
+   "口服片（SNAC）专利<br>欧盟补充保护到期",
+   "ओरल टैबलेट (SNAC) पेटेंट<br>EU अतिरिक्त संरक्षण समाप्त",
+   "経口錠（SNAC）特許<br>EUの追加保護が終了"
+  ],
+  "t3": [
+   "Diyabette 1 mg<br>doz patenti",
+   "1 mg dose patent<br>in diabetes",
+   "1-mg-Dosispatent<br>bei Diabetes",
+   "Patente dosis 1 mg<br>en diabetes",
+   "Патент на дозу 1 мг<br>при диабете",
+   "糖尿病1毫克<br>剂量专利",
+   "मधुमेह में 1 mg<br>खुराक पेटेंट",
+   "糖尿病の1 mg<br>用量特許"
+  ],
+  "t4": [
+   "Enjektabl sıvı<br>bileşim patenti",
+   "Injectable liquid<br>composition patent",
+   "Patent flüssige<br>Injektionslösung",
+   "Patente solución<br>inyectable",
+   "Патент на раствор<br>для инъекций",
+   "注射液<br>组合物专利",
+   "इंजेक्शन घोल<br>संरचना पेटेंट",
+   "注射液<br>組成物特許"
+  ],
+  "c1h": [
+   "Molekül patenti",
+   "Compound patent",
+   "Wirkstoffpatent",
+   "Patente de la molécula",
+   "Патент на молекулу",
+   "化合物专利",
+   "अणु पेटेंट",
+   "物質特許"
+  ],
+  "c1s": [
+   "Engel değil",
+   "Not a barrier",
+   "Kein Hindernis",
+   "No es un obstáculo",
+   "Не препятствие",
+   "不再是障碍",
+   "बाधा नहीं",
+   "障壁ではない"
+  ],
+  "c1t": [
+   "Türkiye'de ek koruma belgesi yok. AB'de koruma 2031'e uzarken Türkiye'de Mart 2026'da bitti.",
+   "Türkiye has no supplementary protection certificate. Protection runs to 2031 in the EU but ended in March 2026 in Türkiye.",
+   "Die Türkei kennt kein ergänzendes Schutzzertifikat. In der EU läuft der Schutz bis 2031, in der Türkei endete er im März 2026.",
+   "Turquía no tiene certificado complementario de protección. En la UE la protección llega a 2031; en Turquía terminó en marzo de 2026.",
+   "В Турции нет свидетельства дополнительной охраны. В ЕС охрана действует до 2031 года, в Турции она закончилась в марте 2026 года.",
+   "土耳其没有补充保护证书。欧盟的保护延续到2031年，土耳其已于2026年3月到期。",
+   "तुर्किये में पूरक संरक्षण प्रमाणपत्र नहीं है। यूरोपीय संघ में संरक्षण 2031 तक है, तुर्किये में मार्च 2026 में समाप्त हुआ।",
+   "トルコには補充的保護証明書がない。EUでは2031年まで保護が続くが、トルコでは2026年3月に終了した。"
+  ],
+  "c2h": [
+   "İkincil patentler",
+   "Secondary patents",
+   "Sekundärpatente",
+   "Patentes secundarias",
+   "Вторичные патенты",
+   "次级专利",
+   "द्वितीयक पेटेंट",
+   "二次特許"
+  ],
+  "c2s": [
+   "Biri düştü",
+   "One has fallen",
+   "Eines ist gefallen",
+   "Una ha caído",
+   "Один отменён",
+   "一项已被撤销",
+   "एक रद्द हुआ",
+   "1件は取り消し"
+  ],
+  "c2t": [
+   "Obezite doz patenti Avrupa'da iptal edildi; Türkiye'de de geçersiz. Diğerleri için sicile bakılmalı.",
+   "The obesity dosing patent was revoked in Europe and is void in Türkiye too. For the others, check the Turkish register.",
+   "Das Dosierungspatent für Adipositas wurde in Europa widerrufen und gilt auch in der Türkei nicht. Für die übrigen entscheidet das Register.",
+   "La patente de dosis para obesidad fue revocada en Europa y tampoco vale en Turquía. Para las demás hay que consultar el registro.",
+   "Патент на дозировку при ожирении отменён в Европе и не действует в Турции. По остальным нужно смотреть реестр.",
+   "肥胖剂量专利已在欧洲被撤销，在土耳其同样无效。其余专利须查土耳其登记簿。",
+   "मोटापे की खुराक का पेटेंट यूरोप में रद्द हुआ और तुर्किये में भी अमान्य है। बाकी के लिए रजिस्टर देखना होगा।",
+   "肥満の用量特許は欧州で取り消され、トルコでも無効。残りは登録簿の確認が必要。"
+  ],
+  "c3h": [
+   "Kalem (cihaz)",
+   "Pen (device)",
+   "Pen (Gerät)",
+   "Pluma (dispositivo)",
+   "Шприц-ручка",
+   "注射笔（器械）",
+   "पेन (उपकरण)",
+   "ペン（デバイス）"
+  ],
+  "c3s": [
+   "Asıl darboğaz",
+   "The real bottleneck",
+   "Der eigentliche Engpass",
+   "El verdadero cuello de botella",
+   "Главное узкое место",
+   "真正的瓶颈",
+   "असली अड़चन",
+   "本当のボトルネック"
+  ],
+  "c3t": [
+   "Patent farklı tasarımla aşılır. Sorun tedarik: jenerik firmaların çoğu kalemi kendisi üretmiyor.",
+   "Patents can be designed around. Supply is the problem: most generic firms do not make their own pens.",
+   "Patente lassen sich durch ein anderes Design umgehen. Das Problem ist die Lieferung: Die meisten Generikafirmen bauen keine eigenen Pens.",
+   "La patente se sortea con otro diseño. El problema es el suministro: la mayoría de los fabricantes de genéricos no produce sus plumas.",
+   "Патент обходится другой конструкцией. Проблема в поставках: большинство производителей дженериков не делают ручки сами.",
+   "专利可以通过不同设计绕开。问题在供应：多数仿制药企业不自己生产注射笔。",
+   "पेटेंट अलग डिज़ाइन से पार हो जाता है। समस्या आपूर्ति है: अधिकतर जेनेरिक कंपनियाँ पेन खुद नहीं बनातीं।",
+   "特許は別設計で回避できる。問題は供給で、後発品企業の多くはペンを自社で製造していない。"
+  ],
+  "c4h": [
+   "Ruhsat ve Faz III",
+   "Approval and Phase III",
+   "Zulassung und Phase III",
+   "Autorización y fase III",
+   "Регистрация и фаза III",
+   "审批与III期",
+   "अनुमोदन और फेज़ III",
+   "承認と第III相"
+  ],
+  "c4s": [
+   "Beklemiyoruz",
+   "Not expected",
+   "Wir erwarten sie nicht",
+   "No lo esperamos",
+   "Мы этого не ждём",
+   "预计不会要求",
+   "हमें अपेक्षा नहीं",
+   "求められないとみる"
+  ],
+  "c4t": [
+   "Kılavuz klinik çalışmayı \"gerekli görülmesi halinde\" ister. Öngörümüz: TİTCK istemeyecek.",
+   "The guideline asks for a clinical trial \"if deemed necessary\". Our forecast: the Turkish agency (TİTCK) will not ask.",
+   "Die Leitlinie verlangt eine klinische Studie „falls für erforderlich gehalten“. Unsere Prognose: Die Behörde TİTCK wird sie nicht verlangen.",
+   "La guía pide un ensayo clínico «si se considera necesario». Nuestra previsión: la agencia turca (TİTCK) no lo pedirá.",
+   "Руководство требует клиническое исследование «при необходимости». Наш прогноз: турецкое агентство (TİTCK) его не потребует.",
+   "指南规定“必要时”才要求临床试验。我们的预测：土耳其药监机构（TİTCK）不会要求。",
+   "दिशानिर्देश नैदानिक परीक्षण \"आवश्यक समझे जाने पर\" माँगता है। हमारा अनुमान: तुर्किये की एजेंसी (TİTCK) नहीं माँगेगी।",
+   "ガイドラインは臨床試験を「必要と判断される場合」に求める。当サイトの予測：トルコ当局（TİTCK）は求めない。"
+  ],
+  "c5h": [
+   "Liraglutid dersi",
+   "The liraglutide lesson",
+   "Die Liraglutid-Lektion",
+   "La lección de la liraglutida",
+   "Урок лираглутида",
+   "利拉鲁肽的教训",
+   "लिराग्लूटाइड का सबक",
+   "リラグルチドの教訓"
+  ],
+  "c5s": [
+   "Hâlâ yok",
+   "Still none",
+   "Noch immer keines",
+   "Todavía no hay",
+   "До сих пор нет",
+   "至今没有",
+   "अब तक नहीं",
+   "いまだに無い"
+  ],
+  "c5t": [
+   "Patenti bütün ülkelerde bitti; AB ve ABD'de jeneriği var. Türkiye'de ruhsatlı jeneriği yok.",
+   "Its patent has expired everywhere, and generics exist in the EU and the US. Türkiye has no approved generic.",
+   "Das Patent ist überall abgelaufen; in der EU und den USA gibt es Generika. In der Türkei ist keines zugelassen.",
+   "Su patente expiró en todos los países; hay genéricos en la UE y EE. UU. En Turquía no hay ninguno autorizado.",
+   "Патент истёк во всех странах; в ЕС и США дженерики есть. В Турции зарегистрированного дженерика нет.",
+   "其专利在所有国家均已到期，欧盟和美国已有仿制药。土耳其没有获批的仿制药。",
+   "इसका पेटेंट हर देश में समाप्त हो चुका है; यूरोपीय संघ और अमेरिका में जेनेरिक हैं। तुर्किये में कोई अनुमोदित जेनेरिक नहीं।",
+   "特許はすべての国で満了し、EUと米国には後発品がある。トルコには承認された後発品がない。"
+  ],
+  "c6h": [
+   "Ne zaman?",
+   "When?",
+   "Wann?",
+   "¿Cuándo?",
+   "Когда?",
+   "何时？",
+   "कब?",
+   "いつ？"
+  ],
+  "c6s": [
+   "2026 sonu, 2027",
+   "Late 2026 or 2027",
+   "Ende 2026 oder 2027",
+   "Finales de 2026 o 2027",
+   "Конец 2026 или 2027",
+   "2026年底或2027年",
+   "2026 के अंत या 2027",
+   "2026年末か2027年"
+  ],
+  "c6t": [
+   "İlk ürünler dava gölgesinde çıkabilir. Fiyat başta orijinale yakın; rekabetle düşer.",
+   "The first products may launch under threat of litigation. Prices start near the original and fall with competition.",
+   "Die ersten Produkte könnten unter Klagedrohung starten. Der Preis liegt zunächst nahe am Original und sinkt mit dem Wettbewerb.",
+   "Los primeros productos pueden salir bajo amenaza de litigio. El precio empieza cerca del original y baja con la competencia.",
+   "Первые препараты могут выйти под угрозой исков. Цена сначала близка к оригиналу и снижается с конкуренцией.",
+   "首批产品可能在诉讼阴影下上市。价格起初接近原研药，随竞争下降。",
+   "पहले उत्पाद मुकदमे के साये में आ सकते हैं। कीमत शुरू में मूल दवा के करीब रहेगी और प्रतिस्पर्धा से घटेगी।",
+   "最初の製品は訴訟リスクの中で発売されうる。価格は当初は先発品に近く、競争で下がる。"
+  ],
+  "quote": [
+   "Jenerik çıkabilir; asıl soru hangi kanıtla çıkacağıdır.",
+   "A generic can come; the real question is on what evidence.",
+   "Ein Generikum kann kommen; die eigentliche Frage ist, auf welcher Evidenz.",
+   "El genérico puede llegar; la verdadera pregunta es con qué pruebas.",
+   "Дженерик может выйти; главный вопрос в том, на каких доказательствах.",
+   "仿制药可以上市；真正的问题是凭什么证据。",
+   "जेनेरिक आ सकता है; असली सवाल यह है कि किस प्रमाण पर।",
+   "後発品は出せる。本当の問いは、どの根拠で出るかだ。"
+  ],
+  "foot": [
+   "AI desteği alınmıştır",
+   "Prepared with AI support",
+   "Mit KI-Unterstützung erstellt",
+   "Elaborado con apoyo de IA",
+   "Подготовлено при поддержке ИИ",
+   "借助AI辅助制作",
+   "AI सहायता से तैयार",
+   "AIの支援を受けて作成"
+  ]
+ }
+}

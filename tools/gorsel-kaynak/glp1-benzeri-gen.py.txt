@@ -1,0 +1,94 @@
+# GLP-1 benzeri yazısı: infografik (1080x1080) ve kapak (1500x800), 8 dilde.
+# Kullanım: python3 gen.py <çıktı klasörü>
+import json, os, sys
+from playwright.sync_api import sync_playwright
+HERE = os.path.dirname(os.path.abspath(__file__))
+OUT = sys.argv[1] if len(sys.argv) > 1 else HERE + '/out'
+L = ['tr', 'en', 'de', 'es', 'ru', 'zh', 'hi', 'ja']
+S = json.load(open(HERE + '/glp1-benzeri.i18n.json', encoding='utf-8'))['strings']
+DEVDIR = os.environ.get('KFD_FONTS', '/home/claude/klinikfarmakoloji-site/tools/gorsel-kaynak/fonts')
+DEV = DEVDIR + '/noto-sans-devanagari-devanagari-%s-normal.woff2'
+FF = {'zh': '"Noto Serif CJK SC"', 'ja': '"Noto Serif CJK JP"', 'hi': '"Noto Sans Devanagari"'}
+TITLE = {'tr': 45, 'en': 41, 'de': 37, 'es': 37, 'ru': 41, 'zh': 44, 'hi': 40, 'ja': 46}
+BODY = {'tr': 19, 'en': 18, 'de': 16.5, 'es': 17, 'ru': 16.5, 'zh': 21, 'hi': 17.5, 'ja': 19}
+STRONG = {'tr': 31, 'en': 29, 'de': 25, 'es': 24, 'ru': 26, 'zh': 31, 'hi': 28, 'ja': 27}
+COLORS = ['#4F7A3A', '#B4472E', '#1F6F78', '#2B3F6B', '#6B3A6E', '#C98A1B']
+ICONS = ['<circle cx="6" cy="7" r="3"/><circle cx="18" cy="7" r="3"/><circle cx="12" cy="18" r="3"/><path d="M8.5 8.5l2.5 7M15.5 8.5l-2.5 7M9 7h6"/>',
+         '<path d="M12 3l9 5-9 5-9-5 9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/>',
+         '<rect x="9" y="6" width="6" height="12" rx="1"/><path d="M12 18v4M10 6V3h4v3M9 10h6"/>',
+         '<path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13l2.5 2.5L16 11"/>',
+         '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 115 0c0 1.8-2.5 2-2.5 4M12 17v.5"/>',
+         '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 15h3"/>']
+PTS = [('10%', '#4F7A3A', '2026', 't1'), ('37%', '#C98A1B', '2031', 't2'), ('64%', '#B4472E', '2033', 't3'), ('90%', '#6B3A6E', '2039', 't4')]
+
+def fontcss(l):
+    c = ''
+    if l == 'hi': c += '@font-face{font-family:"Noto Sans Devanagari";font-weight:400;src:url(file://%s)}@font-face{font-family:"Noto Sans Devanagari";font-weight:700;src:url(file://%s)}' % (DEV % '400', DEV % '700')
+    if l in FF: c += 'body{font-family:%s,"Liberation Serif",serif!important}' % FF[l]
+    return c
+
+BASE = '''*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F6EFE2;font-family:Georgia,'DejaVu Serif','Liberation Serif',serif;color:#2A1A14;position:relative;overflow:hidden}
+.k{color:#E2B95A;letter-spacing:4px;font-weight:bold}
+.bar{position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,#C98A1B 0 16.6%,#1F6F78 0 33.3%,#B4472E 0 50%,#4F7A3A 0 66.6%,#6B3A6E 0 83.3%,#2B3F6B 0)}
+.tl{position:relative}.tl .lbl{font-weight:bold;letter-spacing:2px;color:#7A1F2B}
+.tl .line{position:absolute;left:10px;right:10px;border-radius:5px;background:linear-gradient(90deg,#4F7A3A 0 10%,#C98A1B 10% 64%,#B4472E 64%)}
+.pt{position:absolute;text-align:center}.pt i{display:block;border-radius:50%;margin:0 auto;border:5px solid #F6EFE2;box-shadow:0 0 0 3px currentColor;background:currentColor}
+.pt b{display:block;color:#2A1A14}.pt span{display:inline-block;color:#2A1A14}'''
+
+def timeline(t, cls=''):
+    return '<div class="tl %s"><div class="lbl">%s</div><div class="line"></div>%s</div>' % (cls, t['tl'], ''.join(
+        '<div class="pt" style="left:%s;color:%s"><i></i><b>%s</b><span>%s</span></div>' % (x, c, y, t[k]) for x, c, y, k in PTS))
+
+def info(l, t):
+    css = BASE + '''body{width:1080px;height:1080px}
+.hd{background:#5A1420;height:178px;padding:22px 44px 0;position:relative}.hd .k{font-size:17px}
+.hd h1{color:#FBF4E4;font-size:%dpx;line-height:1.16;margin-top:10px;letter-spacing:.5px}
+.sub{font-size:21px;font-style:italic;text-align:center;padding:14px 40px 4px;color:#5A1420;white-space:nowrap}
+.tl{margin:6px 44px 0;height:138px}.tl .lbl{font-size:15px}.tl .line{top:52px;height:10px}
+.pt{top:36px;width:240px;margin-left:-120px}.pt i{width:42px;height:42px}.pt b{font-size:25px;margin-top:6px}.pt span{font-size:14.5px;line-height:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 44px 0}
+.c{background:#FFFBF2;border:3px solid var(--a);border-radius:14px;height:254px;overflow:hidden}
+.c .t{background:var(--a);color:#fff;height:58px;display:flex;align-items:center;padding:0 12px;font-size:19.5px;font-weight:bold;gap:10px;line-height:1.1}
+.c .t svg{width:38px;height:38px;flex:none;background:#fff;border-radius:50%%;padding:6px}
+.c .b{padding:13px 15px;font-size:%spx;line-height:1.32;height:190px}
+.c .b strong{color:var(--a);font-size:%dpx;display:block;line-height:1.16;margin-bottom:6px}
+.q{position:absolute;left:0;right:0;bottom:46px;height:84px;background:#7A1F2B;color:#FBF4E4;font-size:24px;font-style:italic;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 50px}
+.q:before{content:'\\201C';font-size:70px;color:#E2B95A;margin-right:12px;line-height:40px;margin-top:22px}
+.ft{position:absolute;left:44px;right:44px;bottom:0;height:46px;display:flex;justify-content:space-between;align-items:center;font-size:15px;color:#5A1420}.ft b{font-size:18px;letter-spacing:1px}
+''' % (TITLE[l], BODY[l], STRONG[l]) + fontcss(l)
+    cards = ''.join('<div class="c" style="--a:%s"><div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="%s" stroke-width="2.2">%s</svg>%s</div><div class="b"><strong>%s</strong>%s</div></div>'
+                    % (COLORS[i], COLORS[i], ICONS[i], t['c%dh' % (i + 1)], t['c%ds' % (i + 1)], t['c%dt' % (i + 1)]) for i in range(6))
+    return '<!doctype html><html lang="%s"><head><meta charset="utf-8"><style>%s</style></head><body><div class="hd"><div class="k">%s</div><h1>%s</h1><div class="bar"></div></div><div class="sub">%s</div>%s<div class="grid">%s</div><div class="q">%s</div><div class="ft"><b>klinikfarmakoloji.com</b><span>Prof. Dr. F. Cankat Tulunay · %s</span></div></body></html>' % (
+        l, css, t['kick'], t['title'], t['sub'], timeline(t), cards, t['quote'], t['foot'])
+
+def cover(l, t):
+    css = BASE + '''body{width:1500px;height:800px}
+.hd{background:#5A1420;height:452px;padding:60px 90px 0;position:relative}.hd .k{font-size:26px}
+.hd h1{color:#FBF4E4;font-size:%dpx;line-height:1.14;margin-top:26px;letter-spacing:1px}
+.hd p{color:#E9D9B8;font-size:29px;font-style:italic;margin-top:26px}
+.tl{margin:34px 90px 0;height:250px}.tl .lbl{font-size:21px}.tl .line{top:78px;height:14px}
+.pt{top:54px;width:330px;margin-left:-165px}.pt i{width:62px;height:62px}.pt b{font-size:38px;margin-top:8px}.pt span{font-size:21px;line-height:25px}
+.ft{position:absolute;right:90px;bottom:16px;font-size:20px;color:#5A1420;font-weight:bold;letter-spacing:1px}
+''' % int(TITLE[l] * 1.62) + fontcss(l)
+    return '<!doctype html><html lang="%s"><head><meta charset="utf-8"><style>%s</style></head><body><div class="hd"><div class="k">%s</div><h1>%s</h1><p>%s</p><div class="bar"></div></div>%s<div class="ft">klinikfarmakoloji.com</div></body></html>' % (
+        l, css, t['kick'], t['title'], t['sub'], timeline(t))
+
+CHECK = '''() => { const bad=[]; const add=(e,n)=>{ if(e.scrollHeight>e.clientHeight+1||e.scrollWidth>e.clientWidth+1) bad.push(n) };
+ document.querySelectorAll('.c .b').forEach((e,i)=>add(e,'card'+(i+1))); document.querySelectorAll('.c .t,.sub').forEach((e,i)=>add(e,e.className+i));
+ const h=document.querySelector('.hd'); const h1=h.querySelector('h1'); const last=h.querySelector('p')||h1; if(last.getBoundingClientRect().bottom>h.getBoundingClientRect().bottom-14) bad.push('header');
+ const pts=[...document.querySelectorAll('.pt span')].map(e=>e.getBoundingClientRect()); for(let i=1;i<pts.length;i++) if(pts[i].left<pts[i-1].right+6) bad.push('timeline'+i);
+ const g=document.querySelector('.grid'); const lim=g?g.getBoundingClientRect().top-4:innerHeight-44; pts.forEach((r,i)=>{ if(r.bottom>lim||r.left<0||r.right>innerWidth) bad.push('pt'+i) }); return bad }'''
+
+os.makedirs(OUT, exist_ok=True)
+with sync_playwright() as p:
+    br = p.chromium.launch()
+    for i, l in enumerate(L):
+        t = {k: v[i] for k, v in S.items()}
+        for name, fn, w, h in (('infografik', info, 1080, 1080), ('kapak', cover, 1500, 800)):
+            pg = br.new_page(viewport={'width': w, 'height': h}); pg.set_content(fn(l, t)); pg.wait_for_timeout(250)
+            bad = pg.evaluate(CHECK)
+            if bad: print('OVERFLOW', name, l, bad)
+            pg.screenshot(path='%s/glp1-benzeri-%s%s.png' % (OUT, name, '' if l == 'tr' else '.' + l)); pg.close()
+    br.close()
+print('done')
