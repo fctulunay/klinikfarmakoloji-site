@@ -20,7 +20,7 @@ article picture gets seven companion files next to it:
    without extension). A card is a condensed version: kicker, title, subtitle, optional key numbers,
    3-6 labelled points, one closing message, optional sources. Only title + subtitle gives a poster.
    Use only what the picture and article say; keep numbers exactly; no em dashes.
-   The footer note is "Prepared with AI support" in each language (already built in).
+   The pictures carry no "Prepared with AI support" note (dropped 2026-10-08 at the author's request).
    Card ids must be new (check `grep -l "'<id>'" batch*.py`).
 4. Render and place:
 

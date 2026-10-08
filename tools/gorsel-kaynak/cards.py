@@ -45,7 +45,7 @@ def page(d, lang, theme):
     if d.get('pts'): h.append('<div class="pts">'+''.join(f'<div class="pt"><b>{e(l)}</b>{" " if x else ""}{e(x)}</div>' for l,x in d['pts'])+'</div>')
     if d.get('msg'): h.append(f'<div class="msg">{e(d["msg"])}</div>')
     if d.get('src'): h.append(f'<div class="src">{e(d["src"])}</div>')
-    h.append(f'<div class="foot"><span>klinikfarmakoloji.com</span><span>Prof. Dr. F. Cankat Tulunay</span><span>{AI[lang]}</span></div></body></html>')
+    h.append(f'<div class="foot"><span>klinikfarmakoloji.com</span><span>Prof. Dr. F. Cankat Tulunay</span></div></body></html>')
     return ''.join(h)
 def main():
     mod=importlib.import_module(sys.argv[1]); os.makedirs(HERE+'/out',exist_ok=True)
