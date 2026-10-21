@@ -1,6 +1,6 @@
 ---
 baslik: "BENZERİ OLMAYAN ANALJEZİK: METAMİZOL (NOVALGİN)"
-bolum: bilimsel-yazilar
+bolum: aci-ilac
 tarih: 2026-10-21
 gorsel: /sites/default/files/yazi-gorselleri/cms/metamizol-monograf-kapak.png
 ozet: "Metamizol (Novalgin) üzerine hazırladığımız 90 sayfalık monograf tamamlandı: klinik farmakolojisi, abartılan agranülositoz riskinin yüz yıllık kanıtının yeniden değerlendirilmesi, az bilinen etkileri ve epidural kullanımdaki özgün gözlemlerimiz. Önsöz, içerik ve monografın PDF sürümü."
