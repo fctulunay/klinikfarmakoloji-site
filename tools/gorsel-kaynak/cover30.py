@@ -6,14 +6,14 @@ from i18n import FONT
 HERE = os.path.dirname(os.path.abspath(__file__))
 os.makedirs(f'{HERE}/out', exist_ok=True)
 K = {
- 'tr': ("HABER", "ZAYIFLAMA İĞNELERİ: BİLİMSEL UYARI MI, KANITSIZ KORKUTMA MI?", "Kalp, böbrek, karaciğer: iddialar ve klinik kanıt"),
- 'en': ("NEWS", "WEIGHT-LOSS INJECTIONS: SCIENTIFIC WARNING OR UNFOUNDED SCARE?", "Heart, kidney, liver: claims and clinical evidence"),
- 'de': ("NACHRICHTEN", "ABNEHMSPRITZEN: WISSENSCHAFTLICHE WARNUNG ODER GRUNDLOSE PANIKMACHE?", "Herz, Niere, Leber: Behauptungen und klinische Evidenz"),
- 'es': ("NOTICIAS", "INYECCIONES PARA ADELGAZAR: ¿ADVERTENCIA CIENTÍFICA O ALARMA SIN PRUEBAS?", "Corazón, riñón, hígado: afirmaciones y evidencia clínica"),
- 'ru': ("НОВОСТИ", "УКОЛЫ ДЛЯ ПОХУДЕНИЯ: НАУЧНОЕ ПРЕДУПРЕЖДЕНИЕ ИЛИ БЕЗДОКАЗАТЕЛЬНОЕ ЗАПУГИВАНИЕ?", "Сердце, почки, печень: утверждения и клинические данные"),
- 'zh': ("新闻", "减肥针：科学警示还是无据恐吓？", "心脏、肾脏、肝脏：说法与临床证据"),
- 'hi': ("समाचार", "वज़न घटाने के इंजेक्शन: वैज्ञानिक चेतावनी या बेबुनियाद डर?", "हृदय, गुर्दा, यकृत: दावे और नैदानिक साक्ष्य"),
- 'ja': ("ニュース", "痩せる注射：科学的警告か、根拠なき脅しか？", "心臓・腎臓・肝臓：主張と臨床的根拠"),
+ 'tr': ('HABER', 'CANAN KARATAY HASTALARI VE KAMUOYUNU YANILTIYOR', 'Zayıflama iğneleri: kalp, böbrek, karaciğer iddiaları ve klinik kanıt'),
+ 'en': ('NEWS', 'CANAN KARATAY IS MISLEADING PATIENTS AND THE PUBLIC', 'Weight-loss injections: heart, kidney and liver claims and clinical evidence'),
+ 'de': ('NACHRICHTEN', 'CANAN KARATAY FÜHRT PATIENTEN UND ÖFFENTLICHKEIT IN DIE IRRE', 'Abnehmspritzen: Behauptungen zu Herz, Niere, Leber und klinische Evidenz'),
+ 'es': ('NOTICIAS', 'CANAN KARATAY ENGAÑA A LOS PACIENTES Y A LA OPINIÓN PÚBLICA', 'Inyecciones para adelgazar: afirmaciones sobre corazón, riñón e hígado y evidencia clínica'),
+ 'ru': ('НОВОСТИ', 'КАНАН КАРАТАЙ ВВОДИТ В ЗАБЛУЖДЕНИЕ ПАЦИЕНТОВ И ОБЩЕСТВО', 'Уколы для похудения: утверждения о сердце, почках, печени и клинические данные'),
+ 'zh': ('新闻', 'CANAN KARATAY误导患者和公众', '减肥针：关于心脏、肾脏、肝脏的说法与临床证据'),
+ 'hi': ('समाचार', 'कनान करताय मरीज़ों और जनता को गुमराह कर रही हैं', 'वज़न घटाने के इंजेक्शन: हृदय, गुर्दा, यकृत के दावे और नैदानिक साक्ष्य'),
+ 'ja': ('ニュース', 'カナン・カラタイ氏は患者と世論を誤らせている', '痩せる注射：心臓・腎臓・肝臓をめぐる主張と臨床的根拠'),
 }
 CSS = '''*{box-sizing:border-box;margin:0;padding:0}
 body{width:1500px;height:800px;background:#7A1F2B;color:#fff;font-family:'DejaVu Sans',sans-serif;display:flex;flex-direction:column;overflow:hidden}

@@ -1,5 +1,5 @@
 ---
-baslik: "ZAYIFLAMA İĞNELERİ: BİLİMSEL UYARI MI, KANITSIZ KORKUTMA MI?"
+baslik: "CANAN KARATAY HASTALARI VE KAMUOYUNU YANILTIYOR"
 bolum: haber
 tarih: 2026-10-22
 gorsel: /sites/default/files/yazi-gorselleri/cms/zayiflama-igneleri-kapak.png
