@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Bilingual (TR/EN) infographic 1080x1350 and cover 1500x800 for
-'İLAÇ ARAŞTIRMALARINDA KİŞİLER GÖNÜLLÜ MÜ, DENEK Mİ? (2)' (children in research),
+'TIBBİ ARAŞTIRMALARDA ÇOCUKLAR',
 in the same style as part (1). Output goes straight to sites/default/files/yazi-gorselleri/cms/."""
 import os
 from playwright.sync_api import sync_playwright
@@ -30,12 +30,12 @@ CSS = """
 *{margin:0;padding:0;box-sizing:border-box}
 body{width:1080px;height:1350px;background:#f5ede1;font-family:'DejaVu Serif',Georgia,serif;color:#2a1a14}
 .top{background:#5e1320;color:#fbf3e6;padding:30px 40px 24px}
-.top h1{font-size:43px;line-height:1.08;letter-spacing:.5px}
+.top h1{font-size:44px;white-space:nowrap;line-height:1.08;letter-spacing:.5px}
 .top h1 em{font-style:normal;color:#e6c27c}
 .top .sub{font-style:italic;font-weight:bold;color:#e6c27c;font-size:24px;margin-top:10px}
 .top .s2{font-size:17px;margin-top:8px;color:#f1e3cf}.top .s2 i{color:#e6c27c}
 .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:15px;padding:16px 26px 0}
-.p{background:#fcf7ee;border:2px solid;border-radius:10px;padding:14px 14px 12px;height:482px;overflow:hidden}
+.p{background:#fcf7ee;border:2px solid;border-radius:10px;padding:14px 14px 12px;height:505px;overflow:hidden}
 .ph{display:flex;gap:10px;align-items:center;margin-bottom:10px}
 .ic{flex:none;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center}
 .ic svg{width:25px;height:25px}
@@ -97,9 +97,9 @@ p6 = panel(Y, 'globe', 'Dünyanın cevabı', 'How the world solved it',
     '<p class="t"><i>Kendi çocuğumuza razı olur muyduk?</i><span class="en">Would we accept it for our own child?</span></p>')
 
 INFO = f"""<html><head><meta charset="utf-8"><style>{CSS}</style></head><body>
-<div class="top"><h1>İLAÇ ARAŞTIRMALARINDA KİŞİLER<br>GÖNÜLLÜ MÜ, DENEK Mİ? <em>(2)</em></h1>
-<div class="sub">Çocuklar: En Korunmasız Gönüllüler</div>
-<div class="s2"><i>Children: The Most Vulnerable Volunteers</i> · İstismar ile ihmal arasında · <i>Between exploitation and neglect</i></div></div>
+<div class="top"><h1>TIBBİ ARAŞTIRMALARDA <em>ÇOCUKLAR</em></h1>
+<div class="sub">Children in Medical Research</div>
+<div class="s2">En korunmasız gönüllüler: istismar ile ihmal arasında · <i>Between exploitation and neglect</i></div></div>
 <div class="grid">{p1}{p2}{p3}{p4}{p5}{p6}</div>
 <div class="q"><div class="a">"Çocuklar için en tehlikeli araştırma, adı araştırma olmayan araştırmadır."</div>
 <div class="b">"The most dangerous research for children is research that is not called research."</div></div>
@@ -118,9 +118,9 @@ h1 em{font-style:normal;color:#e6c27c}
 .f{position:absolute;left:110px;bottom:28px;color:#d9b072;font-weight:bold;letter-spacing:4px;font-size:20px}
 svg{position:absolute;right:45px;top:140px}
 </style></head><body>
-<div class="k">ACI İLAÇ · GÖNÜLLÜ MÜ, DENEK Mİ? (2)</div>
-<h1>ÇOCUKLAR:<br>EN <em>KORUNMASIZ</em><br><em>GÖNÜLLÜLER</em></h1>
-<div class="en">Children: The Most Vulnerable Volunteers</div>
+<div class="k">ACI İLAÇ · ARAŞTIRMA ETİĞİ</div>
+<h1>TIBBİ<br>ARAŞTIRMALARDA<br><em>ÇOCUKLAR</em></h1>
+<div class="en">Children in Medical Research</div>
 <div class="bar"></div>
 <div class="q">"Çocuklar tıbbi araştırmanın hem en çok istismar edilen hem de en çok ihmal edilen grubudur."</div>
 <div class="f">KLINIKFARMAKOLOJI.COM</div>
@@ -151,7 +151,7 @@ svg{position:absolute;right:45px;top:140px}
 
 with sync_playwright() as p:
     b = p.chromium.launch()
-    for html_, w, h, name in [(INFO, 1080, 1350, 'cocuk-arastirma-infografik.png'), (COVER, 1500, 800, 'cocuk-arastirma-kapak.png')]:
+    for html_, w, h, name in [(INFO, 1080, 1350, 'tibbi-arastirmalarda-cocuklar-infografik.png'), (COVER, 1500, 800, 'tibbi-arastirmalarda-cocuklar-kapak.png')]:
         pg = b.new_page(viewport={'width': w, 'height': h}); pg.set_content(html_)
         over = pg.evaluate("[...document.querySelectorAll('.p')].filter(e=>e.scrollHeight>e.clientHeight+1).map(e=>e.querySelector('.pt').textContent)")
         if over: print('OVERFLOW', over)
