@@ -1,0 +1,82 @@
+{
+ "tr": {
+  "title": "BİTKİSEL ÜRÜNLER<br>GÜVENLİ Mİ?",
+  "sub": "DOĞAL OLMASI, ZARARSIZ OLDUĞU ANLAMINA GELMEZ!",
+  "h1": "KARACİĞER HASARI", "t1": "Zerdeçal / kurkumin, yeşil çay ekstresi ve ashwagandha ile karaciğer hasarı bildirilmiştir.",
+  "h2": "BÖBREK HASARI", "t2": "Aristolokik asit içeren ürünler böbrek yetmezliği ve kanser riskini artırabilir.",
+  "h3": "KALP VE TANSİYON", "t3": "Meyan kökü potasyumu düşürebilir. Efedra ve sarı zakkum ciddi kalp sorunlarına yol açabilir.",
+  "h4": "İLAÇ ETKİLEŞİMLERİ", "t4": "Sarı kantaron ve diğer bitkisel ürünler ilaçların etkisini azaltabilir veya artırabilir.",
+  "strip": "ETİKETTE “BİTKİSEL” YAZMASI GÜVENLİK GARANTİSİ DEĞİLDİR.",
+  "foot": "Risk; bitkiye, doza, ürün kalitesine ve birlikte kullanılan ilaçlara bağlıdır."
+ },
+ "en": {
+  "title": "ARE HERBAL PRODUCTS<br>SAFE?",
+  "sub": "NATURAL DOES NOT MEAN HARMLESS!",
+  "h1": "LIVER DAMAGE", "t1": "Liver injury has been reported with turmeric / curcumin, green tea extract and ashwagandha.",
+  "h2": "KIDNEY DAMAGE", "t2": "Products containing aristolochic acid can raise the risk of kidney failure and cancer.",
+  "h3": "HEART AND BLOOD PRESSURE", "t3": "Licorice root can lower potassium. Ephedra and yellow oleander can cause serious heart problems.",
+  "h4": "DRUG INTERACTIONS", "t4": "St John's wort and other herbal products can weaken or strengthen the effect of medicines.",
+  "strip": "A “HERBAL” LABEL IS NO GUARANTEE OF SAFETY.",
+  "foot": "Risk depends on the plant, the dose, product quality and the medicines taken with it."
+ },
+ "de": {
+  "title": "SIND PFLANZLICHE<br>PRODUKTE SICHER?",
+  "sub": "NATÜRLICH HEISST NICHT HARMLOS!",
+  "h1": "LEBERSCHÄDEN", "t1": "Unter Kurkuma / Curcumin, Grüntee-Extrakt und Ashwagandha wurden Leberschäden berichtet.",
+  "h2": "NIERENSCHÄDEN", "t2": "Produkte mit Aristolochiasäure können das Risiko für Nierenversagen und Krebs erhöhen.",
+  "h3": "HERZ UND BLUTDRUCK", "t3": "Süßholzwurzel kann den Kaliumspiegel senken. Ephedra und Gelber Oleander können schwere Herzprobleme verursachen.",
+  "h4": "WECHSELWIRKUNGEN", "t4": "Johanniskraut und andere pflanzliche Produkte können die Wirkung von Arzneimitteln abschwächen oder verstärken.",
+  "strip": "„PFLANZLICH“ AUF DEM ETIKETT IST KEINE SICHERHEITSGARANTIE.",
+  "foot": "Das Risiko hängt von Pflanze, Dosis, Produktqualität und gleichzeitig eingenommenen Arzneimitteln ab."
+ },
+ "es": {
+  "title": "¿SON SEGUROS LOS<br>PRODUCTOS HERBALES?",
+  "sub": "¡NATURAL NO SIGNIFICA INOFENSIVO!",
+  "h1": "DAÑO HEPÁTICO", "t1": "Se ha notificado daño hepático con cúrcuma / curcumina, extracto de té verde y ashwagandha.",
+  "h2": "DAÑO RENAL", "t2": "Los productos con ácido aristolóquico pueden aumentar el riesgo de insuficiencia renal y de cáncer.",
+  "h3": "CORAZÓN Y TENSIÓN", "t3": "La raíz de regaliz puede bajar el potasio. La efedra y la adelfa amarilla pueden causar graves problemas cardíacos.",
+  "h4": "INTERACCIONES", "t4": "La hierba de San Juan y otros productos herbales pueden reducir o aumentar el efecto de los medicamentos.",
+  "strip": "QUE LA ETIQUETA DIGA «HERBAL» NO GARANTIZA LA SEGURIDAD.",
+  "foot": "El riesgo depende de la planta, la dosis, la calidad del producto y los medicamentos que se toman a la vez."
+ },
+ "ru": {
+  "title": "БЕЗОПАСНЫ ЛИ<br>РАСТИТЕЛЬНЫЕ ПРЕПАРАТЫ?",
+  "sub": "НАТУРАЛЬНОЕ НЕ ЗНАЧИТ БЕЗВРЕДНОЕ!",
+  "h1": "ПОРАЖЕНИЕ ПЕЧЕНИ", "t1": "Сообщалось о поражении печени при приёме куркумы / куркумина, экстракта зелёного чая и ашваганды.",
+  "h2": "ПОРАЖЕНИЕ ПОЧЕК", "t2": "Продукты с аристолоховой кислотой могут повышать риск почечной недостаточности и рака.",
+  "h3": "СЕРДЦЕ И ДАВЛЕНИЕ", "t3": "Корень солодки может снижать уровень калия. Эфедра и жёлтый олеандр могут вызывать серьёзные проблемы с сердцем.",
+  "h4": "ВЗАИМОДЕЙСТВИЯ", "t4": "Зверобой и другие растительные средства могут ослаблять или усиливать действие лекарств.",
+  "strip": "НАДПИСЬ «РАСТИТЕЛЬНЫЙ» НА ЭТИКЕТКЕ НЕ ГАРАНТИРУЕТ БЕЗОПАСНОСТЬ.",
+  "foot": "Риск зависит от растения, дозы, качества продукта и одновременно принимаемых лекарств."
+ },
+ "zh": {
+  "title": "草药产品安全吗？",
+  "sub": "天然并不等于无害！",
+  "h1": "肝损伤", "t1": "已有姜黄 / 姜黄素、绿茶提取物和南非醉茄引起肝损伤的报告。",
+  "h2": "肾损伤", "t2": "含马兜铃酸的产品可增加肾衰竭和癌症的风险。",
+  "h3": "心脏与血压", "t3": "甘草根可降低血钾。麻黄和黄花夹竹桃可导致严重的心脏问题。",
+  "h4": "药物相互作用", "t4": "圣约翰草等草药产品可减弱或增强药物的作用。",
+  "strip": "标签上写着“草药”并不代表安全有保证。",
+  "foot": "风险取决于植物种类、剂量、产品质量以及同时使用的药物。"
+ },
+ "ja": {
+  "title": "ハーブ製品は<br>安全か？",
+  "sub": "天然＝無害ではない！",
+  "h1": "肝障害", "t1": "ウコン／クルクミン、緑茶抽出物、アシュワガンダで肝障害が報告されています。",
+  "h2": "腎障害", "t2": "アリストロキア酸を含む製品は、腎不全とがんのリスクを高めるおそれがあります。",
+  "h3": "心臓と血圧", "t3": "甘草はカリウムを低下させることがあります。麻黄（エフェドラ）とキバナキョウチクトウは重い心臓障害を起こしえます。",
+  "h4": "薬物相互作用", "t4": "セント・ジョーンズ・ワートなどのハーブ製品は、薬の効果を弱めたり強めたりします。",
+  "strip": "「ハーブ」と書かれていても安全の保証にはなりません。",
+  "foot": "リスクは植物の種類、用量、製品の品質、併用する薬によって異なります。"
+ },
+ "hi": {
+  "title": "क्या हर्बल उत्पाद<br>सुरक्षित हैं?",
+  "sub": "प्राकृतिक का अर्थ हानिरहित नहीं है!",
+  "h1": "लिवर को नुकसान", "t1": "हल्दी / करक्यूमिन, ग्रीन टी अर्क और अश्वगंधा से लिवर क्षति की रिपोर्टें मिली हैं।",
+  "h2": "किडनी को नुकसान", "t2": "एरिस्टोलोकिक एसिड वाले उत्पाद किडनी फेल होने और कैंसर का खतरा बढ़ा सकते हैं।",
+  "h3": "हृदय और रक्तचाप", "t3": "मुलेठी पोटैशियम घटा सकती है। एफेड्रा और पीला कनेर गंभीर हृदय समस्याएँ पैदा कर सकते हैं।",
+  "h4": "दवा पारस्परिक क्रियाएँ", "t4": "सेंट जॉन्स वॉर्ट और अन्य हर्बल उत्पाद दवाओं का असर घटा या बढ़ा सकते हैं।",
+  "strip": "लेबल पर “हर्बल” लिखा होना सुरक्षा की गारंटी नहीं है।",
+  "foot": "जोखिम पौधे, खुराक, उत्पाद की गुणवत्ता और साथ ली जाने वाली दवाओं पर निर्भर करता है।"
+ }
+}

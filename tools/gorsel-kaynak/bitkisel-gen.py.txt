@@ -1,0 +1,76 @@
+# "Bitkisel ürünler güvenli mi?" yazısı: kullanıcının gönderdiği infografiğin dil sürümleri ve kapak (1500x800).
+# Türkçe infografik, gönderilen görselin kendisidir. Diğer diller: yazıları silinmiş zemin (bitkisel-zemin.png)
+# üzerine çevrilmiş metin yazılır.  Kullanım: python3 bitkisel-gen.py <zemin.png> <türkçe-infografik.png> <çıktı klasörü>
+import json, os, sys, base64
+from playwright.sync_api import sync_playwright
+HERE = os.path.dirname(os.path.abspath(__file__))
+BG, TRIMG, OUT = sys.argv[1], sys.argv[2], sys.argv[3]
+S = json.load(open(HERE + '/bitkisel.i18n.json', encoding='utf-8'))
+DEV = HERE + '/fonts/noto-sans-devanagari-devanagari-%s-normal.woff2'
+FONT = {'tr': "'Poppins'", 'en': "'Poppins'", 'de': "'Poppins'", 'es': "'Poppins'",
+        'ru': "'Noto Sans CJK SC'", 'zh': "'Noto Sans CJK SC'", 'ja': "'Noto Sans CJK JP'", 'hi': "'Poppins','KFD Deva'"}
+
+def b64(p): return 'data:image/png;base64,' + base64.b64encode(open(p, 'rb').read()).decode()
+
+def css(l):
+    c = '@font-face{font-family:"KFD Deva";font-weight:400;src:url(file://%s)}@font-face{font-family:"KFD Deva";font-weight:700;src:url(file://%s)}' % (DEV % '400', DEV % '700')
+    return c + '''*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:%s,'DejaVu Sans',sans-serif;font-weight:700;position:relative;overflow:hidden;background:#04122f}
+.fit{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.title{color:#fff;text-transform:uppercase;line-height:1.08;-webkit-text-stroke:1.2px #0a1a3a;text-shadow:0 3px 0 #061331,0 0 18px rgba(0,0,0,.6);letter-spacing:.5px}
+.sub{color:#F7D84A;text-shadow:0 2px 3px rgba(0,0,0,.7)}
+.strip{color:#111;}
+.foot{color:#fff;font-weight:600}
+.swoosh{position:absolute;height:4px;border-radius:50%%;background:linear-gradient(90deg,transparent,#F2D33C 18%%,#F2D33C 82%%,transparent)}
+.panel{position:absolute;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding-left:14px;border-left:5px solid #F2D33C}
+.panel h3{color:#F7D84A;line-height:1.1;margin-bottom:6px;text-transform:uppercase}
+.panel p{color:#fff;font-weight:600;line-height:1.28}
+''' % FONT[l]
+
+def fit_js():
+    # shrink font until every .fit / .panel fits its box
+    return '''() => { const shrink=(el,get,min)=>{ let s=parseFloat(getComputedStyle(get(el)).fontSize); let n=0;
+      while((el.scrollHeight>el.clientHeight+1||el.scrollWidth>el.clientWidth+1)&&s>min&&n<200){ s-=0.5; get(el).style.fontSize=s+'px'; n++; } return s; };
+      document.querySelectorAll('.fit').forEach(e=>shrink(e,x=>x.firstElementChild,8));
+      document.querySelectorAll('.panel').forEach(e=>{ let n=0; while((e.scrollHeight>e.clientHeight+1)&&n<200){ for(const c of e.children){ c.style.fontSize=(parseFloat(getComputedStyle(c).fontSize)-0.25)+'px'; } n++; } });
+      const bad=[]; document.querySelectorAll('.fit,.panel').forEach((e,i)=>{ if(e.scrollHeight>e.clientHeight+1||e.scrollWidth>e.clientWidth+1) bad.push(i) }); return bad; }'''
+
+def info(l, t):
+    # coordinates in the 842x844 cleaned background
+    panels = [(136, 392, 280, 110, 'h1', 't1'), (558, 392, 262, 110, 'h2', 't2'), (136, 534, 280, 126, 'h3', 't3'), (558, 534, 262, 126, 'h4', 't4')]
+    ph = ''.join('<div class="panel" style="left:%dpx;top:%dpx;width:%dpx;height:%dpx"><h3 style="font-size:22px">%s</h3><p style="font-size:16px">%s</p></div>' % (x, y, w, h, t[a], t[b]) for x, y, w, h, a, b in panels)
+    return '''<!doctype html><html lang="%s"><head><meta charset="utf-8"><style>%s body{width:842px;height:844px;background:url(%s) 0 0/842px 844px}</style></head><body>
+<div class="fit" style="left:60px;top:10px;width:722px;height:128px"><div class="title" style="font-size:58px">%s</div></div>
+<div class="swoosh" style="left:250px;top:142px;width:342px"></div>
+<div class="fit" style="left:20px;top:150px;width:802px;height:36px"><div class="sub" style="font-size:24px">%s</div></div>
+%s
+<div style="position:absolute;left:12px;top:688px;width:820px;height:65px;background:#F8DF4E;border-radius:24px"></div>
+<div class="fit" style="left:24px;top:690px;width:796px;height:60px"><div class="strip" style="font-size:25px">%s</div></div>
+<div class="fit" style="left:20px;top:752px;width:802px;height:40px"><div class="foot" style="font-size:19px">%s</div></div>
+</body></html>''' % (l, css(l), b64(BG), t['title'], t['sub'], ph, t['strip'], t['foot'])
+
+def cover(l, t):
+    # top band of the background (title + illustration, rows 0..380) scaled to 1500 wide, strip at the bottom
+    return '''<!doctype html><html lang="%s"><head><meta charset="utf-8"><style>%s body{width:1500px;height:800px}
+.bg{position:absolute;left:0;top:0;width:1500px;height:677px;background:url(%s) 0 0/1500px 1503px}
+.bar{position:absolute;left:30px;right:30px;top:690px;height:84px;background:#F8DF4E;border-radius:20px}</style></head><body>
+<div class="bg"></div>
+<div class="fit" style="left:120px;top:18px;width:1260px;height:226px"><div class="title" style="font-size:100px">%s</div></div>
+<div class="swoosh" style="left:450px;top:252px;width:600px;height:6px"></div>
+<div class="fit" style="left:60px;top:266px;width:1380px;height:66px"><div class="sub" style="font-size:44px">%s</div></div>
+<div class="bar"></div>
+<div class="fit" style="left:50px;top:690px;width:1400px;height:84px"><div class="strip" style="font-size:40px">%s</div></div>
+</body></html>''' % (l, css(l), b64(BG), t['title'], t['sub'], t['strip'])
+
+with sync_playwright() as p:
+    b = p.chromium.launch()
+    for l, t in S.items():
+        for kind, fn, (w, h) in (('infografik', info, (842, 844)), ('kapak', cover, (1500, 800))):
+            if kind == 'infografik' and l == 'tr': continue   # Turkish infographic = the original image
+            pg = b.new_page(viewport={'width': w, 'height': h}, device_scale_factor=1)
+            pg.set_content(fn(l, t)); pg.wait_for_timeout(300)
+            bad = pg.evaluate(fit_js())
+            if bad: print('OVERFLOW', l, kind, bad)
+            pg.screenshot(path='%s/%s.%s.png' % (OUT, kind, l)); pg.close()
+    b.close()
+print('ok')
