@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1080px;background:#f7efe2;font-family:'Lora',Georgia,serif;color:#2b1a14;overflow:hidden}
+.head{background:linear-gradient(135deg,#5e1424,#8a1f35);color:#fff6ea;padding:20px 40px 16px;position:relative}
+.kicker{font-size:17px;letter-spacing:3px;color:#f2c879;font-weight:700}
+h1{max-width:880px;font-size:42px;line-height:1.08;margin-top:6px;font-weight:700}
+h1 span{color:#f2c879}
+.sub{font-size:18px;margin-top:8px;color:#f3dfd0;font-style:italic}
+.badge{position:absolute;right:36px;top:28px;width:92px;height:92px;border-radius:50%;background:#f2c879;color:#5e1424;display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:700;border:4px solid #fff6ea}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;padding:20px 30px 0}
+.p{background:#fffaf2;border:3px solid;border-radius:14px;padding:16px 18px;position:relative}
+.p h3{font-size:19px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.ic{width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:19px;flex:none}
+.p p,.p li{font-size:17px;line-height:1.4}
+.p ul{list-style:none}
+.p li{padding-left:16px;position:relative;margin-bottom:3px}
+.p li:before{content:"▸";position:absolute;left:0;color:inherit}
+.g1{border-color:#2f7d6b}.g1 .ic{background:#2f7d6b}.g1 h3{color:#2f7d6b}
+.g2{border-color:#c46a1b}.g2 .ic{background:#c46a1b}.g2 h3{color:#c46a1b}
+.g3{border-color:#8a1f35}.g3 .ic{background:#8a1f35}.g3 h3{color:#8a1f35}
+.g4{border-color:#3b5998}.g4 .ic{background:#3b5998}.g4 h3{color:#3b5998}
+.g5{border-color:#6b4c9a}.g5 .ic{background:#6b4c9a}.g5 h3{color:#6b4c9a}
+.wide{grid-column:span 2}
+.bar{display:flex;align-items:center;margin:5px 0;font-size:16px}
+.bar .l{width:135px}
+.bar .t{flex:1;height:17px;background:#efe3d2;border-radius:9px;overflow:hidden;margin:0 8px}
+.bar .f{height:100%;border-radius:9px;background:linear-gradient(90deg,#2f7d6b,#58b39a)}
+.bar .v{width:52px;text-align:right;font-weight:700}
+.big{font-size:40px;font-weight:700;color:#c46a1b;line-height:1}
+.note{font-size:13px;font-style:italic;color:#6a5446;margin-top:4px}
+.tl{display:flex;justify-content:space-between;margin-top:6px}
+.tl div{text-align:center;flex:1;font-size:15px;line-height:1.3}
+.tl b{display:block;width:30px;height:30px;margin:0 auto 4px;border-radius:50%;background:#6b4c9a;color:#fff;line-height:30px;font-size:14px}
+.tl .line{position:relative}
+.vs{display:flex;gap:10px;margin-top:4px}
+.vs div{flex:1;border-radius:10px;padding:10px 12px;font-size:16px;line-height:1.35}
+.yes{background:#e3f1ec;border:2px solid #2f7d6b}
+.no{background:#f7e1e4;border:2px solid #8a1f35}
+.vs h4{font-size:15px;margin-bottom:3px}
+.quote{margin:18px 30px 0;background:#2b1a14;color:#f7efe2;border-radius:14px;padding:16px 26px;font-size:21px;font-style:italic;text-align:center;border-left:10px solid #f2c879}
+.foot{display:flex;justify-content:space-between;padding:12px 34px;font-size:15px;color:#5e1424;font-weight:700}
+</style></head><body>
+<div class="head">
+  <div class="kicker">HABER · KADIN SAĞLIĞI · MENOPOZ</div>
+  <h1>KADINDA TESTOSTERON:<br><span>“ENERJİ VERİYOR”</span> İDDİASI NE KADAR SAĞLAM?</h1>
+  <div class="sub">332 kadınlık anket, şirket verisi ve kontrollü kanıtlar yan yana</div>
+  <div class="badge">T</div>
+</div>
+<div class="grid">
+  <div class="p g1 wide">
+    <h3><span class="ic">⚡</span>Ankette bildirilen “düzelme”</h3>
+    <div class="bar"><span class="l">Enerji/yorgunluk</span><span class="t"><span class="f" style="width:84.3%;display:block"></span></span><span class="v">%84,3</span></div>
+    <div class="bar"><span class="l">Depresyon</span><span class="t"><span class="f" style="width:70.8%;display:block"></span></span><span class="v">%70,8</span></div>
+    <div class="bar"><span class="l">İrritabilite</span><span class="t"><span class="f" style="width:69%;display:block"></span></span><span class="v">%69,0</span></div>
+    <div class="bar"><span class="l">Cinsel istek</span><span class="t"><span class="f" style="width:66.9%;display:block"></span></span><span class="v">%66,9</span></div>
+    <div class="bar"><span class="l">Bellek</span><span class="t"><span class="f" style="width:54.5%;display:block"></span></span><span class="v">%54,5</span></div>
+    <div class="note">Geriye dönük, kendi bildirimi; başlangıç ölçümü ve plasebo grubu yok.</div>
+  </div>
+  <div class="p g2">
+    <h3><span class="ic">⚠</span>Kayıt yok</h3>
+    <div class="big">0 <span style="font-size:20px">yan etki verisi</span></div>
+    <p>Yan etki sistematik toplanmadı. Akne, kıllanma, ses kalınlaşması izlenmedi.</p>
+    <p class="note">Hemoglobin 12,7 → 13,4 g/dL artışı “olumlu” sayıldı.</p>
+  </div>
+  <div class="p g3">
+    <h3><span class="ic">€</span>Çıkar ilişkisi</h3>
+    <ul><li>Veri, telesağlık şirketi Joi + Blokes hastalarından</li><li>İki yazar şirketin bilimsel danışmanı</li><li>Sonuçları şirket basın bülteniyle duyurdu</li></ul>
+  </div>
+  <div class="p g4 wide">
+    <h3><span class="ic">⚖</span>Kontrollü çalışmalar ne diyor?</h3>
+    <div class="vs">
+      <div class="yes"><h4>✔ Kanıt var</h4>Menopoz sonrası, sıkıntı veren düşük cinsel istek (HSDD). 36 RKÇ, 8.480 kadın.</div>
+      <div class="no"><h4>✘ Kanıt yok</h4>Ruh hali, bilişsel işlev, iyi oluş, kas ve kemik. Premenopozda veri yetersiz.</div>
+    </div>
+    <p class="note" style="margin-top:8px">2019 Küresel Uzlaşı Bildirgesi: tek kanıta dayalı endikasyon HSDD; magistral ürün önerilmiyor.</p><div>
+    </div>
+  </div>
+  <div class="p g5 wide" style="grid-column:span 3">
+    <h3><span class="ic">⟳</span>Aynı veri, dört kez manşet</h3>
+    <div class="tl">
+      <div><b>1</b>Nisan 2026<br>J Pers Med makalesi</div>
+      <div><b>2</b>Mayıs 2026<br>Şirket basın bülteni</div>
+      <div><b>3</b>Haziran 2026<br>Şirket tıbbi direktörü röportajı</div>
+      <div><b>!</b>Eylül 2026<br>FDA çalıştayı: kadın için onaylı ürün yok</div>
+      <div><b>4</b>Ekim 2026<br>Menopause Society kongresi</div>
+    </div>
+  </div>
+</div>
+<div class="quote">“Değerlendirmek, doğrulamak değildir: hipotez üreten bir anket, tedavi önerisi olamaz.”</div>
+<div class="foot"><span>klinikfarmakoloji.com</span><span>Kaynak: Medscape; J Pers Med 2026;16(5):231; Lancet Diabetes Endocrinol 2019</span></div>
+</body></html>
