@@ -184,11 +184,19 @@
     "url": "/haber/kadinda-testosteron-enerji-veriyor-iddiasi-ne-kadar-saglam"
   },
   "2026-11-18-titck-nin-kurumsal-yeniden-yapilanmasi.md": {
-    "hash": "ea54ca5dd38daf797144a1a5ce8b7ea8482a01a3",
+    "hash": "972574cf8463d283a1472f1eb238f6da12025922",
     "section": "aci-ilac",
     "slug": "titck-nin-kurumsal-yeniden-yapilanmasi-tespitler-ve-oneriler",
     "title": "TİTCK’NİN KURUMSAL YENİDEN YAPILANMASI: TESPİTLER VE ÖNERİLER",
     "image_750x400": "/sites/default/files/styles/manset_resim_stili_750x400/public/yazi-gorselleri/cms/titck-yeniden-yapilanma-infografik.png",
     "url": "/aci-ilac/titck-nin-kurumsal-yeniden-yapilanmasi-tespitler-ve-oneriler"
+  },
+  "2026-11-18-titck-institutional-restructuring.md": {
+    "hash": "36310db29412161475de39e8d0526b0863414208",
+    "section": "aci-ilac",
+    "slug": "titck-institutional-restructuring-findings-and-recommendations",
+    "title": "TİTCK INSTITUTIONAL RESTRUCTURING: FINDINGS AND RECOMMENDATIONS",
+    "image_750x400": "/sites/default/files/styles/manset_resim_stili_750x400/public/yazi-gorselleri/cms/titck-restructuring-infographic.png",
+    "url": "/aci-ilac/titck-institutional-restructuring-findings-and-recommendations"
   }
 }
