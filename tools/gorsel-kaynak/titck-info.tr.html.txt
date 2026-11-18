@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1080px;height:1120px;background:#fbf6ec;font-family:'DejaVu Sans',Arial,sans-serif;color:#14213d;overflow:hidden}
+.h{background:#1b2a5b;color:#fff;text-align:center;padding:26px 30px 20px}
+.h h1{font-size:50px;line-height:1.08;font-weight:800;letter-spacing:1px}
+.h .s{display:flex;align-items:center;gap:18px;justify-content:center;margin-top:10px}
+.h .s .ln{flex:1;height:2px;background:#fff;opacity:.8;max-width:180px}
+.h .s span{font-size:32px;font-weight:700}
+.th{margin:18px 24px 0;background:#f2c14e;border-radius:12px;padding:12px 18px;text-align:center;font-size:24px;font-weight:700;color:#1b2a5b}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;padding:16px 24px 0}
+.col{display:flex;flex-direction:column;gap:12px}
+.c{display:flex;align-items:center;gap:14px;border:2px solid;border-radius:12px;padding:0 16px;height:88px}
+.n{font-size:44px;font-weight:800;width:62px;flex:none}
+.t{font-size:23px;font-weight:700;line-height:1.22;color:#14213d}
+.b{margin:16px 24px 0;background:#1b2a5b;color:#fff;border-radius:12px;padding:14px 18px;text-align:center;font-size:24px;font-weight:700}
+.f{text-align:center;font-size:24px;font-weight:700;margin-top:12px;color:#1b2a5b}
+</style></head><body>
+<div class="h"><h1>TİTCK’NİN KURUMSAL<br>YENİDEN YAPILANMASI</h1><div class="s"><div class="ln"></div><span>Bulgular ve Öneriler</span><div class="ln"></div></div></div>
+<div class="th">Raporun ana teması: Avrupa İlaç Ajansı ile uyum kâğıt üzerinde kaldı</div>
+<div class="g"><div class="col"><div class="c" style="background:#d6efe6;border-color:#2f8f72"><div class="n" style="color:#2f8f72">01</div><div class="t">Biyoeşdeğerliği gösterilmemiş ilaçların ruhsatlandırılması</div></div><div class="c" style="background:#d9e6f8;border-color:#3b6fb6"><div class="n" style="color:#3b6fb6">02</div><div class="t">Dünyada karşılığı olmayan formülasyon ve kombinasyonların jenerik kabulü</div></div><div class="c" style="background:#f8d9d3;border-color:#c2533f"><div class="n" style="color:#c2533f">03</div><div class="t">Farmakoekonomi ve sağlık teknolojisi değerlendirmesi</div></div><div class="c" style="background:#fbecc3;border-color:#b8860b"><div class="n" style="color:#b8860b">04</div><div class="t">Bitkisel ürünler ve gıda takviyelerinin denetimi</div></div><div class="c" style="background:#d6efe6;border-color:#2f8f72"><div class="n" style="color:#2f8f72">05</div><div class="t">Ruhsat sonrasına bırakılan kalite kontrolü</div></div><div class="c" style="background:#d9e6f8;border-color:#3b6fb6"><div class="n" style="color:#3b6fb6">06</div><div class="t">Klinik araştırmalar ve gönüllü güvenliği</div></div><div class="c" style="background:#f8d9d3;border-color:#c2533f"><div class="n" style="color:#c2533f">07</div><div class="t">Patentler, veri koruması ve ruhsatlandırma</div></div></div><div class="col"><div class="c" style="background:#d6efe6;border-color:#2f8f72"><div class="n" style="color:#2f8f72">08</div><div class="t">Fiyatlandırma, gizli anlaşmalar ve TİTCK–SGK eşgüdümü</div></div><div class="c" style="background:#d9e6f8;border-color:#3b6fb6"><div class="n" style="color:#3b6fb6">09</div><div class="t">Tanıtım, çıkar çatışmaları ve yolsuzlukla mücadele</div></div><div class="c" style="background:#f8d9d3;border-color:#c2533f"><div class="n" style="color:#c2533f">10</div><div class="t">Yetim ilaçlar ve nadir hastalık muafiyetleri</div></div><div class="c" style="background:#fbecc3;border-color:#b8860b"><div class="n" style="color:#b8860b">11</div><div class="t">Akılcı ilaç kullanımı, reçetesiz ilaçlar ve halkın bilgilendirilmesi</div></div><div class="c" style="background:#d6efe6;border-color:#2f8f72"><div class="n" style="color:#2f8f72">12</div><div class="t">Ruhsatlandırma komisyonlarının yapısı ve işleyişi</div></div><div class="c" style="background:#d9e6f8;border-color:#3b6fb6"><div class="n" style="color:#3b6fb6">13</div><div class="t">Farmakovijilans verilerinin yayımlanması</div></div><div class="c" style="background:#f8d9d3;border-color:#c2533f"><div class="n" style="color:#c2533f">14</div><div class="t">Klinik araştırmalarda taşeronlaşma: Türkiye ortak mı, hasta kaynağı mı?</div></div></div></div>
+<div class="b">Reform önerileri • Öncelikler ve yol haritası • Başarı göstergeleri</div>
+<div class="f">Prof. Dr. F. Cankat Tulunay · Kasım 2026</div>
+</body></html>

@@ -1,0 +1,89 @@
+import json, os, sys
+OUT = sys.argv[1]
+TR = {
+ 'A': "TİTCK’NİN KURUMSAL<br>YENİDEN YAPILANMASI",
+ 'B': "Bulgular ve Öneriler",
+ 'C': "Raporun ana teması: Avrupa İlaç Ajansı ile uyum kâğıt üzerinde kaldı",
+ 'I': ["Biyoeşdeğerliği gösterilmemiş ilaçların ruhsatlandırılması",
+       "Dünyada karşılığı olmayan formülasyon ve kombinasyonların jenerik kabulü",
+       "Farmakoekonomi ve sağlık teknolojisi değerlendirmesi",
+       "Bitkisel ürünler ve gıda takviyelerinin denetimi",
+       "Ruhsat sonrasına bırakılan kalite kontrolü",
+       "Klinik araştırmalar ve gönüllü güvenliği",
+       "Patentler, veri koruması ve ruhsatlandırma",
+       "Fiyatlandırma, gizli anlaşmalar ve TİTCK–SGK eşgüdümü",
+       "Tanıtım, çıkar çatışmaları ve yolsuzlukla mücadele",
+       "Yetim ilaçlar ve nadir hastalık muafiyetleri",
+       "Akılcı ilaç kullanımı, reçetesiz ilaçlar ve halkın bilgilendirilmesi",
+       "Ruhsatlandırma komisyonlarının yapısı ve işleyişi",
+       "Farmakovijilans verilerinin yayımlanması",
+       "Klinik araştırmalarda taşeronlaşma: Türkiye ortak mı, hasta kaynağı mı?"],
+ 'D': "Reform önerileri • Öncelikler ve yol haritası • Başarı göstergeleri",
+ 'E': "Prof. Dr. F. Cankat Tulunay · Kasım 2026",
+}
+L = {
+'en': {'A':"RESTRUCTURING TİTCK,<br>TURKEY’S MEDICINES AGENCY",'B':"Findings and Recommendations",
+ 'C':"Main theme of the report: alignment with the European Medicines Agency has stayed on paper",
+ 'I':["Licensing of medicines without demonstrated bioequivalence","Generic acceptance of formulations and combinations with no equivalent worldwide","Pharmacoeconomics and health technology assessment","Oversight of herbal products and food supplements","Quality control left until after licensing","Clinical trials and volunteer safety","Patents, data protection and licensing","Pricing, confidential agreements and TİTCK–SGK coordination","Promotion, conflicts of interest and fighting corruption","Orphan drugs and rare disease exemptions","Rational drug use, OTC medicines and public information","Structure and work of the licensing committees","Publishing pharmacovigilance data","Outsourcing in clinical trials: is Turkey a partner or a patient source?"],
+ 'D':"Reform proposals • Priorities and roadmap • Success indicators",'E':"Prof. Dr. F. Cankat Tulunay · November 2026"},
+'de': {'A':"NEUORDNUNG DER TÜRKISCHEN<br>ARZNEIMITTELBEHÖRDE TİTCK",'B':"Befunde und Empfehlungen",
+ 'C':"Hauptthema des Berichts: Die Angleichung an die Europäische Arzneimittel-Agentur ist auf dem Papier geblieben",
+ 'I':["Zulassung von Arzneimitteln ohne nachgewiesene Bioäquivalenz","Generika-Anerkennung weltweit einzigartiger Formulierungen und Kombinationen","Pharmakoökonomie und Bewertung von Gesundheitstechnologien","Überwachung von Pflanzenprodukten und Nahrungsergänzungsmitteln","Qualitätskontrolle erst nach der Zulassung","Klinische Studien und Sicherheit der Probanden","Patente, Unterlagenschutz und Zulassung","Preisbildung, vertrauliche Vereinbarungen und Koordination TİTCK–SGK","Werbung, Interessenkonflikte und Korruptionsbekämpfung","Orphan Drugs und Ausnahmen für seltene Krankheiten","Rationaler Arzneimittelgebrauch, rezeptfreie Arzneimittel und Information der Öffentlichkeit","Aufbau und Arbeitsweise der Zulassungskommissionen","Veröffentlichung von Pharmakovigilanzdaten","Auslagerung klinischer Studien: Die Türkei als Partner oder als Patientenquelle?"],
+ 'D':"Reformvorschläge • Prioritäten und Fahrplan • Erfolgsindikatoren",'E':"Prof. Dr. F. Cankat Tulunay · November 2026"},
+'es': {'A':"REESTRUCTURACIÓN DE LA AGENCIA<br>TURCA DEL MEDICAMENTO (TİTCK)",'B':"Hallazgos y recomendaciones",
+ 'C':"Tema central del informe: la armonización con la Agencia Europea de Medicamentos se ha quedado en el papel",
+ 'I':["Autorización de medicamentos sin bioequivalencia demostrada","Aceptación como genéricos de formulaciones y combinaciones sin equivalente en el mundo","Farmacoeconomía y evaluación de tecnologías sanitarias","Control de productos a base de plantas y complementos alimenticios","Control de calidad relegado a después de la autorización","Ensayos clínicos y seguridad de los voluntarios","Patentes, protección de datos y autorización","Precios, acuerdos confidenciales y coordinación TİTCK–SGK","Promoción, conflictos de interés y lucha contra la corrupción","Medicamentos huérfanos y excepciones para enfermedades raras","Uso racional de medicamentos, medicamentos sin receta e información al público","Estructura y funcionamiento de las comisiones de autorización","Publicación de los datos de farmacovigilancia","Subcontratación en ensayos clínicos: ¿Turquía socia o fuente de pacientes?"],
+ 'D':"Propuestas de reforma • Prioridades y hoja de ruta • Indicadores de éxito",'E':"Prof. Dr. F. Cankat Tulunay · Noviembre de 2026"},
+'ru': {'A':"ИНСТИТУЦИОНАЛЬНАЯ РЕФОРМА<br>ТУРЕЦКОГО АГЕНТСТВА TİTCK",'B':"Выводы и рекомендации",
+ 'C':"Главная тема доклада: гармонизация с Европейским агентством по лекарственным средствам осталась на бумаге",
+ 'I':["Регистрация препаратов без доказанной биоэквивалентности","Признание генериками лекарственных форм и комбинаций, не имеющих аналогов в мире","Фармакоэкономика и оценка технологий здравоохранения","Контроль растительных средств и БАДов","Контроль качества, отложенный на период после регистрации","Клинические исследования и безопасность добровольцев","Патенты, защита данных и регистрация","Ценообразование, конфиденциальные соглашения и координация TİTCK–SGK","Продвижение, конфликт интересов и борьба с коррупцией","Орфанные препараты и исключения для редких заболеваний","Рациональное применение лекарств, безрецептурные препараты и информирование населения","Структура и работа регистрационных комиссий","Публикация данных фармаконадзора","Аутсорсинг клинических исследований: Турция партнёр или источник пациентов?"],
+ 'D':"Предложения по реформе • Приоритеты и дорожная карта • Показатели успеха",'E':"Prof. Dr. F. Cankat Tulunay · ноябрь 2026"},
+'zh': {'A':"土耳其药品和医疗器械管理局<br>（TİTCK）机构重组",'B':"调查结果与建议",
+ 'C':"报告主题：与欧洲药品管理局的接轨仍停留在纸面上",
+ 'I':["未证明生物等效性的药品获批上市","全球无先例的剂型和复方被按仿制药受理","药物经济学与卫生技术评估","草药产品和膳食补充剂的监管","质量控制被推迟到上市之后","临床试验与受试者安全","专利、数据保护与药品注册","定价、保密协议及TİTCK与SGK的协调","推广、利益冲突与反腐败","孤儿药与罕见病豁免","合理用药、非处方药与公众信息","注册审评委员会的结构与运作","药物警戒数据的公开","临床试验外包：土耳其是合作伙伴还是患者来源？"],
+ 'D':"改革建议 • 优先事项与路线图 • 成功指标",'E':"Prof. Dr. F. Cankat Tulunay · 2026年11月"},
+'ja': {'A':"トルコ医薬品・医療機器庁（TİTCK）<br>の組織再編",'B':"調査結果と提言",
+ 'C':"報告書の主題：欧州医薬品庁との整合は紙の上にとどまっている",
+ 'I':["生物学的同等性が示されていない医薬品の承認","世界に前例のない製剤・配合剤のジェネリックとしての受け入れ","薬剤経済学と医療技術評価","生薬製品と栄養補助食品の監督","承認後に先送りされた品質管理","臨床試験と被験者の安全","特許、データ保護と承認","価格設定、非公開契約とTİTCK・SGKの連携","販売促進、利益相反と汚職対策","希少疾病用医薬品と希少疾患の例外措置","医薬品の適正使用、一般用医薬品と市民への情報提供","承認審査委員会の構成と運営","ファーマコビジランスデータの公開","臨床試験の下請け化：トルコはパートナーか、患者の供給源か？"],
+ 'D':"改革提言 • 優先順位とロードマップ • 成果指標",'E':"Prof. Dr. F. Cankat Tulunay · 2026年11月"},
+'hi': {'A':"तुर्की औषधि एजेंसी (TİTCK) का<br>संस्थागत पुनर्गठन",'B':"निष्कर्ष और सिफ़ारिशें",
+ 'C':"रिपोर्ट का मुख्य विषय: यूरोपीय औषधि एजेंसी के साथ सामंजस्य केवल काग़ज़ पर रह गया",
+ 'I':["बिना सिद्ध जैव-समतुल्यता वाली दवाओं को लाइसेंस","विश्व में बेमिसाल फ़ॉर्मूलेशन और संयोजनों को जेनेरिक के रूप में स्वीकृति","फ़ार्माकोइकोनॉमिक्स और स्वास्थ्य प्रौद्योगिकी मूल्यांकन","हर्बल उत्पादों और खाद्य पूरकों की निगरानी","लाइसेंस के बाद तक टाला गया गुणवत्ता नियंत्रण","क्लिनिकल ट्रायल और स्वयंसेवकों की सुरक्षा","पेटेंट, डेटा संरक्षण और लाइसेंसिंग","मूल्य निर्धारण, गोपनीय समझौते और TİTCK–SGK समन्वय","प्रचार, हितों का टकराव और भ्रष्टाचार-विरोधी उपाय","ऑर्फ़न दवाएँ और दुर्लभ रोग छूट","दवाओं का तर्कसंगत उपयोग, बिना पर्चे की दवाएँ और जन-सूचना","लाइसेंसिंग समितियों की संरचना और कार्यप्रणाली","फ़ार्माकोविजिलेंस डेटा का प्रकाशन","क्लिनिकल ट्रायल में आउटसोर्सिंग: तुर्की साझेदार या मरीज़ों का स्रोत?"],
+ 'D':"सुधार प्रस्ताव • प्राथमिकताएँ और रोडमैप • सफलता संकेतक",'E':"Prof. Dr. F. Cankat Tulunay · नवंबर 2026"},
+}
+COL = ['#d6efe6:#2f8f72','#d9e6f8:#3b6fb6','#f8d9d3:#c2533f','#fbecc3:#b8860b']
+cells = []
+for i, t in enumerate(TR['I']):
+    bg, fg = COL[(i % 7) % 4].split(':') if False else COL[(i if i < 7 else i - 7) % 4].split(':')
+    cells.append((i, f'<div class="c" style="background:{bg};border-color:{fg}"><div class="n" style="color:{fg}">{i+1:02d}</div><div class="t">{t}</div></div>'))
+left = ''.join(c for i, c in cells if i < 7); right = ''.join(c for i, c in cells if i >= 7)
+html = f'''<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><style>
+*{{box-sizing:border-box;margin:0;padding:0}}
+body{{width:1080px;height:1120px;background:#fbf6ec;font-family:'DejaVu Sans',Arial,sans-serif;color:#14213d;overflow:hidden}}
+.h{{background:#1b2a5b;color:#fff;text-align:center;padding:26px 30px 20px}}
+.h h1{{font-size:50px;line-height:1.08;font-weight:800;letter-spacing:1px}}
+.h .s{{display:flex;align-items:center;gap:18px;justify-content:center;margin-top:10px}}
+.h .s .ln{{flex:1;height:2px;background:#fff;opacity:.8;max-width:180px}}
+.h .s span{{font-size:32px;font-weight:700}}
+.th{{margin:18px 24px 0;background:#f2c14e;border-radius:12px;padding:12px 18px;text-align:center;font-size:24px;font-weight:700;color:#1b2a5b}}
+.g{{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;padding:16px 24px 0}}
+.col{{display:flex;flex-direction:column;gap:12px}}
+.c{{display:flex;align-items:center;gap:14px;border:2px solid;border-radius:12px;padding:0 16px;height:88px}}
+.n{{font-size:44px;font-weight:800;width:62px;flex:none}}
+.t{{font-size:23px;font-weight:700;line-height:1.22;color:#14213d}}
+.b{{margin:16px 24px 0;background:#1b2a5b;color:#fff;border-radius:12px;padding:14px 18px;text-align:center;font-size:24px;font-weight:700}}
+.f{{text-align:center;font-size:24px;font-weight:700;margin-top:12px;color:#1b2a5b}}
+</style></head><body>
+<div class="h"><h1>{TR['A']}</h1><div class="s"><div class="ln"></div><span>{TR['B']}</span><div class="ln"></div></div></div>
+<div class="th">{TR['C']}</div>
+<div class="g"><div class="col">{left}</div><div class="col">{right}</div></div>
+<div class="b">{TR['D']}</div>
+<div class="f">{TR['E']}</div>
+</body></html>'''
+open(os.path.join(OUT, 'titck-info.html'), 'w', encoding='utf-8').write(html)
+tr = {}
+for lang, d in L.items():
+    m = {TR[k]: d[k] for k in 'ABCDE'}
+    for a, b in zip(TR['I'], d['I']): m[a] = b
+    tr[lang] = m
+json.dump(tr, open(os.path.join(OUT, 'titck-info.i18n.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
